@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="1st commit init project with maven and springboot">
+    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/library-webapp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/LibraryWebappApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/test/java/com/publicservice/librarywebapp/LibraryWebappApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,10 +62,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.LibraryApiApplication">
     <configuration name="LibraryApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="library-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.publicservice.libraryapi.LibraryApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryWebappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="library-webapp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.publicservice.librarywebapp.LibraryWebappApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571426028102</updated>
       <workItem from="1571426030923" duration="3863000" />
-      <workItem from="1571437339461" duration="254000" />
+      <workItem from="1571437339461" duration="1431000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -92,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571436355266</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test git">
+      <created>1571437603861</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571437603861</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +141,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1st commit init project with maven and springboot" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st commit init project with maven and springboot" />
+    <MESSAGE value="test git" />
+    <option name="LAST_COMMIT_MESSAGE" value="test git" />
   </component>
 </project>
