@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09a38c4c6c5def01c4b43c774193661ec01f4161" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14222fe22f132d659898700f2a6b0b8ec48bdb40" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1daf910ab7af0986a514d13975af0e80c407eb27" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/1/313d7221e6b2ecf096879b386cacb691417a1766" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3a16f2963b6b34bf803870dee8ae3db9220c660f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3dc25bee96e6a5e713ad909d1e5f0d736f052d28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51ea04d013f11c87feb4156af72e4e440bee5e67" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c00d56de28b2b410018a7e0ceaff3ef7920270f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/60fc7b88252db322b225057a209a5918a2f249ad" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/92ed3d309c6739e5c8f6f778fb0f10ded47daea0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bbf6923067c3f9d3448c85b454c85a603fd45cc9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c14717a712efe1005f14124785fd473556434c92" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d30d2c03b6bc0225fc0ee957057720b0c1125a57" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dd7428630c7c1945be06fcd9ac6c10a0cee41d1d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fd967ed0e63767dcdbd931b0acb9f15fc26399ab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe67686f5b78260308379338fea2a86b62e1e7e1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_public_service_library_api_business_0_0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_public_service_library_api_business_0_0_1_SNAPSHOT.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/LibraryBatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/LibraryBatchApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/LibraryWebappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/LibraryWebappApplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +141,7 @@
       <workItem from="1571437339461" duration="1731000" />
       <workItem from="1571466447774" duration="12427000" />
       <workItem from="1571480664521" duration="1664000" />
-      <workItem from="1571503491463" duration="9341000" />
+      <workItem from="1571503491463" duration="10215000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -209,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571522728841</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add business layout contract">
+      <created>1571528045623</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571528045623</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +225,7 @@
     <MESSAGE value="added library-webapp" />
     <MESSAGE value="rebuilding the project with :&#10;Library-api (maven multi modules)&#10;Library-web (mono maven module)&#10;Library-batch (mono maven module)" />
     <MESSAGE value="library-api-model: add entities and set validation annotations&#10;library-api-dao: add entities interfaces and jpa annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="library-api-model: add entities and set validation annotations&#10;library-api-dao: add entities interfaces and jpa annotations" />
+    <MESSAGE value="add business layout contract" />
+    <option name="LAST_COMMIT_MESSAGE" value="add business layout contract" />
   </component>
 </project>

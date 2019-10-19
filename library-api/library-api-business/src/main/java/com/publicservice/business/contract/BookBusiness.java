@@ -1,6 +1,5 @@
 package com.publicservice.business.contract;
 
-
 import com.publicservice.entities.Book;
 import org.springframework.data.domain.Page;
 
@@ -11,15 +10,19 @@ import org.springframework.data.domain.Page;
 public interface BookBusiness {
 
   /**
-   * @param id is a specific book id
+   * Used to get a book using his id.
+   * @param id is a specific book id.
+   * @return a Book entity.
    */
   Book findOneBookById(Long id);
 
   /**
+   * Used to get list of book after request using keyword.
    * @param keyword is syntax that user insert as keyword to find book.
    * @param kindOfSearch is book attribute that user want search using it.
    * @param numPage is the number of pages returned by the request result.
    * @param size is the number of books displayed in one page.
+   * @return a List of Books dispatched in pages.
    */
   Page<Book> lookingForABook(int numPage, int size, String keyword, String kindOfSearch);
 
