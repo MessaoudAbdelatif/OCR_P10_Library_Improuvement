@@ -3,12 +3,19 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/library-api-business/pom.xml" />
         <option value="$PROJECT_DIR$/library-api/pom.xml" />
         <option value="$PROJECT_DIR$/library-webapp/pom.xml" />
+        <option value="$PROJECT_DIR$/library-batch/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/library-api/library-api-business/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

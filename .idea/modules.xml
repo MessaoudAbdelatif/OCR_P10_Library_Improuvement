@@ -3,7 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/library-api/library-api.iml" filepath="$PROJECT_DIR$/library-api/library-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-batch/library-batch.iml" filepath="$PROJECT_DIR$/library-batch/library-batch.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-webapp/library-webapp.iml" filepath="$PROJECT_DIR$/library-webapp/library-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" filepath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-api/library-api-dao/libraryapidao.iml" filepath="$PROJECT_DIR$/library-api/library-api-dao/libraryapidao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-api/library-api-model/libraryapimodel.iml" filepath="$PROJECT_DIR$/library-api/library-api-model/libraryapimodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library-api/library-api-service/libraryapiservice.iml" filepath="$PROJECT_DIR$/library-api/library-api-service/libraryapiservice.iml" />
     </modules>
   </component>
 </project>
