@@ -4,9 +4,11 @@
       <root url="jar://$MAVEN_REPOSITORY$/com/public-service/library-api-business/0.0.1-SNAPSHOT/library-api-business-0.0.1-SNAPSHOT.jar!/" />
     </CLASSES>
     <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/library-api/library-api-business/library-api-business-0.0.1-SNAPSHOT-javadoc.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/com/public-service/library-api-business/0.0.1-SNAPSHOT/library-api-business-0.0.1-SNAPSHOT-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
+      <root url="jar://$PROJECT_DIR$/library-api/library-api-business/library-api-business-0.0.1-SNAPSHOT-sources.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/com/public-service/library-api-business/0.0.1-SNAPSHOT/library-api-business-0.0.1-SNAPSHOT-sources.jar!/" />
     </SOURCES>
   </library>

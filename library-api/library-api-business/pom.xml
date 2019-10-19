@@ -11,5 +11,15 @@
   <packaging>jar</packaging>
   <artifactId>library-api-business</artifactId>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.public-service</groupId>
+      <artifactId>library-api-dao</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.public-service</groupId>
+      <artifactId>library-api-model</artifactId>
+    </dependency>
+  </dependencies>
 
 </project>
