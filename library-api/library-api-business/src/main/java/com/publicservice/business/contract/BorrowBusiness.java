@@ -22,4 +22,19 @@ public interface BorrowBusiness {
    */
   void addExtraTime(Long id);
 
+  /**
+   * When user make new borrow.
+   *
+   * @param username is user id.
+   * @return new Borrow instance.
+   */
+  Borrow createBorrow(String username);
+
+  /**
+   * When user bring back a borrowed book.
+   *
+   * @param id is the borrow entity id.
+   */
+  void deleteBorrow(Long id);
+
 }
