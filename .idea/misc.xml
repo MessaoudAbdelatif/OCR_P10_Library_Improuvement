@@ -12,6 +12,8 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/library-api/library-api-business/pom.xml" />
+        <option value="$PROJECT_DIR$/library-api/sefseffsef/pom.xml" />
+        <option value="$PROJECT_DIR$/library-api/test/pom.xml" />
       </set>
     </option>
   </component>

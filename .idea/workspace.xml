@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/e/3e2702a9a10b0430fa774404b33f3c1c454431b7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/e/3e2702a9a10b0430fa774404b33f3c1c454431b7" afterDir="false" />
+    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="db connection test ok creation tables with hibernate ok&#10;update classDiagram">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/029938a3fa623444516a18f9f5dc4eb2c68c2bd5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/06c256a5fe852bfcea126cd89e3bd1a8a87efad4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d3aa43e13db977d72a6f34d26ad37fcd18d44ea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/242a7714e62283ac789a70561c2f91feabcfa422" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/2576d8ce8e024c4465a97836d390f9096b0df921" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2ac120abd3a9cad024295bd522106cdf7d02f45a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/4417a6a544e195bbfd50e8968b9546b92be99717" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/677fbe5807c050a7570a2265316def7b3e8aa2cd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81752230fef6605b37cb6bb4531441dcd920c5e3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/950b5256a85d47353ba0b5de166ac1ab2f774bbe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9edc1620409b03c7736a111a6a96a7cf41e47e4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e60b04cd376c9c810083ce068e909c9fc9881175" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e669f58d5401f7e8a004f82f7ba623013a28bdcb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/56ac346c84f7ddd7ef88b4702e9ccedae2977150" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/56ac346c84f7ddd7ef88b4702e9ccedae2977150" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/763754597ae54213e32c879b025355e6a6267dd7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/763754597ae54213e32c879b025355e6a6267dd7" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/ClassDiagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/documents/ClassDiagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/documents/UseCaseDiagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/documents/UseCaseDiagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-dao/libraryapidao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-dao/libraryapidao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/libraryapimodel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/libraryapimodel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/libraryapiservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/libraryapiservice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/Libraryapiapplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/Libraryapiapplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,15 +52,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ErrorTreeViewConfiguration">
-    <option name="autoscrollToSource" value="true" />
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,9 +75,6 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenRunner">
-    <option name="delegateBuildToMaven" value="true" />
-  </component>
   <component name="ProjectId" id="1SOE1duGf2OXlU522CVaWHKChjy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,6 +82,10 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -71,6 +104,8 @@
       <recent name="com.publicservice.libraryapi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/library-api/library-api-business/src/main/java" />
+      <recent name="$PROJECT_DIR$/library-api/library-api-business/src/main" />
       <recent name="$PROJECT_DIR$/library-api" />
     </key>
   </component>
@@ -91,7 +126,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.LibraryApiApplication">
+  <component name="RunManager" selected="Spring Boot.Libraryapiapplication">
     <configuration name="LibraryApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="library-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.publicservice.libraryapi.LibraryApiApplication" />
@@ -143,7 +178,8 @@
       <workItem from="1571466447774" duration="12427000" />
       <workItem from="1571480664521" duration="1664000" />
       <workItem from="1571503491463" duration="10406000" />
-      <workItem from="1571580416782" duration="375000" />
+      <workItem from="1571580416782" duration="4781000" />
+      <workItem from="1571585317713" duration="12587000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -208,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571528946014</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add 2 new features that will be implemented by used in future.">
+      <created>1571580842161</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571580842161</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +279,8 @@
     <MESSAGE value="library-api-model: add entities and set validation annotations&#10;library-api-dao: add entities interfaces and jpa annotations" />
     <MESSAGE value="add business layout contract" />
     <MESSAGE value="add some javadoc to explain the business method used." />
-    <option name="LAST_COMMIT_MESSAGE" value="add some javadoc to explain the business method used." />
+    <MESSAGE value="add 2 new features that will be implemented by used in future." />
+    <MESSAGE value="db connection test ok creation tables with hibernate ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="db connection test ok creation tables with hibernate ok" />
   </component>
 </project>

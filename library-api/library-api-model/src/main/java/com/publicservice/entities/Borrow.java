@@ -7,30 +7,37 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Borrow implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  @OneToOne
+
+  @ManyToOne
   @JoinColumn(name = "user_id")
-  private String userID;
-  @OneToOne
+  private User userID;
+
+  @ManyToOne
   @JoinColumn(name = "book_id")
-  private Long bookID;
+  private Book bookID;
+
   @DateTimeFormat
   private Date dateStart;
+
   @DateTimeFormat
   private Date dateEnd;
+
   private Boolean extraTime;
 }

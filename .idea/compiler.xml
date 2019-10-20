@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="libraryapibusiness" />
-        <module name="library-batch" />
-        <module name="libraryapidao" />
-        <module name="library-webapp" />
         <module name="libraryapimodel" />
+        <module name="library-batch" />
+        <module name="library-webapp" />
+        <module name="libraryapidao" />
       </profile>
       <profile name="Annotation profile for library-api" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -44,6 +44,8 @@
       <module name="libraryapidao" target="1.8" />
       <module name="libraryapimodel" target="1.8" />
       <module name="libraryapiservice" target="1.8" />
+      <module name="sefseffsef" target="1.8" />
+      <module name="test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -56,6 +58,8 @@
       <module name="libraryapidao" options="-parameters" />
       <module name="libraryapimodel" options="-parameters" />
       <module name="libraryapiservice" options="-parameters" />
+      <module name="sefseffsef" options="-parameters" />
+      <module name="test" options="-parameters" />
     </option>
   </component>
 </project>

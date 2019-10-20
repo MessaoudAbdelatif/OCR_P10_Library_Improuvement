@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @EnableJpaRepositories(basePackages = {"com.publicservice.consumer"})
-@EntityScan(basePackages = {"entities"})
-@ComponentScan(basePackages = {"com"})
+@EntityScan(basePackages = {"com.publicservice.entities"})
+@ComponentScan(basePackages = {"com.publicservice"})
 public class Libraryapiapplication {
 
   public static void main(String[] args) {

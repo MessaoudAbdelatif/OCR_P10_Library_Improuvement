@@ -71,3 +71,15 @@ dlibrary-api/library-api-business/src/main/java/com/publicservice/business/contr
 flibrary-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java,6/7/677fbe5807c050a7570a2265316def7b3e8aa2cd
 ”
 dlibrary-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java,9/5/950b5256a85d47353ba0b5de166ac1ab2f774bbe
+ž
+nlibrary-api/library-api-business/src/main/java/com/publicservice/business/exception/BookNotFoundException.java,e/6/e60b04cd376c9c810083ce068e909c9fc9881175
+ 
+plibrary-api/library-api-business/src/main/java/com/publicservice/business/exception/BorrowNotFoundException.java,2/a/2ac120abd3a9cad024295bd522106cdf7d02f45a
+œ
+llibrary-api/library-api-business/src/main/java/com/publicservice/business/exception/ExtraTimeNotAllowed.java,0/6/06c256a5fe852bfcea126cd89e3bd1a8a87efad4
+–
+flibrary-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java,5/0/50eb71ef365f77e013920afb46386954f7c9d072
+”
+dlibrary-api/library-api-business/src/main/java/com/publicservice/business/impl/UserBusinessImpl.java,8/1/81752230fef6605b37cb6bb4531441dcd920c5e3
+”
+dlibrary-api/library-api-business/src/main/java/com/publicservice/business/impl/BookBusinessImpl.java,0/2/029938a3fa623444516a18f9f5dc4eb2c68c2bd5
