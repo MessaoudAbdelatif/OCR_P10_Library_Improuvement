@@ -9,8 +9,6 @@
     <module>library-api-model</module>
     <module>library-api-dao</module>
     <module>library-api-service</module>
-    <module>test</module>
-    <module>sefseffsef</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>

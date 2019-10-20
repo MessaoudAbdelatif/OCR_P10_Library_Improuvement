@@ -16,5 +16,10 @@
       <groupId>com.public-service</groupId>
       <artifactId>library-api-model</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.public-service</groupId>
+      <artifactId>library-api-dao</artifactId>
+    </dependency>
+
   </dependencies>
 </project>
