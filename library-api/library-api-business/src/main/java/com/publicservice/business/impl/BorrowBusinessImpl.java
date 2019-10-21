@@ -2,6 +2,7 @@ package com.publicservice.business.impl;
 
 import com.publicservice.business.contract.BorrowBusiness;
 import com.publicservice.business.exception.BorrowNotFoundException;
+import com.publicservice.business.exception.ExtraTimeNotAllowed;
 import com.publicservice.consumer.BorrowDao;
 import com.publicservice.entities.Borrow;
 import java.time.Instant;
@@ -34,13 +35,19 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   }
 
   @Override
-  public void addExtraTime(Long id) throws BorrowNotFoundException {
+  public void addExtraTime(Long id) throws BorrowNotFoundException, ExtraTimeNotAllowed {
     Borrow borrow = findBorrowById(id);
+    if (!borrow.getExtraTime()){
     DateTime dt = new DateTime(borrow.getDateEnd());
     DateTime newdt = dt.plusDays(extraTime);
     Date newEndDate = newdt.toDate();
     borrow.setDateEnd(newEndDate);
     borrow.setExtraTime(true);
+    }
+    else {
+      throw new ExtraTimeNotAllowed("You already get an extra time !");
+    }
+
   }
 
   @Override

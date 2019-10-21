@@ -1,6 +1,7 @@
 package com.publicservice.business.contract;
 
 import com.publicservice.business.exception.BorrowNotFoundException;
+import com.publicservice.business.exception.ExtraTimeNotAllowed;
 import com.publicservice.entities.Borrow;
 import java.text.ParseException;
 
@@ -23,7 +24,7 @@ public interface BorrowBusiness {
    *
    * @param id is the borrowing id.
    */
-  void addExtraTime(Long id) throws BorrowNotFoundException, ParseException;
+  void addExtraTime(Long id) throws BorrowNotFoundException, ParseException, ExtraTimeNotAllowed;
 
   /**
    * When user make new borrow.
