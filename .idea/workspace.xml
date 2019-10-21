@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BookBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BookBusinessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-dao/libraryapidao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-dao/libraryapidao.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/libraryapimodel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/libraryapimodel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-dao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-dao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-dao/src/main/java/com/publicservice/consumer/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-dao/src/main/java/com/publicservice/consumer/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-api/library-api-service/libraryapiservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/libraryapiservice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +148,7 @@
       <workItem from="1571480664521" duration="1664000" />
       <workItem from="1571503491463" duration="10406000" />
       <workItem from="1571580416782" duration="4781000" />
-      <workItem from="1571585317713" duration="14847000" />
+      <workItem from="1571585317713" duration="21626000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -229,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571613521077</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix business layout modules import">
+      <created>1571614909806</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571614909806</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +273,7 @@
     <MESSAGE value="db connection test ok creation tables with hibernate ok" />
     <MESSAGE value="db connection test ok creation tables with hibernate ok&#10;update classDiagram" />
     <MESSAGE value="adding business folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding business folders" />
+    <MESSAGE value="fix business layout modules import" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix business layout modules import" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 package com.publicservice.business.contract;
 
+import com.publicservice.business.exception.BookNotFoundException;
 import com.publicservice.entities.Book;
 import org.springframework.data.domain.Page;
 
@@ -12,9 +13,10 @@ public interface BookBusiness {
   /**
    * Used to get a book using his id.
    * @param id is a specific book id.
+   * @throws BookNotFoundException we handle the risk if the result of search is null.
    * @return a Book entity.
    */
-  Book findOneBookById(Long id);
+  Book findOneBookById(Long id) throws BookNotFoundException;
 
   /**
    * Used to get list of book after request using keyword.

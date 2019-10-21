@@ -1,36 +1,63 @@
 package com.publicservice.business.impl;
 
 import com.publicservice.business.contract.BorrowBusiness;
+import com.publicservice.business.exception.BorrowNotFoundException;
 import com.publicservice.consumer.BorrowDao;
 import com.publicservice.entities.Borrow;
+import java.time.Instant;
+import java.util.Date;
+import java.util.ResourceBundle;
 import javax.transaction.Transactional;
+import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
 public class BorrowBusinessImpl implements BorrowBusiness {
 
+  private static ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
+  private static int initialTime = Integer.parseInt(resourceBundle.getString("InitialTime"));
+  private static int extraTime = Integer.parseInt(resourceBundle.getString("ExtraTime"));
   private BorrowDao borrowDao;
 
-
-
-  @Override
-  public Borrow findBorrowById(Long id) {
-    return null;
+  public BorrowBusinessImpl(BorrowDao borrowDao) {
+    this.borrowDao = borrowDao;
   }
 
   @Override
-  public void addExtraTime(Long id) {
-
+  public Borrow findBorrowById(Long id) throws BorrowNotFoundException {
+    Borrow targetBorrow = borrowDao.getOne(id);
+    if (targetBorrow == null) {
+      throw new BorrowNotFoundException("Borrow not found !!");
+    }
+    return targetBorrow;
   }
 
   @Override
-  public Borrow createBorrow(String username) {
-    return null;
+  public void addExtraTime(Long id) throws BorrowNotFoundException {
+    Borrow borrow = findBorrowById(id);
+    DateTime dt = new DateTime(borrow.getDateEnd());
+    DateTime newdt = dt.plusDays(extraTime);
+    Date newEndDate = newdt.toDate();
+    borrow.setDateEnd(newEndDate);
+    borrow.setExtraTime(true);
+  }
+
+  @Override
+  public Borrow createBorrow(Borrow newBorrow) {
+    newBorrow.setDateStart(Date.from(Instant.now()));
+    DateTime dateStart = new DateTime(newBorrow.getDateStart());
+    DateTime dateEnd = dateStart.plusDays(initialTime);
+    Date calculatedEndDate = dateEnd.toDate();
+    newBorrow.setDateEnd(calculatedEndDate);
+    newBorrow.setExtraTime(false);
+
+    return newBorrow;
   }
 
   @Override
   public void deleteBorrow(Long id) {
+    borrowDao.deleteById(id);
 
   }
 }

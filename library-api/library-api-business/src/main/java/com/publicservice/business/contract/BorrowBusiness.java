@@ -1,6 +1,8 @@
 package com.publicservice.business.contract;
 
+import com.publicservice.business.exception.BorrowNotFoundException;
 import com.publicservice.entities.Borrow;
+import java.text.ParseException;
 
 /**
  * use case business fonction findBorrowById. use case business fonction addExtraTime.
@@ -11,24 +13,25 @@ public interface BorrowBusiness {
    * Used to find Borrow entity by his id.
    *
    * @param id is the borrowing id.
+   * @throws BorrowNotFoundException handle the risk if borrow not found.
    * @return Borrow entity concerned.
    */
-  Borrow findBorrowById(Long id);
+  Borrow findBorrowById(Long id) throws BorrowNotFoundException;
 
   /**
    * Used to add extra time for borrowing period.
    *
    * @param id is the borrowing id.
    */
-  void addExtraTime(Long id);
+  void addExtraTime(Long id) throws BorrowNotFoundException, ParseException;
 
   /**
    * When user make new borrow.
    *
-   * @param username is user id.
+   * @param borrow is the new borrow entity.
    * @return new Borrow instance.
    */
-  Borrow createBorrow(String username);
+  Borrow createBorrow(Borrow borrow);
 
   /**
    * When user bring back a borrowed book.
