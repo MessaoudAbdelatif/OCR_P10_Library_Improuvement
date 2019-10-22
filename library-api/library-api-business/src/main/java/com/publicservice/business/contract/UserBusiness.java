@@ -4,7 +4,7 @@ import com.publicservice.entities.Borrow;
 import java.util.List;
 
 /**
- * use case business fonction checkeUserBorrowedBook.
+ * use case business fonction checkeLibraryReaderBorrowedBook.
  */
 public interface UserBusiness {
 
@@ -14,6 +14,7 @@ public interface UserBusiness {
    * @param username is user id.
    * @return List of borrows entities.
    */
-  List<Borrow> checkeUserBorrowedBook(String username);
+  List<Borrow> checkeLibraryUserBorrowedBook(String username);
 
 }
+

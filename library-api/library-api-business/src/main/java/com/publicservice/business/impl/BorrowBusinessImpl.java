@@ -7,7 +7,6 @@ import com.publicservice.consumer.BorrowDao;
 import com.publicservice.entities.Borrow;
 import java.time.Instant;
 import java.util.Date;
-import java.util.ResourceBundle;
 import javax.transaction.Transactional;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
@@ -16,9 +15,6 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class BorrowBusinessImpl implements BorrowBusiness {
 
-  private static ResourceBundle resourceBundle = ResourceBundle.getBundle("application");
-  private static int initialTime = Integer.parseInt(resourceBundle.getString("InitialTime"));
-  private static int extraTime = Integer.parseInt(resourceBundle.getString("ExtraTime"));
   private BorrowDao borrowDao;
 
   public BorrowBusinessImpl(BorrowDao borrowDao) {
@@ -37,14 +33,18 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   @Override
   public void addExtraTime(Long id) throws BorrowNotFoundException, ExtraTimeNotAllowed {
     Borrow borrow = findBorrowById(id);
-    if (!borrow.getExtraTime()){
-    DateTime dt = new DateTime(borrow.getDateEnd());
-    DateTime newdt = dt.plusDays(extraTime);
-    Date newEndDate = newdt.toDate();
-    borrow.setDateEnd(newEndDate);
-    borrow.setExtraTime(true);
-    }
-    else {
+    if (!borrow.getExtraTime()) {
+      DateTime dt = new DateTime(borrow.getDateEnd());
+      //  private static ResourceBundle resourceBundle = ResourceBundle.getBundle(
+      //      "WEB-INF/classes/application.properties");
+      //  private static int initialTime = Integer.parseInt(resourceBundle.getString("InitialTime"));
+      //  private static int extraTime = Integer.parseInt(resourceBundle.getString("ExtraTime"));
+      int extraTime = 28;
+      DateTime newdt = dt.plusDays(extraTime);
+      Date newEndDate = newdt.toDate();
+      borrow.setDateEnd(newEndDate);
+      borrow.setExtraTime(true);
+    } else {
       throw new ExtraTimeNotAllowed("You already get an extra time !");
     }
 
@@ -54,6 +54,7 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   public Borrow createBorrow(Borrow newBorrow) {
     newBorrow.setDateStart(Date.from(Instant.now()));
     DateTime dateStart = new DateTime(newBorrow.getDateStart());
+    int initialTime = 28;
     DateTime dateEnd = dateStart.plusDays(initialTime);
     Date calculatedEndDate = dateEnd.toDate();
     newBorrow.setDateEnd(calculatedEndDate);

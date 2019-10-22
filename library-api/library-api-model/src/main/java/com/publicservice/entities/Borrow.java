@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
@@ -26,7 +25,7 @@ public class Borrow implements Serializable {
 
   @ManyToOne
   @JoinColumn(name = "user_id")
-  private User userID;
+  private LibraryUser userID;
 
   @ManyToOne
   @JoinColumn(name = "book_id")

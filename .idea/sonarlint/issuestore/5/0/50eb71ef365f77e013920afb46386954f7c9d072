@@ -1,4 +1,3 @@
 
-Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ßÒ‰þ8¤×£ÌÞ-
-Psquid:S1068	"-Remove this unused "borrowDao" private field.(£Ñ´‘ýÿÿÿÿ8¢ÑýÌÞ-
-¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(éùÓ‡ýÿÿÿÿ8¤×£ÌÞ-
+Msquid:S5411("*Use the primitive boolean expression here.(öáç‚ûÿÿÿÿ8•ÿ àÞ-
+bsquid:S2583"DChange this condition so that it does not always evaluate to "false"(”•ƒ»8§¼¤ÝÞ-

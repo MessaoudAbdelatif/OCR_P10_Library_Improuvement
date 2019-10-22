@@ -3,7 +3,7 @@ package com.publicservice.business.impl;
 import com.publicservice.business.contract.UserBusiness;
 import com.publicservice.consumer.UserDao;
 import com.publicservice.entities.Borrow;
-import com.publicservice.entities.User;
+import com.publicservice.entities.LibraryUser;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -19,8 +19,8 @@ public class UserBusinessImpl implements UserBusiness {
   }
 
   @Override
-  public List<Borrow> checkeUserBorrowedBook(String username) {
-    User targetUser = userDao.getOne(username);
-    return targetUser.getBorrows();
+  public List<Borrow> checkeLibraryUserBorrowedBook(String username) {
+    LibraryUser targetLibraryUser = userDao.getOne(username);
+    return targetLibraryUser.getBorrows();
   }
 }

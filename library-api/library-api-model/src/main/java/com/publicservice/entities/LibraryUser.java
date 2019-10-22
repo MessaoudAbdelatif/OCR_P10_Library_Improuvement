@@ -14,13 +14,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "user_reader")
-public class User implements Serializable {
+public class LibraryUser implements Serializable {
 
   @Id
   private String username;
