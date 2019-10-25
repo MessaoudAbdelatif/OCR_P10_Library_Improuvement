@@ -18,8 +18,7 @@ public class BookController {
 
   @GetMapping(value = "Books/{id}")
   public Book findOneBookById(@PathVariable Long id) throws BookNotFoundException {
-    Book book = bookBusiness.findOneBookById(id);
-    return book;
+    return bookBusiness.findOneBookById(id);
   }
 
 }

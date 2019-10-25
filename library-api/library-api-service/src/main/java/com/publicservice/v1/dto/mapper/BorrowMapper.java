@@ -9,12 +9,12 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface BorrowMapper {
 
-//  @Mapping(target = "userID", source = "userID")
-////  @Mapping(target = "bookID", source = "book.id")
-//  BorrowDto toBorrowDto(Borrow borrow);
-//
-//  @Mapping(target = "username",source ="userID" )
-////  @Mapping(target = "book.id", source = "bookID")
-//  Borrow toBorrow(BorrowDto borrowDto);
+  @Mapping(target = "username", source = "userID.username")
+  @Mapping(target = "bookId", source = "bookID.id")
+  BorrowDto toBorrowDto(Borrow borrow);
+
+  @Mapping(target = "userID.username",source ="username" )
+  @Mapping(target = "bookID.id", source = "bookId")
+  Borrow toBorrow(BorrowDto borrowDto);
 
 }

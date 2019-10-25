@@ -59,6 +59,7 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     Date calculatedEndDate = dateEnd.toDate();
     newBorrow.setDateEnd(calculatedEndDate);
     newBorrow.setExtraTime(false);
+    borrowDao.save(newBorrow);
 
     return newBorrow;
   }

@@ -8,7 +8,7 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface LibraryUserMapper {
 
-  LibraryUserDto toUserDto(LibraryUser libraryUser);
+  LibraryUserDto toLibraryUserDto(LibraryUser libraryUser);
 
-  LibraryUser toUser(LibraryUserDto libraryUserDto);
+  LibraryUser toLibraryUser(LibraryUserDto libraryUserDto);
 }
