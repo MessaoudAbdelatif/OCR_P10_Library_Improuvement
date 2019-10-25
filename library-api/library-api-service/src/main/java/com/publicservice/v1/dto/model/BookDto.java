@@ -20,4 +20,5 @@ public class BookDto {
   protected String coverPicUrl;
   protected Long library;
   protected List<Borrow> borrows;
+  protected Long stock;
 }
