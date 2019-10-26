@@ -4,6 +4,8 @@ import com.publicservice.business.contract.BorrowBusiness;
 import com.publicservice.business.exception.BorrowNotFoundException;
 import com.publicservice.business.exception.ExtraTimeNotAllowed;
 import com.publicservice.entities.Borrow;
+import com.publicservice.v1.dto.mapper.BorrowMapper;
+import com.publicservice.v1.dto.model.BorrowDto;
 import java.text.ParseException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,9 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class BorrowController {
 
   private BorrowBusiness borrowBusiness;
+  private BorrowMapper borrowMapper;
 
-  public BorrowController(BorrowBusiness borrowBusiness) {
+
+  public BorrowController(BorrowBusiness borrowBusiness,
+      BorrowMapper borrowMapper) {
     this.borrowBusiness = borrowBusiness;
+    this.borrowMapper = borrowMapper;
   }
 
   @GetMapping(value = "Borrows/{id}")
@@ -31,8 +37,9 @@ public class BorrowController {
   }
 
   @PostMapping(value = "Borrows/newBorrow")
-  public Borrow createBorrow(Borrow newBorrow){
-    return borrowBusiness.createBorrow(newBorrow);
+  public Borrow createBorrow(BorrowDto newBorrowDto) {
+  Borrow borrow = borrowMapper.toBorrow(newBorrowDto);
+    return borrowBusiness.createBorrow(borrow);
   }
 
 }

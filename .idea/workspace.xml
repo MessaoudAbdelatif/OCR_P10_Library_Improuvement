@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
+    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="Dto mapping done ! 💪">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_18.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_10_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_10_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_10_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_form_feign_form_spring_3_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_60.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_60.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_2_0_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_2_0_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_2_0_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_2_0_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_2_0_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_2_0_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_2_0_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/18af436694ed426f2164fffc461f6b61d0141662" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6fae127caa2cbe6fe6b71588906d036722182690" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3f635d966c283da0384bceabd1e72670fa42746" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f34331d122a62b178ee2e2cde3d20e92f2479be6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe34d3c26a8d7a06063ab4a245d42a06509ded2e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/BookBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/BorrowBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/LibraryUserBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BookDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BookDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/library-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/library-webapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/LibraryWebappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/LibraryWebappApplication.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -158,7 +195,7 @@
       <workItem from="1571642376601" duration="110000" />
       <workItem from="1571642489909" duration="10492000" />
       <workItem from="1571671297799" duration="13785000" />
-      <workItem from="1571740141398" duration="8977000" />
+      <workItem from="1571740141398" duration="13836000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -286,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572029278908</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Dto mapping done ! 💪">
+      <created>1572044279944</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1572044279944</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
