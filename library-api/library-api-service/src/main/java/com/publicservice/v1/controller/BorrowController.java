@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BorrowController {
 
-  private BorrowBusiness borrowBusiness;
-  private BorrowMapper borrowMapper;
+  private final BorrowBusiness borrowBusiness;
+  private final BorrowMapper borrowMapper;
 
 
   public BorrowController(BorrowBusiness borrowBusiness,

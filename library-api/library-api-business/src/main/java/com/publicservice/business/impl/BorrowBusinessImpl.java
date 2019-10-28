@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class BorrowBusinessImpl implements BorrowBusiness {
 
-  private BorrowDao borrowDao;
+  private final BorrowDao borrowDao;
 
   public BorrowBusinessImpl(BorrowDao borrowDao) {
     this.borrowDao = borrowDao;

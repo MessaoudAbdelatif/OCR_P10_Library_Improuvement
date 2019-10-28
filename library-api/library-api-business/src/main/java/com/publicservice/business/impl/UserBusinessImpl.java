@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Transactional
 public class UserBusinessImpl implements UserBusiness {
 
-  private UserDao userDao;
+  private final UserDao userDao;
 
   public UserBusinessImpl(UserDao userDao) {
     this.userDao = userDao;

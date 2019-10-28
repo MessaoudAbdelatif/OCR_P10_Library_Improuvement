@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class BookBusinessImpl implements BookBusiness {
 
 
-  private BookDao bookDao;
+  private final BookDao bookDao;
 
   public BookBusinessImpl(BookDao bookDao) {
     this.bookDao = bookDao;
