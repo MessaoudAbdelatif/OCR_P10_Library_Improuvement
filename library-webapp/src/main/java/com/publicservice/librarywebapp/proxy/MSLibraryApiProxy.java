@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.data.domain.Page;
+
 
 @FeignClient(name = "MicroService-LibraryApiService", url = "localhost:9090")
 public interface MSLibraryApiProxy {
@@ -26,5 +28,9 @@ public interface MSLibraryApiProxy {
 
   @GetMapping(value = "Users/{username}")
   List<BorrowDto> checkeLibraryUserBorrowedBook(@PathVariable("username") String username);
+
+  @GetMapping(value = "/Books/search/{numPage}/{size}/{keyword}/{kindOfSearch}")
+   Page<BookDto> lookingForABook(@PathVariable("numPage") int numPage, @PathVariable("size") int size,
+      @PathVariable("keyword") String keyword, @PathVariable("kindOfSearch") String kindOfSearch);
 
   }

@@ -53,8 +53,8 @@ public class Book implements Serializable {
   @JoinColumn(name = "library_id")
   private Library library;
 
-  @OneToMany(mappedBy = "bookID", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-  private List<Borrow> borrows;
+  @OneToOne(cascade = CascadeType.ALL)
+  private Borrow borrow;
 
   @OneToOne(cascade = CascadeType.ALL)
   private Stock stockId;

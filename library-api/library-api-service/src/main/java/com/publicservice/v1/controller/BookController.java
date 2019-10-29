@@ -30,11 +30,12 @@ public class BookController {
     return bookMapper.toBookDto(book);
   }
 
-  @GetMapping(value = "/serche/{numPage}/{size}/{keyword}/{kindOfSerche}")
-  public Page<Book> lookingForABook(@PathVariable int numPage, @PathVariable int size,
+  @GetMapping(value = "/search/{numPage}/{size}/{keyword}/{kindOfSearch}")
+  public Page<BookDto> lookingForABook(@PathVariable int numPage, @PathVariable int size,
       @PathVariable String keyword, @PathVariable String kindOfSearch) {
-    /** TODO */
-    return null;
+    Page<Book> books = bookBusiness.lookingForABook(numPage, size, keyword, kindOfSearch);
+    return books.map(bookMapper::toBookDto);
+
   }
 
 }

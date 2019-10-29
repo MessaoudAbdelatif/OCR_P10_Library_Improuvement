@@ -19,6 +19,6 @@ public class BorrowController {
       String username = "messaoud";
       List<BorrowDto> borrowDtos =  msLibraryApiProxy.checkeLibraryUserBorrowedBook(username);
       model.addAttribute(borrowDtos);
-      return "views/Accueil";
+      return "views/Index";
     }
 }

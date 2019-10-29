@@ -2,7 +2,6 @@ package com.publicservice.v1.dto.model;
 
 import com.publicservice.entities.Borrow;
 import java.util.Date;
-import java.util.List;
 import lombok.Data;
 
 
@@ -19,6 +18,6 @@ public class BookDto {
   protected String language;
   protected String coverPicUrl;
   protected Long library;
-  protected List<Borrow> borrows;
+  protected Borrow borrow;
   protected Long stock;
 }
