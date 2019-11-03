@@ -56,33 +56,33 @@
             <!--          </th>-->
           </tr>
         </table>
-
-        <div class="container" th:if="${nbrPagesTotal>1}">
-          <ul class="pagination justify-content-center ">
-            <li class="page-item">
-              <a class="page-link "
-                 th:href="@{/Books(page=(${currentPage}-1),keyword=${keyword},kindOfSearch=${kindOfSearch})}"
-                 aria-label="Previous" th:if="${currentPage>0}">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-
-            <li class="page-item" th:classappend="${currentPage==status.index}?'active':''"
-                th:each="numPages,status:${pages}">
-              <a class="page-link "
-                 th:href="@{/Books(page=${status.index},keyword=${keyword},kindOfSearch=${kindOfSearch})}"
-                 th:text="${status.index}"></a>
-            </li>
-            <li class="page-item">
-              <a class="page-link"
-                 th:href="@{/Books(page=(${currentPage}+1),keyword=${keyword},kindOfSearch=${kindOfSearch})}"
-                 aria-label="Next" th:if="${bookDto.size()>1}">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </div>
       </div>
+    </div>
+
+    <div class="container" th:if="${nbrPagesTotal>1}">
+      <ul class="pagination justify-content-center ">
+        <li class="page-item">
+          <a class="page-link "
+             th:href="@{/Books(page=(${currentPage}-1),keyword=${keyword},kindOfSearch=${kindOfSearch})}"
+             aria-label="Previous" th:if="${currentPage>0}">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+
+        <li class="page-item" th:classappend="${currentPage==status.index}?'active':''"
+            th:each="numPages,status:${pages}">
+          <a class="page-link "
+             th:href="@{/Books(page=${status.index},keyword=${keyword},kindOfSearch=${kindOfSearch})}"
+             th:text="${status.index}"></a>
+        </li>
+        <li class="page-item">
+          <a class="page-link"
+             th:href="@{/Books(page=(${currentPage}+1),keyword=${keyword},kindOfSearch=${kindOfSearch})}"
+             aria-label="Next" th:if="${bookDto.size()>1}">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

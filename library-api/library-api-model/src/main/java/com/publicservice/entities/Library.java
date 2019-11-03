@@ -10,12 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
-
 
 @Data
 @AllArgsConstructor
@@ -27,10 +26,12 @@ public class Library implements Serializable {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @NotEmpty
+  @NotNull
+  @Size(max = 50, min = 2)
   private String name;
 
-  @NotEmpty
+  @NotNull
+  @Size(max = 100)
   private String address;
 
   @Email
@@ -38,5 +39,4 @@ public class Library implements Serializable {
 
   @OneToMany(mappedBy = "library", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   private List<Book> books;
-
 }

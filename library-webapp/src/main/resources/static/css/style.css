@@ -68,7 +68,7 @@ tr{
 }
 
 #menuText {
-  font-family: 'Chewy', cursive;
+  font-family: 'Roboto', cursive;
   font-size: larger;
 }
 .shadow-textarea textarea.form-control::placeholder {
@@ -79,6 +79,6 @@ tr{
 }
 
 h1,h2,h3,h4{
-  font-family: 'Chewy', cursive;
+  font-family: 'Roboto', cursive;
   font-size: larger;
 }
