@@ -26,8 +26,8 @@ public class BorrowController {
   }
 
   @GetMapping(value = "Borrows/{id}")
-  public Borrow findBorrowById(@PathVariable Long id) throws BorrowNotFoundException {
-    return borrowBusiness.findBorrowById(id);
+  public BorrowDto findBorrowById(@PathVariable Long id) throws BorrowNotFoundException {
+    return borrowMapper.toBorrowDto(borrowBusiness.findBorrowById(id));
   }
 
   @PostMapping(value = "Borrows/{id}/addExtraTime")

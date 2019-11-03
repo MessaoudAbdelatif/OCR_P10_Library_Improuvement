@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout">
+
+<div layout:fragment="content1">
+  <div class="container mt-5 ml-md-5 col-md-7 col-sm-12">
+    <div class="shadow card bg-light">
+
+      <div class="card-header h4 text-dark text-center">Library</div>
+      <div class=" p-3">
+        <form th:action="@{/Books}" method="get">
+          <label>Looking For A Book ?</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="keyword" th:value="${keyword}"
+                   placeholder="keyword..." aria-label="keyword"
+                   aria-describedby="button-addon2"
+                   id="keyword" autofocus="autofocus">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit" id="button-addon2"><i
+                  class="fas fa-search"></i> Search
+              </button>
+            </div>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="NAME" type="radio" name="kindOfSearch" value="NAME"
+                   checked="checked"><label class="form-check-label" for="NAME">Name</label></div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="AUTHOR" type="radio" name="kindOfSearch"
+                   value="AUTHOR"
+            ><label class="form-check-label" for="AUTHOR">Author</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" id="PUBLISHER" type="radio" name="kindOfSearch"
+                   value="PUBLISHER"
+            ><label class="form-check-label" for="PUBLISHER">Publisher</label></div>
+        </form>
+        <!--      </div>-->
+        <!--      <div class="text-danger p-3" th:if="${bookDto.isEmpty()}">Book Not Found !!-->
+        <!--      </div>-->
+        <table class="table table-hover">
+          <tr class="card-header">
+            <th>Name</th>
+            <th>Author</th>
+            <th>Publisher</th>
+          </tr>
+          <tr th:each="bDto:${bookDto}">
+            <th th:text="${bDto.name}"></th>
+            <th th:text="${bDto.author}"></th>
+            <th th:text="${bDto.publisher}"></th>
+            <!--          <th class="text-center"><a class="btn btn-primary"-->
+            <!--                                     th:href="@{/viewBook(id=${bDto.id})}"><i-->
+            <!--              class="fas fa-check"></i>View détails</a></th>-->
+            <!--          </th>-->
+          </tr>
+        </table>
+
+        <div class="container" th:if="${nbrPagesTotal>1}">
+          <ul class="pagination justify-content-center ">
+            <li class="page-item">
+              <a class="page-link "
+                 th:href="@{/Books(page=(${currentPage}-1),keyword=${keyword},kindOfSearch=${kindOfSearch})}"
+                 aria-label="Previous" th:if="${currentPage>0}">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+
+            <li class="page-item" th:classappend="${currentPage==status.index}?'active':''"
+                th:each="numPages,status:${pages}">
+              <a class="page-link "
+                 th:href="@{/Books(page=${status.index},keyword=${keyword},kindOfSearch=${kindOfSearch})}"
+                 th:text="${status.index}"></a>
+            </li>
+            <li class="page-item">
+              <a class="page-link"
+                 th:href="@{/Books(page=(${currentPage}+1),keyword=${keyword},kindOfSearch=${kindOfSearch})}"
+                 aria-label="Next" th:if="${bookDto.size()>1}">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>

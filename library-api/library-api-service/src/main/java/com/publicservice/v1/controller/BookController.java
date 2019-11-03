@@ -5,11 +5,16 @@ import com.publicservice.business.exception.BookNotFoundException;
 import com.publicservice.entities.Book;
 import com.publicservice.v1.dto.mapper.BookMapper;
 import com.publicservice.v1.dto.model.BookDto;
+import com.publicservice.v1.dto.model.BookPageDto;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
 @RequestMapping("/Books")
@@ -22,19 +27,34 @@ public class BookController {
       BookMapper bookMapper) {
     this.bookBusiness = bookBusiness;
     this.bookMapper = bookMapper;
+
   }
 
   @GetMapping(value = "/{id}")
   public BookDto findOneBookById(@PathVariable Long id) throws BookNotFoundException {
     Book book = bookBusiness.findOneBookById(id);
+
     return bookMapper.toBookDto(book);
   }
 
-  @GetMapping(value = "/search/{numPage}/{size}/{keyword}/{kindOfSearch}")
-  public Page<BookDto> lookingForABook(@PathVariable int numPage, @PathVariable int size,
-      @PathVariable String keyword, @PathVariable String kindOfSearch) {
-    Page<Book> books = bookBusiness.lookingForABook(numPage, size, keyword, kindOfSearch);
-    return books.map(bookMapper::toBookDto);
+  @GetMapping(value = "/search")
+  public BookPageDto lookingForABook(@RequestParam(value = "page",defaultValue = "0") int numPage, @RequestParam(value = "size", defaultValue = "5") int size,
+      @RequestParam(value = "keyword", defaultValue = "") String keyword, @RequestParam(value = "kindOfSearch", defaultValue = "NAME") String kindOfSearch) {
+    Page<Book> booksUnderPage = bookBusiness.lookingForABook(numPage, size, keyword, kindOfSearch);
+    List<Book> booksUnderList = booksUnderPage.getContent();
+    BookPageDto bookPageDto = new BookPageDto();
+    bookPageDto.setBooksDto(booksUnderList
+        .stream()
+        .map(bookMapper::toBookDto)
+        .collect(Collectors.toList()));
+    bookPageDto.setSize(size);
+    bookPageDto.setKeyword(keyword);
+    bookPageDto.setKindOfSearch(kindOfSearch);
+    bookPageDto.setPage(numPage);
+    bookPageDto.setTotalPages(new int[booksUnderPage.getTotalPages()]);
+    bookPageDto.setNbrTotalPages(new int[booksUnderPage.getTotalPages()].length);
+
+    return bookPageDto;
 
   }
 

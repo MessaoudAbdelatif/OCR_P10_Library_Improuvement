@@ -2,18 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/Books.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b35b394eca0a440a5b4b63f0de6b9b9fa7c7122" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/335357faea6282646e36233fe5a08b9541d4763b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5bfef229c50a2bb89ef8f65d1fd9bd987f4f4653" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7faaab32949c8c4a77358b2822f0ef7854a5bf2c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9249e3dec4420448cc232668f9d48f3a1e620033" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95f8ffbb429d6da97840a6b603df2b248df59ced" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0c1864dec4c23e40a7f8cec0d629be47682faad" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac70ccd9dd9c97251e4b0ada7fdad0808236e516" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6d2b84bca6a35f032e95566d231d4d90031e411" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cc18a159733eac11caf2dd466568f79ab6491661" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4b79f02621f4ed5f3f813104cd3f1c4e91ec788" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea7c31a601aa3fe1154f13fe910fbd09cbde695d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa25edd0f2d2fb3d1f59a57fbdc2880e56a41d3f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BookPageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/BookPageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/configuration/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/029938a3fa623444516a18f9f5dc4eb2c68c2bd5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/029938a3fa623444516a18f9f5dc4eb2c68c2bd5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6fae127caa2cbe6fe6b71588906d036722182690" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6fae127caa2cbe6fe6b71588906d036722182690" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3f635d966c283da0384bceabd1e72670fa42746" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3f635d966c283da0384bceabd1e72670fa42746" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa272527126f7f1ee9d3cd8fbc4ee465188551a3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa272527126f7f1ee9d3cd8fbc4ee465188551a3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BookDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BookDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/library-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/library-webapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BorrowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/Books.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/books.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,12 +39,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -69,7 +90,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -109,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Libraryapiapplication">
+  <component name="RunManager" selected="Spring Boot.LibraryWebappApplication">
     <configuration name="static.img.css in library-webapp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-webapp" />
       <extension name="coverage">
@@ -154,17 +175,17 @@
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
-        <option name="contentProportion" value="0.13845322" />
+        <option name="contentProportion" value="0.1684276" />
         <treeState>
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@26a39daa" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@66655b77" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@26a39daa" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8d57be3d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@66655b77" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@67528529" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -192,7 +213,8 @@
       <workItem from="1571642376601" duration="110000" />
       <workItem from="1571642489909" duration="10492000" />
       <workItem from="1571671297799" duration="13785000" />
-      <workItem from="1571740141398" duration="39282000" />
+      <workItem from="1571740141398" duration="56213000" />
+      <workItem from="1572479229416" duration="13593000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -341,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572296466704</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="books.html">
+      <created>1572317227596</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1572317227596</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +409,8 @@
     <MESSAGE value="Dto mapping done ! " />
     <MESSAGE value="setting up library-webapp :&#10; -adding proxies as client of library api" />
     <MESSAGE value="libraryWebApp consume the libraryApi service and display it on the index page&#10;used stream to map all the list of borrow into borrowDTO&#10;then expose the dto list !  " />
-    <option name="LAST_COMMIT_MESSAGE" value="libraryWebApp consume the libraryApi service and display it on the index page&#10;used stream to map all the list of borrow into borrowDTO&#10;then expose the dto list !  " />
+    <MESSAGE value="books.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="books.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -393,29 +423,15 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java</url>
           <line>25</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BookBusinessImpl.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BookController.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BookController.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="((Book)((java.util.ArrayList)((PageImpl)books).content).get(0)).library" custom="org.springframework.data.domain.PageImpl,java.util.ArrayList,com.publicservice.entities.Book" />
+        <watch expression="this.h" custom="java.lang.reflect.Proxy" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

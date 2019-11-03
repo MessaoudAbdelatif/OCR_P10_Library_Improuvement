@@ -1,0 +1,17 @@
+
+CWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(Ñçë€
+IWeb:AvoidCommentedOutCodeCheck("Remove this commented out code.(‹ü­½
+NWeb:AvoidCommentedOutCodeCheck)"Remove this commented out code.(å„’Àøÿÿÿÿ
+IWeb:AvoidCommentedOutCodeCheck*"Remove this commented out code.(‹ü­½
+MWeb:TableWithoutCaptionCheck+" Add a description to this table.(­ã’Òÿÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheck-";Add either an 'id' or a 'scope' attribute to this <th> tag.(Ûéú»ÿÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheck.";Add either an 'id' or a 'scope' attribute to this <th> tag.(²±µ›
+l Web:TableHeaderHasIdOrScopeCheck/";Add either an 'id' or a 'scope' attribute to this <th> tag.(°„×ÿûÿÿÿÿ
+g Web:TableHeaderHasIdOrScopeCheck2";Add either an 'id' or a 'scope' attribute to this <th> tag.(ðßÃ‚
+l Web:TableHeaderHasIdOrScopeCheck3";Add either an 'id' or a 'scope' attribute to this <th> tag.(‹Û—Òûÿÿÿÿ
+l Web:TableHeaderHasIdOrScopeCheck4";Add either an 'id' or a 'scope' attribute to this <th> tag.(©Ð¶äÿÿÿÿÿ
+NWeb:AvoidCommentedOutCodeCheck5"Remove this commented out code.(´ß±¾øÿÿÿÿ
+IWeb:AvoidCommentedOutCodeCheck6"Remove this commented out code.(€â¶‚
+NWeb:AvoidCommentedOutCodeCheck7"Remove this commented out code.(ƒ¶Æðÿÿÿÿÿ
+IWeb:AvoidCommentedOutCodeCheck8"Remove this commented out code.(åûåÐ
+IWeb:PageWithoutTitleCheck"Add a <title> tag to this page.(¸¢‹…úÿÿÿÿ
