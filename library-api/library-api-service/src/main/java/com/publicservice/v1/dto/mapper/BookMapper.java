@@ -10,10 +10,10 @@ import org.mapstruct.Mapping;
 public interface BookMapper {
 
   @Mapping(target = "library.id", source = "library")
-  @Mapping(target = "stockId.stockId", source = "stock")
+  @Mapping(target = "stock.id", source = "stock")
   Book toBook(BookDto bookDto);
 
   @Mapping(target = "library", source = "library.id")
-  @Mapping(target = "stock", source = "stockId.stockId")
+  @Mapping(target = "stock", source = "stock.id")
   BookDto toBookDto(Book book);
 }

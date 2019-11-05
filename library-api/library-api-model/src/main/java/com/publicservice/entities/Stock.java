@@ -18,7 +18,7 @@ public class Stock implements Serializable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long stockId;
+  private Long id;
 
   private Book book;
   private Integer available;

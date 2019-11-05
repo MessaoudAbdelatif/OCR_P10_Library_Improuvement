@@ -40,4 +40,7 @@ public class Borrow implements Serializable {
 
   @NotNull
   private Boolean extraTime;
+
+  @NotNull
+  private Boolean closed;
 }

@@ -58,6 +58,7 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     DateTime dateEnd = dateStart.plusDays(initialTime);
     Date calculatedEndDate = dateEnd.toDate();
     newBorrow.setDateEnd(calculatedEndDate);
+    newBorrow.setClosed(false);
     newBorrow.setExtraTime(false);
     borrowDao.save(newBorrow);
 
@@ -65,8 +66,9 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   }
 
   @Override
-  public void deleteBorrow(Long id) {
-    borrowDao.deleteById(id);
-
+  public void closeBorrow(Long id) {
+    Borrow borrow = borrowDao.getOne(id);
+    borrow.setClosed(true);
+    borrowDao.save(borrow);
   }
 }

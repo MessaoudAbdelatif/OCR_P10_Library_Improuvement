@@ -12,4 +12,5 @@ public class BorrowDto {
     protected Date dateStart;
     protected Date dateEnd;
     protected Boolean extraTime;
+    protected Boolean closed;
 }

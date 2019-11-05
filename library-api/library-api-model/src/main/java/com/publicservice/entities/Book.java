@@ -55,5 +55,5 @@ public class Book implements Serializable {
   private Borrow borrow;
 
   @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-  private Stock stockId;
+  private Stock stock;
 }

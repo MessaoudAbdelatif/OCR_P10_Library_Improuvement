@@ -39,6 +39,6 @@ public interface BorrowBusiness {
    *
    * @param id is the borrow entity id.
    */
-  void deleteBorrow(Long id);
+  void closeBorrow(Long id);
 
 }
