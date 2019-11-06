@@ -13,12 +13,13 @@
       </div>
       <div class="p-2 card-body list-group">
         <table class="table table-hover">
+          <thead th:text="${User.username}"></thead>
           <tr class="card-header">
             <th>NOM</th>
             <th>LIEU</th>
             <th></th>
           </tr>
-          <tr th:each="borrow : ${borrowDtoList}">
+          <tr th:each="borrow : ${listOfBorrows}">
             <th class="list-inline" th:text="${borrow.bookId}">
             <th class="list-inline" th:text="${borrow.dateStart}">
             </th>

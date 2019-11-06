@@ -1,6 +1,7 @@
 package com.publicservice.business.impl;
 
 import com.publicservice.business.contract.UserBusiness;
+import com.publicservice.business.exception.LibraryUserNotFoundException;
 import com.publicservice.consumer.UserDao;
 import com.publicservice.entities.Borrow;
 import com.publicservice.entities.LibraryUser;
@@ -19,8 +20,19 @@ public class UserBusinessImpl implements UserBusiness {
   }
 
   @Override
-  public List<Borrow> checkeLibraryUserBorrowedBook(String username) {
-    LibraryUser targetLibraryUser = userDao.getOne(username);
+  public List<Borrow> checkeLibraryUserBorrowedBook(String username)
+      throws LibraryUserNotFoundException {
+    LibraryUser targetLibraryUser = oneLibraryUser(username);
     return targetLibraryUser.getBorrows();
+  }
+
+  @Override
+  public LibraryUser oneLibraryUser(String username) throws LibraryUserNotFoundException {
+    LibraryUser libraryUser = userDao.getOne(username);
+    if (libraryUser == null) {
+      throw new LibraryUserNotFoundException("can't find User");
+    } else {
+      return libraryUser;
+    }
   }
 }

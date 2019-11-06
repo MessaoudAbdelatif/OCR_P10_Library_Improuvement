@@ -137,3 +137,15 @@ Ylibrary-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApi
 Rlibrary-webapp/src/main/java/com/publicservice/librarywebapp/bean/BookPageDto.java,1/1/11db5032837d764f455d32435555ce15b2761f3a
 
 ]library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BookPageDto.java,5/a/5a8dab25622b93b0f43dd3c0a7dbf1e06edb5f36
+
+Olibrary-webapp/src/main/java/com/publicservice/librarywebapp/bean/StockDto.java,c/6/c646b6947c0be497e11196cce0a98f26475adee4
+Ž
+^library-api/library-api-service/src/main/java/com/publicservice/v1/dto/mapper/StockMapper.java,c/e/ceb690775b4a0b7f804ad1acfdb24f9c121ffa32
+Š
+Zlibrary-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/StockDto.java,6/c/6ced37e349317646b23902544edf0a4fa96baed3
+s
+Clibrary-webapp/src/main/resources/templates/views/booksDetails.html,1/0/103ed3980dedddb62c7f97337faba1af336c97d0
+n
+>library-webapp/src/main/resources/templates/views/Borrows.html,1/e/1e392c9ca25b1733cf5363d9652abe704469f43e
+¥
+ulibrary-api/library-api-business/src/main/java/com/publicservice/business/exception/LibraryUserNotFoundException.java,d/b/db8fe91a75fe6ff5e807ded59f9ebe55b506b85f

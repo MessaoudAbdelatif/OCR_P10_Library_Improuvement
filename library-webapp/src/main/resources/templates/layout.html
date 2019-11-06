@@ -48,16 +48,16 @@
 
         <li class="nav-item">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            connection
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
+            Connection
           </a>
           <!-- Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
           <div class="dropdown-menu dropdown-menu-right animate slideIn"
                aria-labelledby="navbarDropdown">
             <div th:if="${#httpServletRequest.remoteUser}">
               <h1 class="dropdown-item" th:inline="text">Hi
-                [[${#httpServletRequest.remoteUser}]] <i class="fas fa-hiking"></i></h1>
-              <a th:href="@{/user/espacePerso/{username}(username=${#httpServletRequest.remoteUser})}"><h1 class=" dropdown-item"><i class="fas fa-address-book"></i>Check my borrows</h1></a>
+                [[${#httpServletRequest.remoteUser}]] <i class="fas fa-list"></i></h1>
+              <a th:href="@{/Borrows/{username}(username=${#httpServletRequest.remoteUser})}"><h1 class=" dropdown-item"><i class="fas fa-address-book"></i>Check my borrows</h1></a>
               <form class="dropdown-item-text" th:action="@{/logout}" method="post">
                 <input class=" alert-info" type="submit" value="logout"/>
               </form>
