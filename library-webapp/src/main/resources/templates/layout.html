@@ -23,9 +23,9 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="/index"><img th:class="figure-img"
                                                th:src="@{/img/logo.png}"
-                                               width="85" height="50"
+                                               width="35" height="20"
                                                class="d-inline-block align-top"
-                                               alt="LES AMIS DE L'ESCALADE">PUBLIC SERVICE LIBRARY</a>
+                                               alt="PUBLIC SERVICE LIBRARY">PUBLIC SERVICE LIBRARY</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -37,41 +37,34 @@
         <li class="nav-item">
           <a class="nav-link" th:href="@{/index}" id="navbarLink1" role="button"
              aria-haspopup="true" aria-expanded="false">
-            Accueil
+            Home
           </a>
         <li class="nav-item">
-          <a class="nav-link" th:href="@{/siteEscalade}" id="navbarLink2" role="button"
+          <a class="nav-link" th:href="@{/Books}" id="navbarLink2" role="button"
              aria-haspopup="true" aria-expanded="false">
-            Nos Sites d'escalades
+            Our Books
           </a>
-
-        <li class="nav-item">
-          <a class="nav-link" th:href="@{/user/topos}" id="navbarLink3" role="button"
-             aria-haspopup="true" aria-expanded="false">
-            Nos Topos
-          </a>
-
 
 
         <li class="nav-item">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            S'Identifier
+            connection
           </a>
           <!-- Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
           <div class="dropdown-menu dropdown-menu-right animate slideIn"
                aria-labelledby="navbarDropdown">
             <div th:if="${#httpServletRequest.remoteUser}">
-              <h1 class="dropdown-item" th:inline="text">Coucou
+              <h1 class="dropdown-item" th:inline="text">Hi
                 [[${#httpServletRequest.remoteUser}]] <i class="fas fa-hiking"></i></h1>
-              <a th:href="@{/user/espacePerso/{username}(username=${#httpServletRequest.remoteUser})}"><h1 class=" dropdown-item"><i class="fas fa-address-book"></i> Accèder à Mon Espace</h1></a>
+              <a th:href="@{/user/espacePerso/{username}(username=${#httpServletRequest.remoteUser})}"><h1 class=" dropdown-item"><i class="fas fa-address-book"></i>Check my borrows</h1></a>
               <form class="dropdown-item-text" th:action="@{/logout}" method="post">
-                <input class=" alert-info" type="submit" value="Se déconnecté"/>
+                <input class=" alert-info" type="submit" value="logout"/>
               </form>
             </div>
-            <a class="dropdown-item" th:href="@{/registration}">S'inscrire</a>
+            <a class="dropdown-item" th:href="@{/registration}">Sign-Up</a>
             <div th:if="!${#httpServletRequest.remoteUser}">
-              <a class="dropdown-item" th:href="@{/login}">Se connecter</a>
+              <a class="dropdown-item" th:href="@{/login}">Sign-In</a>
             </div>
           </div>
         </li>

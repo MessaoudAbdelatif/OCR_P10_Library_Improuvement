@@ -1,10 +1,13 @@
 package com.publicservice.librarywebapp.controller;
 
+import com.publicservice.librarywebapp.bean.BookDto;
 import com.publicservice.librarywebapp.bean.BookPageDto;
+import com.publicservice.librarywebapp.bean.StockDto;
 import com.publicservice.librarywebapp.proxy.MSLibraryApiProxy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -36,6 +39,16 @@ public class BookController {
     }
     return "views/books";
   }
+
+  @GetMapping("/Books/{id}")
+    public String bookDetails(Model model, @PathVariable("id") Long id){
+    BookDto bookDto = msLibraryApiProxy.findOneBookById(id);
+    StockDto stockDto = msLibraryApiProxy.findStockByBookId(id);
+    model.addAttribute("book", bookDto);
+    model.addAttribute("stock", stockDto);
+    return "views/booksDetails";
+    }
+
 
 
 }

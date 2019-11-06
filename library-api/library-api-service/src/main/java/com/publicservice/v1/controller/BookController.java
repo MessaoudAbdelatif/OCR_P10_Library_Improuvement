@@ -4,8 +4,10 @@ import com.publicservice.business.contract.BookBusiness;
 import com.publicservice.business.exception.BookNotFoundException;
 import com.publicservice.entities.Book;
 import com.publicservice.v1.dto.mapper.BookMapper;
+import com.publicservice.v1.dto.mapper.StockMapper;
 import com.publicservice.v1.dto.model.BookDto;
 import com.publicservice.v1.dto.model.BookPageDto;
+import com.publicservice.v1.dto.model.StockDto;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.data.domain.Page;
@@ -22,12 +24,14 @@ public class BookController {
 
   private final BookBusiness bookBusiness;
   private final BookMapper bookMapper;
+  private final StockMapper stockMapper;
 
   public BookController(BookBusiness bookBusiness,
-      BookMapper bookMapper) {
+      BookMapper bookMapper, StockMapper stockMapper) {
     this.bookBusiness = bookBusiness;
     this.bookMapper = bookMapper;
 
+    this.stockMapper = stockMapper;
   }
 
   @GetMapping(value = "/{id}")
@@ -37,9 +41,16 @@ public class BookController {
     return bookMapper.toBookDto(book);
   }
 
+  @GetMapping(value = "{id}/Stocks")
+  public StockDto findStockByBookId(@PathVariable Long id) throws BookNotFoundException {
+    return stockMapper.toStockDto(bookBusiness.findStockByBookId(id));
+  }
+
   @GetMapping(value = "/search")
-  public BookPageDto lookingForABook(@RequestParam(value = "page",defaultValue = "0") int numPage, @RequestParam(value = "size", defaultValue = "5") int size,
-      @RequestParam(value = "keyword", defaultValue = "") String keyword, @RequestParam(value = "kindOfSearch", defaultValue = "NAME") String kindOfSearch) {
+  public BookPageDto lookingForABook(@RequestParam(value = "page", defaultValue = "0") int numPage,
+      @RequestParam(value = "size", defaultValue = "5") int size,
+      @RequestParam(value = "keyword", defaultValue = "") String keyword,
+      @RequestParam(value = "kindOfSearch", defaultValue = "NAME") String kindOfSearch) {
     Page<Book> booksUnderPage = bookBusiness.lookingForABook(numPage, size, keyword, kindOfSearch);
     List<Book> booksUnderList = booksUnderPage.getContent();
     BookPageDto bookPageDto = new BookPageDto();

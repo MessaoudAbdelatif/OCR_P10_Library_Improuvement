@@ -50,10 +50,10 @@
             <th th:text="${bDto.name}"></th>
             <th th:text="${bDto.author}"></th>
             <th th:text="${bDto.publisher}"></th>
-            <!--          <th class="text-center"><a class="btn btn-primary"-->
-            <!--                                     th:href="@{/viewBook(id=${bDto.id})}"><i-->
-            <!--              class="fas fa-check"></i>View détails</a></th>-->
-            <!--          </th>-->
+                      <th class="text-center"><a class="btn btn-primary"
+                                                 th:href="@{/Books/{id}(id=${bDto.id})}"><i
+                          class="fas fa-book"></i> View details</a></th>
+                      </th>
           </tr>
         </table>
       </div>

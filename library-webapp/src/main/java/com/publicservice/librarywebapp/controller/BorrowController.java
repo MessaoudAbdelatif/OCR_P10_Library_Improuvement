@@ -17,11 +17,18 @@ public class BorrowController {
     this.msLibraryApiProxy = msLibraryApiProxy;
   }
 
-  @GetMapping(value = "/")
-    public String index(Model model){
-      String username = "messaoud";
+  @GetMapping(value = {"/", "/index", "/home"})
+    public String index(){
+    return "views/Index";
+
+    }
+
+    @GetMapping(value = "/Borrows")
+  public String borrows(Model model){
+      String username = "john33";
       List<BorrowDto> borrowDtos =  msLibraryApiProxy.checkeLibraryUserBorrowedBook(username);
       model.addAttribute(borrowDtos);
-      return "views/Index";
+      return "views/Borrows";
+
     }
 }

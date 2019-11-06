@@ -2,17 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/mapper/StockMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/StockDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/StockDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/Borrows.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/booksDetails.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_0_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/763754597ae54213e32c879b025355e6a6267dd7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/763754597ae54213e32c879b025355e6a6267dd7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9249e3dec4420448cc232668f9d48f3a1e620033" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9249e3dec4420448cc232668f9d48f3a1e620033" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa25edd0f2d2fb3d1f59a57fbdc2880e56a41d3f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa25edd0f2d2fb3d1f59a57fbdc2880e56a41d3f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa272527126f7f1ee9d3cd8fbc4ee465188551a3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/a/fa272527126f7f1ee9d3cd8fbc4ee465188551a3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BorrowBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BookBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BookBusinessImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/LibraryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/LibraryUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BorrowDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BorrowDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/LibraryUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/LibraryUserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-webapp/library-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/library-webapp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/configuration/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/books.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/books.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +51,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -71,7 +95,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.RegExp" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -111,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Libraryapiapplication">
+  <component name="RunManager" selected="Spring Boot.LibraryWebappApplication">
     <configuration name="static.img.css in library-webapp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-webapp" />
       <extension name="coverage">
@@ -195,7 +219,8 @@
       <workItem from="1571642489909" duration="10492000" />
       <workItem from="1571671297799" duration="13785000" />
       <workItem from="1571740141398" duration="56213000" />
-      <workItem from="1572479229416" duration="18178000" />
+      <workItem from="1572479229416" duration="23417000" />
+      <workItem from="1572993679945" duration="5677000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -365,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572791482867</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="set borrow closed">
+      <created>1572958111375</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1572958111375</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +439,8 @@
     <MESSAGE value="books.html" />
     <MESSAGE value="book search pagination done" />
     <MESSAGE value="fix bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bug" />
+    <MESSAGE value="set borrow closed" />
+    <option name="LAST_COMMIT_MESSAGE" value="set borrow closed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,7 +452,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java</url>
-          <line>25</line>
+          <line>28</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>

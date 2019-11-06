@@ -13,6 +13,7 @@ public class LibraryUserDto {
   protected String firstname;
   protected String password;
   protected String address;
+  private String zipCode;
   protected String email;
   protected Date creationDate;
   protected Boolean active;

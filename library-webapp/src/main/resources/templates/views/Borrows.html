@@ -9,12 +9,21 @@
   <div class="container mt-5 ml-md-5 col-md-6">
     <div class="shadow card bg-light">
       <div class="card-header h4 text-primary text-center">
-        <div>Welcome !!</div>
+        <div></div>
       </div>
       <div class="p-2 card-body list-group">
-        <p>
-      Welcome to your public service library you can check for your specific book or check the borrowed ones already !
-        </p>
+        <table class="table table-hover">
+          <tr class="card-header">
+            <th>NOM</th>
+            <th>LIEU</th>
+            <th></th>
+          </tr>
+          <tr th:each="borrow : ${borrowDtoList}">
+            <th class="list-inline" th:text="${borrow.bookId}">
+            <th class="list-inline" th:text="${borrow.dateStart}">
+            </th>
+          </tr>
+        </table>
       </div>
     </div>
   </div>

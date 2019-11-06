@@ -16,6 +16,7 @@ import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.URL;
 
 @Data
 @AllArgsConstructor
@@ -44,7 +45,10 @@ public class Book implements Serializable {
   @NotNull
   private Date publicationDate;
 
+  @Size(max = 50)
   private String language;
+
+  @URL
   private String coverPicUrl;
 
   @ManyToOne

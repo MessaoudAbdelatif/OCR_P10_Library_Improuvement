@@ -3,7 +3,9 @@ package com.publicservice.business.impl;
 import com.publicservice.business.contract.BookBusiness;
 import com.publicservice.business.exception.BookNotFoundException;
 import com.publicservice.consumer.BookDao;
+import com.publicservice.consumer.StockDao;
 import com.publicservice.entities.Book;
+import com.publicservice.entities.Stock;
 import javax.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,9 +18,11 @@ public class BookBusinessImpl implements BookBusiness {
 
 
   private final BookDao bookDao;
+  private final StockDao stockDao;
 
-  public BookBusinessImpl(BookDao bookDao) {
+  public BookBusinessImpl(BookDao bookDao, StockDao stockDao) {
     this.bookDao = bookDao;
+    this.stockDao = stockDao;
   }
 
   @Override
@@ -41,5 +45,11 @@ public class BookBusinessImpl implements BookBusiness {
         return bookDao
             .findByNameContainsIgnoreCaseOrderByName(keyword, PageRequest.of(numPage, size));
     }
+  }
+
+  @Override
+  public Stock findStockByBookId(Long id) throws BookNotFoundException {
+    Book book = findOneBookById(id);
+    return book.getStock();
   }
 }

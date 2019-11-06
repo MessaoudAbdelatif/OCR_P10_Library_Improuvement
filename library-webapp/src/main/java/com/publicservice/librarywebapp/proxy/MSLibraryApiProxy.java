@@ -3,6 +3,7 @@ package com.publicservice.librarywebapp.proxy;
 import com.publicservice.librarywebapp.bean.BookDto;
 import com.publicservice.librarywebapp.bean.BookPageDto;
 import com.publicservice.librarywebapp.bean.BorrowDto;
+import com.publicservice.librarywebapp.bean.StockDto;
 import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +27,9 @@ public interface MSLibraryApiProxy {
 
   @GetMapping(value = "Books/{id}")
   BookDto findOneBookById(@PathVariable("id") Long id);
+
+  @GetMapping(value = "Books/{id}/Stocks")
+  StockDto findStockByBookId(@PathVariable("id") Long id);
 
   @GetMapping(value = "Users/{username}")
   List<BorrowDto> checkeLibraryUserBorrowedBook(@PathVariable("username") String username);

@@ -133,3 +133,7 @@ l
 [library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java,f/a/fa25edd0f2d2fb3d1f59a57fbdc2880e56a41d3f
 â
 Ylibrary-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java,7/f/7faaab32949c8c4a77358b2822f0ef7854a5bf2c
+Ç
+Rlibrary-webapp/src/main/java/com/publicservice/librarywebapp/bean/BookPageDto.java,1/1/11db5032837d764f455d32435555ce15b2761f3a
+ç
+]library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/BookPageDto.java,5/a/5a8dab25622b93b0f43dd3c0a7dbf1e06edb5f36

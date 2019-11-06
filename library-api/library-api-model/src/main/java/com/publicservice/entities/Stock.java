@@ -20,7 +20,7 @@ public class Stock implements Serializable {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private Book book;
+  //private Book book;
   private Integer available;
   private Integer outside;
   private Integer total;
