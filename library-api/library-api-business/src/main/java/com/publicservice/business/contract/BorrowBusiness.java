@@ -24,7 +24,7 @@ public interface BorrowBusiness {
    *
    * @param id is the borrowing id.
    */
-  void addExtraTime(Long id) throws BorrowNotFoundException, ParseException, ExtraTimeNotAllowed;
+  void addExtraTime(Long id, int extraTime) throws BorrowNotFoundException, ParseException, ExtraTimeNotAllowed;
 
   /**
    * When user make new borrow.
@@ -32,7 +32,7 @@ public interface BorrowBusiness {
    * @param borrow is the new borrow entity.
    * @return new Borrow instance.
    */
-  Borrow createBorrow(Borrow borrow);
+  Borrow createBorrow(Borrow borrow, int initialTime);
 
   /**
    * When user bring back a borrowed book.

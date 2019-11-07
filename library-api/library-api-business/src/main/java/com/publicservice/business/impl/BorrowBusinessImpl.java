@@ -11,14 +11,18 @@ import javax.transaction.Transactional;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
 
+
 @Service
 @Transactional
 public class BorrowBusinessImpl implements BorrowBusiness {
 
   private final BorrowDao borrowDao;
 
-  public BorrowBusinessImpl(BorrowDao borrowDao) {
+
+  public BorrowBusinessImpl(BorrowDao borrowDao
+  ) {
     this.borrowDao = borrowDao;
+
   }
 
   @Override
@@ -31,15 +35,11 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   }
 
   @Override
-  public void addExtraTime(Long id) throws BorrowNotFoundException, ExtraTimeNotAllowed {
+  public void addExtraTime(Long id, int extraTime)
+      throws BorrowNotFoundException, ExtraTimeNotAllowed {
     Borrow borrow = findBorrowById(id);
     if (!borrow.getExtraTime()) {
       DateTime dt = new DateTime(borrow.getDateEnd());
-      //  private static ResourceBundle resourceBundle = ResourceBundle.getBundle(
-      //      "WEB-INF/classes/application.properties");
-      //  private static int initialTime = Integer.parseInt(resourceBundle.getString("InitialTime"));
-      //  private static int extraTime = Integer.parseInt(resourceBundle.getString("ExtraTime"));
-      int extraTime = 28;
       DateTime newdt = dt.plusDays(extraTime);
       Date newEndDate = newdt.toDate();
       borrow.setDateEnd(newEndDate);
@@ -51,10 +51,9 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   }
 
   @Override
-  public Borrow createBorrow(Borrow newBorrow) {
+  public Borrow createBorrow(Borrow newBorrow, int initialTime) {
     newBorrow.setDateStart(Date.from(Instant.now()));
     DateTime dateStart = new DateTime(newBorrow.getDateStart());
-    int initialTime = 28;
     DateTime dateEnd = dateStart.plusDays(initialTime);
     Date calculatedEndDate = dateEnd.toDate();
     newBorrow.setDateEnd(calculatedEndDate);

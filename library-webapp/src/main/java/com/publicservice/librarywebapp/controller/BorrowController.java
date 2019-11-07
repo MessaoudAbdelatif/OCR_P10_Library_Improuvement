@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BorrowController {
 
-    private final MSLibraryApiProxy msLibraryApiProxy;
+  private final MSLibraryApiProxy msLibraryApiProxy;
 
   public BorrowController(
       MSLibraryApiProxy msLibraryApiProxy) {
@@ -19,19 +19,18 @@ public class BorrowController {
   }
 
   @GetMapping(value = {"/", "/index", "/home"})
-    public String index(){
+  public String index() {
     return "views/Index";
 
-    }
+  }
 
-    @GetMapping(value = "/Borrows")
-  public String borrows(Model model){
-      String username = "john33";
-      LibraryUserDto libraryUserDto = msLibraryApiProxy.findOneLibraryUser(username);
-      List<BorrowDto> borrowDtos =  msLibraryApiProxy.checkeLibraryUserBorrowedBook(username);
-      model.addAttribute("listOfBorrows",borrowDtos);
-      model.addAttribute("User", libraryUserDto);
-      return "views/Borrows";
-
-    }
+  @GetMapping(value = "/Borrows")
+  public String borrows(Model model) {
+    String username = "john33";
+    LibraryUserDto libraryUserDto = msLibraryApiProxy.findOneLibraryUser(username);
+    List<BorrowDto> borrowDtos = msLibraryApiProxy.checkeLibraryUserBorrowedBook(username);
+    model.addAttribute("listOfBorrows", borrowDtos);
+    model.addAttribute("User", libraryUserDto);
+    return "views/borrows";
+  }
 }

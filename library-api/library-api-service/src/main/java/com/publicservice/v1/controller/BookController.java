@@ -41,7 +41,7 @@ public class BookController {
     return bookMapper.toBookDto(book);
   }
 
-  @GetMapping(value = "{id}/Stocks")
+  @GetMapping(value = "/{id}/Stocks")
   public StockDto findStockByBookId(@PathVariable Long id) throws BookNotFoundException {
     return stockMapper.toStockDto(bookBusiness.findStockByBookId(id));
   }

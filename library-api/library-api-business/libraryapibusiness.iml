@@ -29,5 +29,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:2.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.10.4" level="project" />
+    <orderEntry type="module" module-name="libraryapiservice" />
   </component>
 </module>

@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/library-api/pom.xml" />
         <option value="$PROJECT_DIR$/library-webapp/pom.xml" />
         <option value="$PROJECT_DIR$/library-batch/pom.xml" />
+        <option value="$PROJECT_DIR$/config-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
