@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/library-webapp/pom.xml" />
         <option value="$PROJECT_DIR$/library-batch/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

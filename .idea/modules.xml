@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-api/library-api.iml" filepath="$PROJECT_DIR$/library-api/library-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-batch/library-batch.iml" filepath="$PROJECT_DIR$/library-batch/library-batch.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-webapp/library-webapp.iml" filepath="$PROJECT_DIR$/library-webapp/library-webapp.iml" />
