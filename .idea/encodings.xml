@@ -10,5 +10,6 @@
     <file url="file://$PROJECT_DIR$/library-api/library-api-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-batch" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library-webapp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul-server" charset="UTF-8" />
   </component>
 </project>

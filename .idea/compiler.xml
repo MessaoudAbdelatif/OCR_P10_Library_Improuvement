@@ -12,6 +12,7 @@
         <module name="libraryapimodel" />
         <module name="library-batch" />
         <module name="library-webapp" />
+        <module name="zuul-server" />
         <module name="libraryapidao" />
       </profile>
       <profile name="Annotation profile for library-api" enabled="true">
@@ -50,6 +51,7 @@
       <module name="libraryapiservice" target="1.8" />
       <module name="sefseffsef" target="1.8" />
       <module name="test" target="1.8" />
+      <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -66,6 +68,7 @@
       <module name="libraryapiservice" options="-parameters" />
       <module name="sefseffsef" options="-parameters" />
       <module name="test" options="-parameters" />
+      <module name="zuul-server" options="-parameters" />
     </option>
   </component>
 </project>

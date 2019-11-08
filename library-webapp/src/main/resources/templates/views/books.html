@@ -8,10 +8,9 @@
   <div class="container mt-5 ml-md-5 col-md-7 col-sm-12">
     <div class="shadow card bg-light">
 
-      <div class="card-header h4 text-dark text-center">Library</div>
+      <div class="card-header h4 text-dark text-center">Looking For A Book ?</div>
       <div class=" p-3">
         <form th:action="@{/Books}" method="get">
-          <label>Looking For A Book ?</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" name="keyword" th:value="${keyword}"
                    placeholder="keyword..." aria-label="keyword"
@@ -37,23 +36,23 @@
                    value="PUBLISHER"
             ><label class="form-check-label" for="PUBLISHER">Publisher</label></div>
         </form>
-        <!--      </div>-->
-        <!--      <div class="text-danger p-3" th:if="${bookDto.isEmpty()}">Book Not Found !!-->
-        <!--      </div>-->
+        <div class="text-danger p-3" th:if="${bookDto.isEmpty()}">Book Not Found !!
+        </div>
         <table class="table table-hover">
           <tr class="card-header">
             <th>Name</th>
             <th>Author</th>
             <th>Publisher</th>
+            <th>Preview</th>
           </tr>
           <tr th:each="bDto:${bookDto}">
             <th th:text="${bDto.name}"></th>
             <th th:text="${bDto.author}"></th>
             <th th:text="${bDto.publisher}"></th>
-                      <th class="text-center"><a class="btn btn-primary"
-                                                 th:href="@{/Books/{id}(id=${bDto.id})}"><i
-                          class="fas fa-book"></i> View details</a></th>
-                      </th>
+            <th class="text-center"><a class="btn btn-primary"
+                                       th:href="@{/Books/{id}(id=${bDto.id})}"><i
+                class="fas fa-book"></i> View details</a></th>
+            </th>
           </tr>
         </table>
       </div>

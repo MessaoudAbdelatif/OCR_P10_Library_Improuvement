@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/library-api/library-api-dao/libraryapidao.iml" filepath="$PROJECT_DIR$/library-api/library-api-dao/libraryapidao.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-api/library-api-model/libraryapimodel.iml" filepath="$PROJECT_DIR$/library-api/library-api-model/libraryapimodel.iml" />
       <module fileurl="file://$PROJECT_DIR$/library-api/library-api-service/libraryapiservice.iml" filepath="$PROJECT_DIR$/library-api/library-api-service/libraryapiservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/zuul-server/zuul-server.iml" />
     </modules>
   </component>
 </project>
