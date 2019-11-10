@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -26,7 +27,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class LibraryUser implements Serializable {
 
   @Id
-  @NotNull
+  @Column(nullable = false, unique = true)
   @Size(max = 55)
   private String username;
 
@@ -54,6 +55,7 @@ public class LibraryUser implements Serializable {
   private String zipCode;
 
   @Email
+  @Column(nullable = false, unique = true)
   @Size(max = 100)
   private String email;
 

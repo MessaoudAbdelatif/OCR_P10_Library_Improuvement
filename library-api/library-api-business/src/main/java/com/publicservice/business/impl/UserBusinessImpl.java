@@ -6,6 +6,7 @@ import com.publicservice.consumer.UserDao;
 import com.publicservice.entities.Borrow;
 import com.publicservice.entities.LibraryUser;
 import java.util.List;
+import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
@@ -22,17 +23,24 @@ public class UserBusinessImpl implements UserBusiness {
   @Override
   public List<Borrow> checkeLibraryUserBorrowedBook(String username)
       throws LibraryUserNotFoundException {
-    LibraryUser targetLibraryUser = oneLibraryUser(username);
-    return targetLibraryUser.getBorrows();
+    Optional<LibraryUser> targetLibraryUser = oneLibraryUser(username);
+    return targetLibraryUser.get().getBorrows();
   }
 
   @Override
-  public LibraryUser oneLibraryUser(String username) throws LibraryUserNotFoundException {
-    LibraryUser libraryUser = userDao.getOne(username);
-    if (libraryUser == null) {
-      throw new LibraryUserNotFoundException("can't find User");
+  public Optional<LibraryUser> oneLibraryUser(String username)
+      throws LibraryUserNotFoundException {
+    Optional<LibraryUser> libraryUser = userDao.findById(username);
+    if (!libraryUser.isPresent()) {
+      throw new LibraryUserNotFoundException("Can't find this " + username + " Library user !!");
     } else {
       return libraryUser;
     }
+  }
+
+  @Override
+  public LibraryUser addLibraryUser(LibraryUser libraryUser) {
+    userDao.save(libraryUser);
+    return libraryUser;
   }
 }
