@@ -1,6 +1,8 @@
 package com.publicservice.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -8,6 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
@@ -67,4 +70,7 @@ public class LibraryUser implements Serializable {
 
   @OneToMany(mappedBy = "userID", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   private List<Borrow> borrows;
+
+  @ManyToMany(fetch = FetchType.EAGER)
+  private Collection<LibraryRole> roles = new ArrayList<>();
 }
