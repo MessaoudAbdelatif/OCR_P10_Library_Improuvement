@@ -42,7 +42,6 @@ public class LibraryUserController {
   public LibraryUserDto findOneLibraryUser(@PathVariable String username)
       throws LibraryUserNotFoundException {
     LibraryUser libraryUser = userBusiness.oneLibraryUser(username);
-    if(libraryUser.getEmail().equalsIgnoreCase("null")) throw new LibraryUserNotFoundException("cant find user");
     return libraryUserMapper.toLibraryUserDto(libraryUser);
   }
 

@@ -3,6 +3,7 @@ package com.publicservice.librarywebapp.controller;
 import com.publicservice.librarywebapp.bean.BookDto;
 import com.publicservice.librarywebapp.bean.BookPageDto;
 import com.publicservice.librarywebapp.bean.StockDto;
+import com.publicservice.librarywebapp.configuration.WebApplicationPropertiesConfiguration;
 import com.publicservice.librarywebapp.proxy.MSLibraryApiProxy;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,10 +15,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class BookController {
 
   private final MSLibraryApiProxy msLibraryApiProxy;
+  private final WebApplicationPropertiesConfiguration webApplicationPropertiesConfiguration;
 
   public BookController(
-      MSLibraryApiProxy msLibraryApiProxy) {
+      MSLibraryApiProxy msLibraryApiProxy,
+      WebApplicationPropertiesConfiguration webApplicationPropertiesConfiguration) {
     this.msLibraryApiProxy = msLibraryApiProxy;
+    this.webApplicationPropertiesConfiguration = webApplicationPropertiesConfiguration;
   }
 
   @GetMapping("/Books")
@@ -25,9 +29,10 @@ public class BookController {
       @RequestParam(name = "page", defaultValue = "0") int numPages,
       @RequestParam(name = "keyword", defaultValue = "") String keyword,
       @RequestParam(name = "kindOfSearch", defaultValue = "NAME") String kindOfSearch) {
+    int sizeDefaultPage = webApplicationPropertiesConfiguration.getSizeDefaultPage();
     try {
-     BookPageDto bookPageDto = msLibraryApiProxy
-          .lookingForABook(numPages, 2, keyword, kindOfSearch);
+      BookPageDto bookPageDto = msLibraryApiProxy
+          .lookingForABook(numPages, sizeDefaultPage, keyword, kindOfSearch);
       model.addAttribute("bookDto", bookPageDto.getBooksDto());
       model.addAttribute("pages", bookPageDto.getTotalPages());
       model.addAttribute("nbrPagesTotal", bookPageDto.getNbrTotalPages());
@@ -41,14 +46,13 @@ public class BookController {
   }
 
   @GetMapping("/Books/{id}")
-    public String bookDetails(Model model, @PathVariable("id") Long id){
+  public String bookDetails(Model model, @PathVariable("id") Long id) {
     BookDto bookDto = msLibraryApiProxy.findOneBookById(id);
     StockDto stockDto = msLibraryApiProxy.findStockByBookId(id);
     model.addAttribute("book", bookDto);
     model.addAttribute("stock", stockDto);
     return "views/booksDetails";
-    }
-
+  }
 
 
 }

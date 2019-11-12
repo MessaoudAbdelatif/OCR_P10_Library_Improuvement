@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/ErrorMessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/exception/ApplicationExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_config_client_2_2_0_M3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/configuration/WebApplicationPropertiesConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/UserBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/UserBusinessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/LibraryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/LibraryUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/LibraryUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/LibraryUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/LibraryUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/LibraryUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/library-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/library-webapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/bootstrap.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Libraryapiapplication">
+  <component name="RunManager" selected="Spring Boot.LibraryWebappApplication">
     <configuration name="static.img.css in library-webapp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-webapp" />
       <extension name="coverage">
@@ -185,7 +184,7 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@66655b77" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@67528529" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1f89cb22" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -216,7 +215,7 @@
       <workItem from="1571740141398" duration="56213000" />
       <workItem from="1572479229416" duration="23417000" />
       <workItem from="1572993679945" duration="8608000" />
-      <workItem from="1573022828449" duration="38657000" />
+      <workItem from="1573022828449" duration="42438000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -435,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573221049497</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="exceptions rest handler added">
+      <created>1573430162131</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1573430162131</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +462,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="rebuilding the project with :&#10;Library-api (maven multi modules)&#10;Library-web (mono maven module)&#10;Library-batch (mono maven module)" />
     <MESSAGE value="library-api-model: add entities and set validation annotations&#10;library-api-dao: add entities interfaces and jpa annotations" />
     <MESSAGE value="add business layout contract" />
     <MESSAGE value="add some javadoc to explain the business method used." />
@@ -481,7 +486,8 @@
     <MESSAGE value="test config server ok " />
     <MESSAGE value="eureka and ribbon loud balancer ok " />
     <MESSAGE value="zuul gateway api ok " />
-    <option name="LAST_COMMIT_MESSAGE" value="zuul gateway api ok " />
+    <MESSAGE value="exceptions rest handler added" />
+    <option name="LAST_COMMIT_MESSAGE" value="exceptions rest handler added" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
