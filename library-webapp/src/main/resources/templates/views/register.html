@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout">
+
+<div layout:fragment="content1">
+  <main class="page registration-page mb-3">
+    <section class=" clean-form dark  mt-5 ml-md-5 col-md-6">
+      <div class="container shadow card bg-light text-dark">
+        <div class="block-heading p-2 pm-3 mb-3">
+          <h2 class="h2 text-center p-2">✏ Inscription️</h2>
+          <p>
+            Rejoinez nous maintenant ! et Accédez :</p>
+          <small class="small shadow">
+            # Tous nous sites d'escalades approuvées par la communauté <br># Nos topos ! Oooui tous les topos des membres de notre communauté <br># Échangez, Louez, évoluez avec tous les grimpeurs professionnels & amateurs</small>
+        </div>
+
+
+        <form class="needs-validation" novalidate th:action="@{/save}" method="post" th:object="${utilisateurConnecte}" name="registrationForm" onsubmit="return retapeMotDePass()">
+          <!-- th:object je declare quel object sera attribue les *{attribues} le concernant pendant le POST -->
+
+          <div class="form-group">
+            <label th:for="username">Pseudo</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupPrepend">@️️</span></div>
+              <input
+                  class="form-control"
+                  type="text" id="username" name="userName" th:field="*{username}"
+                  autofocus="autofocus" placeholder="Pseudo" aria-describedby="inputGroupPrepend" required />
+            </div><span>
+            <ul class="text-danger" th:each="error: ${#fields.errors('username')}">
+              <li th:each="message : ${error.split(',')}">
+                <p class="error-message" th:text="${message}"></p>
+              </li>
+            </ul>
+            </span>
+            <small id="passwordHelpInline" class="text-muted">
+              Doit être de 5-60 caractères.
+            </small>
+
+          </div>
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input class="form-control item" name="nom" type="text" id="name" th:field="*{nom}"/>
+            <span th:errors="*{nom}" class="text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input
+                class="form-control item"
+                name="prenom" type="text"
+                id="prenom"
+                th:value="${utilisateurConnecte.prenom}"/>
+            <span th:errors="${utilisateurConnecte.prenom}" class="text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mot de Passe</label>
+            <input
+                name="motDePasse" class="form-control item" type="password" id="password"
+                th:value="${utilisateurConnecte.motDePasse}"/>
+            <span th:errors="*{motDePasse}" class="text-danger"></span>
+          </div>
+
+
+          <div class="form-group">
+            <label for="confirmationMdp">Confirmation <em>Mot de Passe*</em></label>
+            <input
+                class="form-control item" type="password" id="confirmationMdp" name="confirmationMdp"
+                th:value="${utilisateurConnecte.confirmationMdp}"/>
+            <span th:errors="*{confirmationMdp}" class="text-danger"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+                class="form-control item"
+                name="email" type="text"
+                id="email"
+                th:value="${utilisateurConnecte.email}"/>
+
+            <ul class="text-danger" th:each="error: ${#fields.errors('email')}">
+              <li th:each="message : ${error.split(',')}">
+                <span class="error-message" th:text="${message}"></span>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-primary btn-lg m-3" type="submit">S'enregistrer 💾</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!--
+############### Validation FRONT-END Script  #############*START*###########
+-->
+  <script type="text/javascript" src="../../js/validationForm/registrationForm.js"></script>
+  <!--
+  ############### Validation FRONT-END Script  #############*END*#############
+  -->
+</div>
+
+</html>
