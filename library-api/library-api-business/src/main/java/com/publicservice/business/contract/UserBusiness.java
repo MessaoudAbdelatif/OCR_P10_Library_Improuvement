@@ -4,7 +4,6 @@ import com.publicservice.business.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.Borrow;
 import com.publicservice.entities.LibraryUser;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * use case business fonction checkeLibraryReaderBorrowedBook.
@@ -26,7 +25,7 @@ public interface UserBusiness {
    * @return One LibraryUser entity.
    * @throws LibraryUserNotFoundException handle if there is not user for this id.
    */
-  Optional<LibraryUser> oneLibraryUser(String username) throws LibraryUserNotFoundException;
+  LibraryUser oneLibraryUser(String username) throws LibraryUserNotFoundException;
 
   /**
    * Used to register a new user
@@ -34,6 +33,10 @@ public interface UserBusiness {
    * @param libraryUser is the json transit by LibraryUserDto posted.
    * @return One LibraryUser entity.
    */
-  LibraryUser addLibraryUser(LibraryUser libraryUser);
+  void saveOneLibraryUser(LibraryUser libraryUser);
+
+  void addRoleToLibraryUser(String username, String rolename);
+
+
 }
 

@@ -10,21 +10,32 @@
     <section class="container dark ml-md-5 col-md-6 p-2">
       <div class="card shadow bg-light text-dark">
         <div class="card-header">
-          <h2 class="h2">Se connecter</h2>
+          <h2 class="h2">Connect</h2>
           <div class="alert alert-danger" th:if="${#request.getParameter('error') == 'true'}">
-            <span class="fas fa-exclamation-triangle"></span> Connexion Impossible !!<br /><small>Pseudo/Mot de passe: Incorrecte </small>
+            <span class="fas fa-exclamation-triangle"></span> Connection is impossible
+            !!<br/><small>Username or Password is Incorrect !</small>
           </div>
         </div>
         <form class="card-body" th:action="@{/login}" method="post">
-          <div class="form-group"> <label for="username">Pseudo</label> <div class="input-group"><div class="input-group-prepend"><span class="fas fa-user input-group-text fa-1x" id="iconeUser"></span></div> <input class="form-control" type="text" id="username" name="username" aria-describedby="iconeUser" autofocus REQUIRED></div></div>
-          <div class="form-group"><label for="password">Mot de passe</label><div class="input-group"><div class="input-group-prepend"><span class="fas fa-lock input-group-text fa-1x" id="iconpassword"></span></div><input class="form-control" type="password" id="password" name="password"></div></div>
-          <button class="btn btn-primary" type="submit">Connexion</button>
+          <div class="form-group"><label for="username">Username</label>
+            <div class="input-group">
+              <div class="input-group-prepend"><span class="fas fa-user input-group-text fa-1x"
+                                                     id="iconeUser"></span></div>
+              <input class="form-control" type="text" id="username" name="username"
+                     aria-describedby="iconeUser" autofocus REQUIRED></div>
+          </div>
+          <div class="form-group"><label for="password">Password</label>
+            <div class="input-group">
+              <div class="input-group-prepend"><span class="fas fa-lock input-group-text fa-1x"
+                                                     id="iconpassword"></span></div>
+              <input class="form-control" type="password" id="password" name="password"></div>
+          </div>
+          <button class="btn btn-primary" type="submit">Connection</button>
         </form>
       </div>
     </section>
   </main>
 </div>
-
 
 
 </html>

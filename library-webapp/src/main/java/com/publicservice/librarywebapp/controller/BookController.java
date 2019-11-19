@@ -53,6 +53,4 @@ public class BookController {
     model.addAttribute("stock", stockDto);
     return "views/booksDetails";
   }
-
-
 }

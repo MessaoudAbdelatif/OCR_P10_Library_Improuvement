@@ -44,5 +44,7 @@ public interface MSLibraryApiProxy {
   BookPageDto lookingForABook(@RequestParam(value = "page",defaultValue = "0") int numPage, @RequestParam(value = "size", defaultValue = "5") int size,
       @RequestParam(value = "keyword", defaultValue = "") String keyword, @RequestParam(value = "kindOfSearch", defaultValue = "NAME") String kindOfSearch);
 
+  @PostMapping(value = "Users/newLibraryUser")
+  LibraryUserDto createNewUser(@RequestBody LibraryUserDto libraryUserDto);
 
   }

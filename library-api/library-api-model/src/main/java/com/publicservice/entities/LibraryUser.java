@@ -15,7 +15,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -54,7 +53,6 @@ public class LibraryUser implements Serializable {
 
   @NotNull
   @Size(max = 5)
-  @Pattern(regexp = ".*/^(?:[0-9]\\d|9[0-8])\\d{3}$/")
   private String zipCode;
 
   @Email

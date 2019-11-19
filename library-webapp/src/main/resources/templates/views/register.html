@@ -9,19 +9,12 @@
     <section class=" clean-form dark  mt-5 ml-md-5 col-md-6">
       <div class="container shadow card bg-light text-dark">
         <div class="block-heading p-2 pm-3 mb-3">
-          <h2 class="h2 text-center p-2">✏ Inscription️</h2>
-          <p>
-            Rejoinez nous maintenant ! et Accédez :</p>
-          <small class="small shadow">
-            # Tous nous sites d'escalades approuvées par la communauté <br># Nos topos ! Oooui tous les topos des membres de notre communauté <br># Échangez, Louez, évoluez avec tous les grimpeurs professionnels & amateurs</small>
+          <h2 class="h2 text-center p-2">subscription</h2>
         </div>
-
-
-        <form class="needs-validation" novalidate th:action="@{/save}" method="post" th:object="${utilisateurConnecte}" name="registrationForm" onsubmit="return retapeMotDePass()">
-          <!-- th:object je declare quel object sera attribue les *{attribues} le concernant pendant le POST -->
+        <form class="needs-validation" novalidate th:action="@{/register}" method="post" th:object="${libraryUser}" name="registrationForm">
 
           <div class="form-group">
-            <label th:for="username">Pseudo</label>
+            <label th:for="username">Username</label>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroupPrepend">@️️</span></div>
@@ -37,41 +30,41 @@
             </ul>
             </span>
             <small id="passwordHelpInline" class="text-muted">
-              Doit être de 5-60 caractères.
+             Must be between 2 to 50 characters !
             </small>
 
           </div>
           <div class="form-group">
-            <label for="name">Nom</label>
-            <input class="form-control item" name="nom" type="text" id="name" th:field="*{nom}"/>
-            <span th:errors="*{nom}" class="text-danger"></span>
+            <label for="name">Firstname</label>
+            <input class="form-control item" name="nom" type="text" id="name" th:field="*{firstname}"/>
+            <span th:errors="*{firstname}" class="text-danger"></span>
           </div>
 
           <div class="form-group">
-            <label for="prenom">Prénom</label>
+            <label for="Lastname">Lastname</label>
             <input
                 class="form-control item"
-                name="prenom" type="text"
-                id="prenom"
-                th:value="${utilisateurConnecte.prenom}"/>
-            <span th:errors="${utilisateurConnecte.prenom}" class="text-danger"></span>
+                name="Lastname" type="text"
+                id="Lastname"
+                th:value="${libraryUser.lastname}"/>
+            <span th:errors="${libraryUser.lastname}" class="text-danger"></span>
           </div>
 
           <div class="form-group">
-            <label for="password">Mot de Passe</label>
+            <label for="password">Password</label>
             <input
                 name="motDePasse" class="form-control item" type="password" id="password"
-                th:value="${utilisateurConnecte.motDePasse}"/>
-            <span th:errors="*{motDePasse}" class="text-danger"></span>
+                th:value="${libraryUser.password}"/>
+            <span th:errors="*{password}" class="text-danger"></span>
           </div>
 
 
           <div class="form-group">
-            <label for="confirmationMdp">Confirmation <em>Mot de Passe*</em></label>
+            <label for="confirmationMdp">Confirme the <em>Password*</em></label>
             <input
                 class="form-control item" type="password" id="confirmationMdp" name="confirmationMdp"
-                th:value="${utilisateurConnecte.confirmationMdp}"/>
-            <span th:errors="*{confirmationMdp}" class="text-danger"></span>
+                th:value="${libraryUser.passwordRetype}"/>
+            <span th:errors="*{passwordRetype}" class="text-danger"></span>
           </div>
           <div class="form-group">
             <label for="email">E-mail</label>
@@ -79,7 +72,7 @@
                 class="form-control item"
                 name="email" type="text"
                 id="email"
-                th:value="${utilisateurConnecte.email}"/>
+                th:value="${libraryUser.email}"/>
 
             <ul class="text-danger" th:each="error: ${#fields.errors('email')}">
               <li th:each="message : ${error.split(',')}">
@@ -87,7 +80,7 @@
               </li>
             </ul>
           </div>
-          <button class="btn btn-primary btn-lg m-3" type="submit">S'enregistrer 💾</button>
+          <button class="btn btn-primary btn-lg m-3" type="submit">Subscribe 💾</button>
         </form>
       </div>
     </section>
@@ -95,7 +88,6 @@
   <!--
 ############### Validation FRONT-END Script  #############*START*###########
 -->
-  <script type="text/javascript" src="../../js/validationForm/registrationForm.js"></script>
   <!--
   ############### Validation FRONT-END Script  #############*END*#############
   -->

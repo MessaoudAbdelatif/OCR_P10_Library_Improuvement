@@ -13,7 +13,7 @@
 
 
   <dependencies>
-<!--    Internals dependencies -->
+    <!--    Internals dependencies -->
     <dependency>
       <groupId>com.public-service</groupId>
       <artifactId>library-api-business</artifactId>
@@ -23,7 +23,7 @@
       <artifactId>library-api-model</artifactId>
     </dependency>
 
-<!-- Externals dependencies-->
+    <!-- Externals dependencies-->
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -64,7 +64,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
   </properties>
-
 
 
   <!-- ############################################################### -->

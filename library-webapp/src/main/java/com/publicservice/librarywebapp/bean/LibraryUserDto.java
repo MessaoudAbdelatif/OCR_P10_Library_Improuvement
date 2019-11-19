@@ -15,10 +15,12 @@ public class LibraryUserDto {
   protected String lastname;
   protected String firstname;
   protected String password;
+  protected String passwordRetype;
   protected String address;
   protected String email;
   protected Date creationDate;
   protected Boolean active;
   protected List<BorrowDto> borrows;
+  private List<LibraryRoleDto> roles;
 
 }
