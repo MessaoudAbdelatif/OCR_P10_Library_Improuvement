@@ -2,95 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/8/08931305b9d6c65ed4ebb80868af80004a777caa" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09d6c851d3b5e0951a6f90053fc57fac349c8d8e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c74a29dea45ec31b186e5835f34383a5379e61c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/173763af57b6fde362a1515ed21f9f70eae4a329" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1c0309c3869f41b46bfb063a8aa837609a801f4d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d13082cbae9c5ca3d21986168e35aa51f6592e5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/2378efbf8dccf1e45f4b4ad9bac0b804f753988e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b0bb6e21e3d601e73103d0f4a52a479e7030063" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39ba9d3e7229353d8017a754cd3d575cedfc4348" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/a/3a1c567767e97c222be1d1ae3a9f5d80fcbbd880" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/5093e0f72c438ac9affc83bfaf7e7710460101b8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50c5ba58b181d6c138d4c950882128f46de8e5d6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57a9df11e3943afcc765e630cfc33da3afe44c52" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6fb34a51354e66b45dc42c75a2656def46d0946d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/700060b45b55a30aeb4a90eb5b60fa8e2bcc2fc7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/7761d696c1ec451a3bdbaa537f833f9cbdbad4a2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7bd4b6ccb02693257b0c5f646057e19544b09960" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82df67438921e155a7df46965e080fca168104b3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83809947ea2bba7d06ea05a47e1e83198dcc6a9a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/930a93511d3a3f8c163573e42f5354f97cce923d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/98fdfa1edde52e49d00efc880fd93f797f9c1568" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c92add74efe64a1b2a09684bdf3d990bb4a34c7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/2/a2f9618c8ad821b143a07a29a9805fcb0b2df470" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a86ffbbef3ceb9ce05c6e0c400f4a4b0490f3092" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ada673df693c7899043cee0b5ce11de25979505e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b02081f63fe3e34af1c08ff9908f1e4413a2c793" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b079db58b97e966ce487af582d031837dd6569b7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b14238b4c69505b39f74aab943538e98b695d541" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b39ae52d769ea03b699b5602439afd875433c8a7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bc48b36be288a4ae6bf49193c3a8e49813c69351" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bce4b02de95c62441de7ea7d048a5387bb652674" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/0/c08211d4b564f994e6f52c163641e7e0daed9b47" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c310ceb937d027b29a681727916f779bdc3abc52" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c76681874c24ea5c7b3fd53e96063ffa52d6294e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce0e7119e059f07c3d04023d3fc7ce1e23bf2a41" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d33244a2d29960e6b9ce95e2abcba5921619fdd9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d38f59373f2970faaa11b6eac1660b3f8d49b73e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db2994a40d6e864db3996b011598c341305c9cea" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc7537c4c6f25c2d13e47957b190a23b312bf1cf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea2f7bb7f2c7281be1df3fc6f3efe2bbadc9386e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/feeae4c559beac294c976ca0369e45db8ebf83a3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/LibraryRoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/validation/FieldMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/validation/FieldMatchValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/confirmRegister.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/business/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/business/AccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/dao/LibraryRoleAccessDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/dao/LibraryUserAccessDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/entities/LibraryRoleAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/entities/LibraryUserAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/029938a3fa623444516a18f9f5dc4eb2c68c2bd5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/029938a3fa623444516a18f9f5dc4eb2c68c2bd5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/103ed3980dedddb62c7f97337faba1af336c97d0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/103ed3980dedddb62c7f97337faba1af336c97d0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1dc30e5923fb9d4f1507c1aca74009a9e2fcbaa2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1dc30e5923fb9d4f1507c1aca74009a9e2fcbaa2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/242a7714e62283ac789a70561c2f91feabcfa422" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/242a7714e62283ac789a70561c2f91feabcfa422" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/335357faea6282646e36233fe5a08b9541d4763b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/335357faea6282646e36233fe5a08b9541d4763b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ed6bd296481aa24d17f5b6fdae68697873e5ddb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7bbd38cdfa93cc91fd722638606f96021258394e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7bbd38cdfa93cc91fd722638606f96021258394e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81752230fef6605b37cb6bb4531441dcd920c5e3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81752230fef6605b37cb6bb4531441dcd920c5e3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9249e3dec4420448cc232668f9d48f3a1e620033" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9249e3dec4420448cc232668f9d48f3a1e620033" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f34331d122a62b178ee2e2cde3d20e92f2479be6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f34331d122a62b178ee2e2cde3d20e92f2479be6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_auth0_java_jwt_3_8_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_8_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/configuration/ApplicationPropertiesConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/libraryapibusiness.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/UserBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/UserBusinessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/LibraryRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/LibraryRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/LibraryUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/LibraryUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/Libraryapiapplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/Libraryapiapplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/LibraryUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/LibraryUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/library-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/library-webapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/LibraryWebappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/LibraryWebappApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/LibraryUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/LibraryUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/test/java/com/publicservice/librarywebapp/LibraryWebappApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/test/java/com/publicservice/librarywebapp/LibraryWebappApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/ZuulServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/ZuulServerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/application.properties" afterDir="false" />
@@ -269,11 +198,6 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@711243b5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@26c921a6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@711243b5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@30699dbf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
@@ -306,7 +230,7 @@
       <workItem from="1572479229416" duration="23417000" />
       <workItem from="1572993679945" duration="8608000" />
       <workItem from="1573022828449" duration="65006000" />
-      <workItem from="1573897443475" duration="17833000" />
+      <workItem from="1573897443475" duration="22519000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -553,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573650602779</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="implementing spring security in zuul module in order to set JWT authentication.">
+      <created>1574155908328</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1574155908328</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +505,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add 2 new features that will be implemented by used in future." />
     <MESSAGE value="db connection test ok creation tables with hibernate ok" />
     <MESSAGE value="db connection test ok creation tables with hibernate ok&#10;update classDiagram" />
     <MESSAGE value="adding business folders" />
@@ -599,7 +529,8 @@
     <MESSAGE value="externalise webAppProperties" />
     <MESSAGE value="add roles springSecurity" />
     <MESSAGE value="set zuul as middleware for the webapp in order to filter the access using spring security" />
-    <option name="LAST_COMMIT_MESSAGE" value="set zuul as middleware for the webapp in order to filter the access using spring security" />
+    <MESSAGE value="implementing spring security in zuul module in order to set JWT authentication." />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing spring security in zuul module in order to set JWT authentication." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
