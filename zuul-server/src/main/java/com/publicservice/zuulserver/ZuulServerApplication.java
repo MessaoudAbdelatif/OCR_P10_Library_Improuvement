@@ -1,6 +1,7 @@
 package com.publicservice.zuulserver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.publicservice.zuulserver.configuration.ApplicationPropertiesConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -16,10 +17,18 @@ public class ZuulServerApplication {
   public static void main(String[] args) {
     SpringApplication.run(ZuulServerApplication.class, args);
   }
+
   @Bean
-  BCryptPasswordEncoder getBCPE(){
+  BCryptPasswordEncoder getBCPE() {
     return new BCryptPasswordEncoder();
   }
+
   @Bean
-  ObjectMapper getOM(){return new ObjectMapper();}
+  ObjectMapper getOM() {
+    return new ObjectMapper();
+  }
+  @Bean
+  ApplicationPropertiesConfiguration getAPC() {
+    return new ApplicationPropertiesConfiguration();
+  }
 }

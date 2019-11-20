@@ -1,28 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_auth0_java_jwt_3_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_8_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/configuration/ApplicationPropertiesConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/UserDetailsServiceImpl.java" afterDir="false" />
+    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="setting JWT">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_2_1_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_popper_js_1_14_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/0248d278e7128771813a91a1598d7d0613fd4a1f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/262cfc597ba956886e97f1d6f292916251b9b0e0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/2759be2f2910b8f20ca7c2265d47c1045553e377" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/f/2f8da86d5ca7f59a458ef0f96507f4e075f079a0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/604ded53194d1176b6c334ad48921810bbc8ceee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/6926be5d1a85576031e4849a78e500d513b1d7c7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7fb24535d9f74fbb1cbe278fde9549832f3351f3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80c93c4c5fb6378e1bb0eabf02c4f8fe53f9ed5b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/5/854e5a77be22266ff38c58b0e4f9b95d8f1df5ab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8c963d39d9a52292ce0bf013a080f6ab087ca420" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/918b51e1205a582911e7e51b163cb9c0167f99be" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/2/b25206ad705cebc828a41f1a91691dd47b834b01" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b58b5e6f8c833720d00ca57daa2aeedf702e3229" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6daf9eaf5ba4da10b09600c0f121a0cc263305e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cb6c9c698fda03c78479da4c78004319b574e893" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f67b1d25ee4673dd982de3b3ab6787ef75b3808c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fc51350728e3344ef4c04d1a73991e87dd7d247d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/static/img/librarybookpic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/static/img/librarybookpic1920.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/static/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/templates/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1c0309c3869f41b46bfb063a8aa837609a801f4d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1c0309c3869f41b46bfb063a8aa837609a801f4d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d13082cbae9c5ca3d21986168e35aa51f6592e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/242a7714e62283ac789a70561c2f91feabcfa422" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/242a7714e62283ac789a70561c2f91feabcfa422" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50eb71ef365f77e013920afb46386954f7c9d072" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/7761d696c1ec451a3bdbaa537f833f9cbdbad4a2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/7761d696c1ec451a3bdbaa537f833f9cbdbad4a2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7bbd38cdfa93cc91fd722638606f96021258394e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7bbd38cdfa93cc91fd722638606f96021258394e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81752230fef6605b37cb6bb4531441dcd920c5e3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/81752230fef6605b37cb6bb4531441dcd920c5e3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f34331d122a62b178ee2e2cde3d20e92f2479be6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f34331d122a62b178ee2e2cde3d20e92f2479be6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/ZuulServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/ZuulServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/entities/LibraryUserAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/entities/LibraryUserAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/test/java/com/publicservice/zuulserver/ZuulServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/test/java/com/publicservice/zuulserver/ZuulServerApplicationTests.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +101,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/zuul-server/src/main/resources/static" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -84,20 +111,22 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.publicservice.libraryapi" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp" />
-      <recent name="$PROJECT_DIR$/library-webapp/src/main/resources" />
-      <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/static/img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/static/img" />
       <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views" />
       <recent name="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.publicservice.libraryapi" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/zuul-server/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/zuul-server/src/main/resources/templates/views" />
+      <recent name="$PROJECT_DIR$/zuul-server/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp" />
+      <recent name="$PROJECT_DIR$/library-webapp/src/main/resources" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -122,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Libraryapiapplication">
+  <component name="RunManager" selected="Spring Boot.ZuulServerApplication">
     <configuration name="static.img.css in library-webapp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-webapp" />
       <extension name="coverage">
@@ -193,12 +222,22 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@711243b5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fcc2f924" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@711243b5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@30699dbf" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fcc2f924" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e95a026d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fcc2f924" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9cf79920" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fcc2f924" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3d9c2b1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -230,7 +269,8 @@
       <workItem from="1572479229416" duration="23417000" />
       <workItem from="1572993679945" duration="8608000" />
       <workItem from="1573022828449" duration="65006000" />
-      <workItem from="1573897443475" duration="22519000" />
+      <workItem from="1573897443475" duration="23059000" />
+      <workItem from="1574178410557" duration="15951000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -484,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574155908328</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="setting JWT">
+      <created>1574172138703</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1574172138704</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,7 +552,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="db connection test ok creation tables with hibernate ok" />
     <MESSAGE value="db connection test ok creation tables with hibernate ok&#10;update classDiagram" />
     <MESSAGE value="adding business folders" />
     <MESSAGE value="fix business layout modules import" />
@@ -530,12 +576,37 @@
     <MESSAGE value="add roles springSecurity" />
     <MESSAGE value="set zuul as middleware for the webapp in order to filter the access using spring security" />
     <MESSAGE value="implementing spring security in zuul module in order to set JWT authentication." />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing spring security in zuul module in order to set JWT authentication." />
+    <MESSAGE value="setting JWT" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting JWT" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
-        <watch expression="((Book)((java.util.ArrayList)((PageImpl)books).content).get(0)).library" custom="org.springframework.data.domain.PageImpl,java.util.ArrayList,com.publicservice.entities.Book" />
+        <watch expression="((Book)((java.util.ArrayList)((PageImpl)books).content).get(0)).library" language="JAVA" custom="org.springframework.data.domain.PageImpl,java.util.ArrayList,com.publicservice.entities.Book" />
         <watch expression="this.h" custom="java.lang.reflect.Proxy" />
       </configuration>
     </watches-manager>

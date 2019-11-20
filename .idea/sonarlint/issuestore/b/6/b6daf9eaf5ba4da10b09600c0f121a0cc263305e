@@ -1,0 +1,6 @@
+
+Fsquid:S11483"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Îñæžè-
+wsquid:S00116"XRename this field "AppProperties" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê˜ü©8ôî€Ÿè-
+Osquid:S1602=",Remove useless curly braces around statement(øÝæÀûÿÿÿÿ8è±Ûžè-
+jsquid:S001124"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8è±Ûžè-
+Â%squid:RedundantThrowsDeclarationCheck,"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ð»’ùÿÿÿÿ8øÅÜžè-

@@ -1,3 +1,2 @@
 
-%squid:RedundantThrowsDeclarationCheck5"eRemove the declaration of thrown exception 'java.lang.RuntimeException' which is a runtime exception.(Ü¨÷¾8¤è®œç-
-esquid:S001125"FDefine and throw a dedicated exception instead of using a generic one.(Ü¨÷¾8¤è®œç-
+Ø%squid:RedundantThrowsDeclarationCheck4"šRemove the declaration of thrown exception 'com.publicservice.business.exception.LibraryUserNotFoundException', as it cannot be thrown from method's body.(Üıß¥øÿÿÿÿ8í×ƒ˜è-

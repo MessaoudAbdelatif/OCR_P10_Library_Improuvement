@@ -1,0 +1,5 @@
+
+|squid:S00116"XRename this field "HEADER_PREFIX" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ýþ…ÿÿÿÿÿ8ýลอ่-
+ysquid:S00116"URename this field "EXPIRATION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ฃภ๓ÿÿÿÿÿ8ýลอ่-
+~squid:S00116"ZRename this field "JWT_HEADER_NAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ะฯร๚ÿÿÿÿ8ýลอ่-
+psquid:S00116"QRename this field "SECRET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Þฝ8ýลอ่-

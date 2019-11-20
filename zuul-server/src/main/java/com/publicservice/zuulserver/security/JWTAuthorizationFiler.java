@@ -19,10 +19,10 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+
 public class JWTAuthorizationFiler extends OncePerRequestFilter {
 
-
-  private ApplicationPropertiesConfiguration SecurityParams;
+  private ApplicationPropertiesConfiguration securityParams;
 
   @Override
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
@@ -39,13 +39,13 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
       filterChain.doFilter(request, response);
       return;
     } else {
-      String jwtToken = request.getHeader(SecurityParams.getJWT_HEADER_NAME());
-      if (jwtToken == null || !jwtToken.startsWith(SecurityParams.getHEADER_PREFIX())) {
+      String jwtToken = request.getHeader(securityParams.getJWT_HEADER_NAME());
+      if (jwtToken == null || !jwtToken.startsWith(securityParams.getHEADER_PREFIX())) {
         filterChain.doFilter(request, response);
         return;
       }
-      JWTVerifier verifier = JWT.require(Algorithm.HMAC256(SecurityParams.getSECRET())).build();
-      String jwt = jwtToken.substring(SecurityParams.getHEADER_PREFIX().length());
+      JWTVerifier verifier = JWT.require(Algorithm.HMAC256(securityParams.getSECRET())).build();
+      String jwt = jwtToken.substring(securityParams.getHEADER_PREFIX().length());
       DecodedJWT decodedJWT = verifier.verify(jwt);
       String username = decodedJWT.getSubject();
       List<String> roles = decodedJWT.getClaims().get("roles").asList(String.class);
