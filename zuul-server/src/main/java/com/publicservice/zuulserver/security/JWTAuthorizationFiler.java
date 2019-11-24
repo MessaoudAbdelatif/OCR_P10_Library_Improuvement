@@ -1,14 +1,11 @@
 package com.publicservice.zuulserver.security;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.auth0.jwt.interfaces.JWTVerifier;
 import com.publicservice.zuulserver.configuration.ApplicationPropertiesConfiguration;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +19,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 public class JWTAuthorizationFiler extends OncePerRequestFilter {
 
-  private ApplicationPropertiesConfiguration securityParams;
-
   @Override
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
       FilterChain filterChain) throws ServletException, IOException {
@@ -35,29 +30,29 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
         "Access-Control-Allow-Origin, Access-Control-Allow-Credentials, authorization");
     if (request.getMethod().equals("OPTIONS")) {
       response.setStatus(HttpServletResponse.SC_OK);
-    } else if (request.getRequestURI().equals("/login")) {
-      filterChain.doFilter(request, response);
-      return;
     } else {
-      String jwtToken = request.getHeader(securityParams.getJWT_HEADER_NAME());
-      if (jwtToken == null || !jwtToken.startsWith(securityParams.getHEADER_PREFIX())) {
+      String jwtToken = request.getHeader(ApplicationPropertiesConfiguration.JWT_HEADER_NAME);
+      if (jwtToken == null || !jwtToken
+          .startsWith(ApplicationPropertiesConfiguration.HEADER_PREFIX)) {
         filterChain.doFilter(request, response);
         return;
       }
-      JWTVerifier verifier = JWT.require(Algorithm.HMAC256(securityParams.getSECRET())).build();
-      String jwt = jwtToken.substring(securityParams.getHEADER_PREFIX().length());
-      DecodedJWT decodedJWT = verifier.verify(jwt);
-      String username = decodedJWT.getSubject();
-      List<String> roles = decodedJWT.getClaims().get("roles").asList(String.class);
+      Claims claims = Jwts.parser()
+          .setSigningKey(ApplicationPropertiesConfiguration.SECRET)
+          .parseClaimsJws(jwtToken.replace(ApplicationPropertiesConfiguration.HEADER_PREFIX, ""))
+          .getBody();
+      String username = claims.getSubject();
+      ArrayList<String> roles = (ArrayList<String>)
+          claims.get("roles");
       Collection<GrantedAuthority> authorities = new ArrayList<>();
-      roles.forEach(rn -> {
-        authorities.add(new SimpleGrantedAuthority(rn));
+      roles.forEach(r -> {
+        authorities.add(new SimpleGrantedAuthority(r));
       });
-      UsernamePasswordAuthenticationToken user =
+      UsernamePasswordAuthenticationToken authenticationToken =
           new UsernamePasswordAuthenticationToken(username, null, authorities);
-      SecurityContextHolder.getContext().setAuthentication(user);
+//      authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+      SecurityContextHolder.getContext().setAuthentication(authenticationToken);
       filterChain.doFilter(request, response);
     }
-
   }
 }

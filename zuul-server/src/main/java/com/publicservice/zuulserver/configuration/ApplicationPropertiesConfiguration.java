@@ -1,18 +1,11 @@
 package com.publicservice.zuulserver.configuration;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+//@ConfigurationProperties("my-security-config")
 
-@Component
-@ConfigurationProperties("my-security-config")
-@Getter
-@Setter
-public class ApplicationPropertiesConfiguration {
+public interface ApplicationPropertiesConfiguration {
 
-  private String JWT_HEADER_NAME;
-  private String SECRET;
-  private int EXPIRATION;
-  private String HEADER_PREFIX;
+  public static final String JWT_HEADER_NAME="Authorization";
+  public static final String SECRET="OpenClassRooms";
+  public static final int EXPIRATION=864000;
+  public static final String HEADER_PREFIX="Bearer ";
 }

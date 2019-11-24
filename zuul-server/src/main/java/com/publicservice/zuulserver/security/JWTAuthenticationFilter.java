@@ -1,9 +1,8 @@
 package com.publicservice.zuulserver.security;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.publicservice.zuulserver.configuration.ApplicationPropertiesConfiguration;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,9 +23,10 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
   private AuthenticationManager authenticationManager;
 
-  private ObjectMapper objectMapper;
+//  private AccountService accountService;
+//
+//  private ObjectMapper objectMapper;
 
-  private ApplicationPropertiesConfiguration appProperties;
 
   public JWTAuthenticationFilter(
       AuthenticationManager authenticationManager) {
@@ -37,14 +37,14 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
   public Authentication attemptAuthentication(HttpServletRequest request,
       HttpServletResponse response) throws AuthenticationException {
 
-    String username= request.getParameter("username");
-    String password= request.getParameter("password");
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
 
 //    try {
 //      LibraryUserAccess  libraryUserAccess = objectMapper
 //          .readValue(request.getInputStream(), LibraryUserAccess.class);
-      return authenticationManager.authenticate(
-          new UsernamePasswordAuthenticationToken(username, password));
+    return authenticationManager.authenticate(
+        new UsernamePasswordAuthenticationToken(username, password));
 //    } catch (IOException e) {
 //      e.printStackTrace();
 //      throw new RuntimeException(e);
@@ -60,12 +60,15 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     authResult.getAuthorities().forEach(a -> {
       roles.add(a.getAuthority());
     });
-    String jwt = JWT.create()
-        .withIssuer(request.getRequestURI())
-        .withSubject(user.getUsername())
-        .withArrayClaim("roles", roles.toArray(new String[roles.size()]))
-        .withExpiresAt(new Date(System.currentTimeMillis() + 122))
-        .sign(Algorithm.HMAC256(appProperties.getSECRET()));
-    response.addHeader(appProperties.getHEADER_PREFIX(), jwt);
+    String jwt = Jwts.builder()
+        .setIssuer(request.getRequestURI())
+        .setSubject(user.getUsername())
+        .claim("roles", roles.toArray(new String[roles.size()]))
+        .setExpiration(
+            new Date(System.currentTimeMillis() + ApplicationPropertiesConfiguration.EXPIRATION))
+        .signWith(SignatureAlgorithm.HS512, ApplicationPropertiesConfiguration.SECRET)
+        .compact();
+    System.out.println(jwt);
+    response.addHeader(ApplicationPropertiesConfiguration.JWT_HEADER_NAME,ApplicationPropertiesConfiguration.HEADER_PREFIX+jwt);
   }
 }

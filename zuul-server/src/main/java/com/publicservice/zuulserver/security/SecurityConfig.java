@@ -1,6 +1,5 @@
 package com.publicservice.zuulserver.security;
 
-import com.publicservice.zuulserver.configuration.ApplicationPropertiesConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -14,12 +13,12 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
   private UserDetailsServiceImpl userDetailsService;
   private BCryptPasswordEncoder bCryptPasswordEncoder;
-  private ApplicationPropertiesConfiguration securityParams;
 
   public SecurityConfig(
       UserDetailsServiceImpl userDetailsService,
@@ -29,21 +28,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   }
 
   @Override
-  protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+  public void configure(AuthenticationManagerBuilder auth) throws Exception {
     auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder);
+
   }
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
-    http.csrf().disable();
-    http.formLogin().loginPage("/login");
+
+    http.csrf().and().cors().disable();
+    http.formLogin();
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    http.authorizeRequests().antMatchers("/login/**", "/register/**", "/", "/Books").permitAll();
-    http.authorizeRequests().antMatchers("/appRoles/**").hasAuthority("USER");
+    http.authorizeRequests().antMatchers("/login/**", "/login*","/").permitAll();
+    http.authorizeRequests().antMatchers("/Books/**").hasAuthority("USER");
     http.authorizeRequests().anyRequest().authenticated();
+    http.exceptionHandling().accessDeniedPage("/login");
     http.addFilter(new JWTAuthenticationFilter(authenticationManager()));
     http.addFilterBefore(new JWTAuthorizationFiler(),
         UsernamePasswordAuthenticationFilter.class);
+    http.httpBasic();
   }
 
   @Override
