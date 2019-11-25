@@ -36,10 +36,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
 
-    http.csrf().and().cors().disable();
-    http.formLogin();
+    http.csrf().disable();
+    http.formLogin().loginPage("/login");
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    http.authorizeRequests().antMatchers("/login/**", "/login*","/").permitAll();
+    http.authorizeRequests().antMatchers("/login/**", "/login","/").permitAll();
     http.authorizeRequests().antMatchers("/Books/**").hasAuthority("USER");
     http.authorizeRequests().anyRequest().authenticated();
     http.exceptionHandling().accessDeniedPage("/login");

@@ -1,0 +1,10 @@
+POST http://localhost:9103/reminder
+Content-Type: application/json
+
+{
+  "name": "Dan",
+  "email": "dzdevsoft@gmail.com",
+  "feedback": "bring back this book !!"
+}
+
+###

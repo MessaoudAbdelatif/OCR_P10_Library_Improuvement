@@ -16,7 +16,7 @@
             !!<br/><small>Username or Password is Incorrect !</small>
           </div>
         </div>
-        <form class="card-body" th:action="@{/login}" method="post">
+        <form class="card-body" th:action="@{/login}" method="post" onsubmit="return setCookies()">
           <div class="form-group"><label for="username">Username</label>
             <div class="input-group">
               <div class="input-group-prepend"><span class="fas fa-user input-group-text fa-1x"
@@ -36,6 +36,5 @@
     </section>
   </main>
 </div>
-
-
+<script type="text/javascript" src="../../js/validationForm/setCookies.js"></script>
 </html>

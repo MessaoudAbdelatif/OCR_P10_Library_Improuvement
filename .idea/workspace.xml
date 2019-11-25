@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_1_3_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/EmailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/Reminder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/ReminderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/feedback.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-batch/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/static/js/validationForm/setCookies.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/ZuulServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/ZuulServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/configuration/ApplicationPropertiesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/configuration/ApplicationPropertiesConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/entities/LibraryUserAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/entities/LibraryUserAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/resources/templates/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/templates/views/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +35,7 @@
       <list>
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -68,15 +79,15 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch" />
       <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/static/img" />
       <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views" />
-      <recent name="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.publicservice.libraryapi" />
@@ -111,7 +122,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZuulServerApplication">
+  <component name="RunManager" selected="HTTP Request.feedback#1">
+    <configuration name="feedback#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/feedback.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="All in library-batch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="library-batch" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="static.img.css in library-webapp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="library-webapp" />
       <extension name="coverage">
@@ -170,6 +192,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.feedback#1" />
+        <item itemvalue="JUnit.All in library-batch" />
         <item itemvalue="JUnit.static.img.css in library-webapp" />
       </list>
     </recent_temporary>
@@ -187,12 +211,7 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fcc2f924" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e95a026d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fcc2f924" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3d9c2b1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9cf79920" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -225,7 +244,7 @@
       <workItem from="1572993679945" duration="8608000" />
       <workItem from="1573022828449" duration="65006000" />
       <workItem from="1573897443475" duration="23059000" />
-      <workItem from="1574178410557" duration="42429000" />
+      <workItem from="1574178410557" duration="54023000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -493,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574270437755</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="security token generated and work fine &#10;Todo: need to stock the token in front end in order to add it in every request header">
+      <created>1574558317740</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1574558317741</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +540,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="adding business folders" />
     <MESSAGE value="fix business layout modules import" />
     <MESSAGE value="borrow business layout add Date logic." />
     <MESSAGE value="add logic business layout" />
@@ -539,15 +564,27 @@
     <MESSAGE value="implementing spring security in zuul module in order to set JWT authentication." />
     <MESSAGE value="setting JWT" />
     <MESSAGE value="session mentor" />
-    <option name="LAST_COMMIT_MESSAGE" value="session mentor" />
+    <MESSAGE value="security token generated and work fine &#10;Todo: need to stock the token in front end in order to add it in every request header" />
+    <option name="LAST_COMMIT_MESSAGE" value="security token generated and work fine &#10;Todo: need to stock the token in front end in order to add it in every request header" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="62" />
+          <line>43</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/zuul-server/src/main/resources/static/js/validationForm/setCookies.js</url>
+          <line>1</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
