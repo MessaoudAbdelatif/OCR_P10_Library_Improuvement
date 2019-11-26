@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -69,6 +70,14 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         .signWith(SignatureAlgorithm.HS512, ApplicationPropertiesConfiguration.SECRET)
         .compact();
     System.out.println(jwt);
+    // ADD COOKIES ##################################################
+    Cookie cookie = new Cookie("JWTtoken",jwt);
+    cookie.setSecure(false);
+    cookie.setHttpOnly(true);
+    cookie.setMaxAge(9999999);
+    cookie.setDomain("localhost");
+    cookie.setPath("/");
+    response.addCookie(cookie);
     response.addHeader(ApplicationPropertiesConfiguration.JWT_HEADER_NAME,ApplicationPropertiesConfiguration.HEADER_PREFIX+jwt);
   }
 }

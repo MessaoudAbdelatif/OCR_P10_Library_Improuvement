@@ -39,7 +39,7 @@ public class ReminderController {
     mailMessage.setFrom("BorrowService@PublicServiceLibrary.lib");
     mailMessage.setTo(reminder.getEmail());
     mailMessage.setSubject("Hello " + reminder.getName()
-        + "we just reminde you that you have to bring back a book(s)");
+        + " we just reminde you that you have to bring back a book(s)");
     mailMessage.setText(reminder.getFeedback());
 
     // Send mail
