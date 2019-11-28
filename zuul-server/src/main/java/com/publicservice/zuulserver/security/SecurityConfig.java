@@ -46,7 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     http.addFilter(new JWTAuthenticationFilter(authenticationManager()));
     http.addFilterBefore(new JWTAuthorizationFiler(),
         UsernamePasswordAuthenticationFilter.class);
-    http.httpBasic();
+//    http.httpBasic();
   }
 
   @Override

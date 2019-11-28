@@ -39,7 +39,7 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
       if (cookie != null) {
         jwtToken = cookie.getValue();
       }
-      if (jwtToken == null )
+      if (jwtToken == null)
 //        || !jwtToken
 //        .startsWith(ApplicationPropertiesConfiguration.HEADER_PREFIX)
       {
@@ -48,7 +48,8 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
       }
       Claims claims = Jwts.parser()
           .setSigningKey(ApplicationPropertiesConfiguration.SECRET)
-          .parseClaimsJws(jwtToken.replace(ApplicationPropertiesConfiguration.HEADER_PREFIX, ""))
+          .parseClaimsJws(jwtToken)
+//              .replace(ApplicationPropertiesConfiguration.HEADER_PREFIX, ""))
           .getBody();
       String username = claims.getSubject();
       ArrayList<String> roles = (ArrayList<String>)
