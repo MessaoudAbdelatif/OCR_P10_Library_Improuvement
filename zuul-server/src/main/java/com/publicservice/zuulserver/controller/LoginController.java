@@ -9,6 +9,6 @@ public class LoginController {
 
   @GetMapping("/login")
   public String login(Model model) {
-    return "views/login";
+    return "loginTEST";
   }
 }

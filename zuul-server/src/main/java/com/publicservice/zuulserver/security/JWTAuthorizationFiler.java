@@ -4,8 +4,10 @@ import com.publicservice.zuulserver.configuration.ApplicationPropertiesConfigura
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import java.io.IOException;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -30,9 +32,9 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
 //        "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,Authorization");
 //    response.addHeader("Access-Control-Expose-Headers",
 //        "Access-Control-Allow-Origin, Access-Control-Allow-Credentials, Authorization");
-//    if (request.getMethod().equals("OPTIONS")) {
-//      response.setStatus(HttpServletResponse.SC_OK);
-//    } else {
+    if (request.getMethod().equals("OPTIONS")) {
+      response.setStatus(HttpServletResponse.SC_OK);
+    } else {
 //      String jwtToken = request.getHeader(ApplicationPropertiesConfiguration.JWT_HEADER_NAME);
       Cookie cookie = WebUtils.getCookie(request, "JWTtoken");
       String jwtToken = null;
@@ -51,17 +53,23 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
           .parseClaimsJws(jwtToken)
 //              .replace(ApplicationPropertiesConfiguration.HEADER_PREFIX, ""))
           .getBody();
-      String username = claims.getSubject();
-      ArrayList<String> roles = (ArrayList<String>)
-          claims.get("roles");
-      Collection<GrantedAuthority> authorities = new ArrayList<>();
-      roles.forEach(r -> {
-        authorities.add(new SimpleGrantedAuthority(r));
-      });
-      UsernamePasswordAuthenticationToken authenticationToken =
-          new UsernamePasswordAuthenticationToken(username, null, authorities);
+
+      if (claims.getExpiration().before(Date.from(Instant.now()))) {
+        filterChain.doFilter(request, response);
+      } else {
+        String username = claims.getSubject();
+        ArrayList<String> roles = (ArrayList<String>)
+            claims.get("roles");
+        Collection<GrantedAuthority> authorities = new ArrayList<>();
+        roles.forEach(r -> {
+          authorities.add(new SimpleGrantedAuthority(r));
+        });
+        UsernamePasswordAuthenticationToken authenticationToken =
+            new UsernamePasswordAuthenticationToken(username, null, authorities);
 //      authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-      SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-      filterChain.doFilter(request, response);
+        SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+        filterChain.doFilter(request, response);
+      }
     }
   }
+}

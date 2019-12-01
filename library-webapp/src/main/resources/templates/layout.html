@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html
+    lang="en"
     xmlns:th="http://www.thymeleaf.org"
-    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
->
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
   <meta charset="UTF-8"/>
   <title>Public Service Library</title>
@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css"/>
   <!-- 1er lien juste pour IDE afin d'ajouter l'intellisense , mon moteur de template utilisera le 2nd lien-->
-  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/../css/style.css}"/>
   <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"/>
 </head>
@@ -23,10 +23,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menuText">
   <div class="container-fluid">
     <a class="navbar-brand" href="/index"><img th:class="figure-img"
-                                               th:src="@{/img/logo.png}"
+                                               th:src="@{/../img/logo.png}"
                                                width="35" height="20"
                                                class="d-inline-block align-top"
-                                               alt="PUBLIC SERVICE LIBRARY">PUBLIC SERVICE LIBRARY</a>
+                                               alt="PUBLIC SERVICE LIBRARY">PUBLIC SERVICE
+      LIBRARY</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -43,22 +44,27 @@
         <li class="nav-item">
           <a class="nav-link" th:href="@{/Books}" id="navbarLink2" role="button"
              aria-haspopup="true" aria-expanded="false">
-            Our Books
+             Books
           </a>
-
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/Borrows}" id="navbarLink3" role="button"
+             aria-haspopup="true" aria-expanded="false">
+            My Borrows
+          </a>
 
         <li class="nav-item">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i>
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+              class="fas fa-user"></i>
             Connection
           </a>
           <!-- Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
           <div class="dropdown-menu dropdown-menu-right animate slideIn"
                aria-labelledby="navbarDropdown">
-            <div th:if="${#httpServletRequest.remoteUser}">
-              <h1 class="dropdown-item" th:inline="text">Hi
-                [[${#httpServletRequest.remoteUser}]] <i class="fas fa-list"></i></h1>
-              <a th:href="@{/Borrows/{username}(username=${#httpServletRequest.remoteUser})}"><h1 class=" dropdown-item"><i class="fas fa-address-book"></i>Check my borrows</h1></a>
+            <div>
+              <a th:href="@{/Borrows/{username}(username=${#httpServletRequest.getHeader('username')})}"><h1
+                  class=" dropdown-item"><i class="fas fa-address-book"></i>Check my borrows</h1>
+              </a>
               <form class="dropdown-item-text" th:action="@{/logout}" method="post">
                 <input class=" alert-info" type="submit" value="logout"/>
               </form>

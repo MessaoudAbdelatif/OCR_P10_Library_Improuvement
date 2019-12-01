@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Setter
 public class WebApplicationPropertiesConfiguration {
 
-  private int sizeDefaultPage;
+  private  int sizeDefaultPage;
+  private String secret;
 
 }

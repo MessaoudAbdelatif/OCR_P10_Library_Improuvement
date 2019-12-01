@@ -78,6 +78,14 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     cookie.setDomain("localhost");
     cookie.setPath("/");
     response.addCookie(cookie);
-    response.addHeader(ApplicationPropertiesConfiguration.JWT_HEADER_NAME,ApplicationPropertiesConfiguration.HEADER_PREFIX+jwt);
+//    Cookie usernameCookie = new Cookie("username",user.getUsername());
+//    usernameCookie.setSecure(false);
+//    usernameCookie.setHttpOnly(true);
+//    usernameCookie.setMaxAge(-1);
+//    usernameCookie.setDomain("localhost");
+//    usernameCookie.setPath("/");
+//    response.addCookie(usernameCookie);
+//    response.addHeader("Username",user.getUsername());
+    response.sendRedirect("/Books");
   }
 }

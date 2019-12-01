@@ -39,14 +39,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     http.csrf().disable();
     http.formLogin().loginPage("/login");
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    http.authorizeRequests().antMatchers("/login/**", "/login","/").permitAll();
+    http.authorizeRequests().antMatchers("/login/**", "/login","/","/index","/home").permitAll();
     http.authorizeRequests().antMatchers("/Books/**").hasAuthority("USER");
     http.authorizeRequests().anyRequest().authenticated();
     http.exceptionHandling().accessDeniedPage("/login");
     http.addFilter(new JWTAuthenticationFilter(authenticationManager()));
     http.addFilterBefore(new JWTAuthorizationFiler(),
         UsernamePasswordAuthenticationFilter.class);
-//    http.httpBasic();
+    http.httpBasic();
   }
 
   @Override
