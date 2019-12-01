@@ -26,24 +26,15 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
   @Override
   protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
       FilterChain filterChain) throws ServletException, IOException {
-
-//    response.addHeader("Access-Control-Allow-Origin", "*");
-//    response.addHeader("Access-Control-Allow-Headers",
-//        "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers,Authorization");
-//    response.addHeader("Access-Control-Expose-Headers",
-//        "Access-Control-Allow-Origin, Access-Control-Allow-Credentials, Authorization");
     if (request.getMethod().equals("OPTIONS")) {
       response.setStatus(HttpServletResponse.SC_OK);
     } else {
-//      String jwtToken = request.getHeader(ApplicationPropertiesConfiguration.JWT_HEADER_NAME);
       Cookie cookie = WebUtils.getCookie(request, "JWTtoken");
       String jwtToken = null;
       if (cookie != null) {
         jwtToken = cookie.getValue();
       }
       if (jwtToken == null)
-//        || !jwtToken
-//        .startsWith(ApplicationPropertiesConfiguration.HEADER_PREFIX)
       {
         filterChain.doFilter(request, response);
         return;
@@ -51,7 +42,6 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
       Claims claims = Jwts.parser()
           .setSigningKey(ApplicationPropertiesConfiguration.SECRET)
           .parseClaimsJws(jwtToken)
-//              .replace(ApplicationPropertiesConfiguration.HEADER_PREFIX, ""))
           .getBody();
 
       if (claims.getExpiration().before(Date.from(Instant.now()))) {
@@ -66,7 +56,6 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
         });
         UsernamePasswordAuthenticationToken authenticationToken =
             new UsernamePasswordAuthenticationToken(username, null, authorities);
-//      authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
         SecurityContextHolder.getContext().setAuthentication(authenticationToken);
         filterChain.doFilter(request, response);
       }

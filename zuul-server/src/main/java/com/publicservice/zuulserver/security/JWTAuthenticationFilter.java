@@ -78,14 +78,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     cookie.setDomain("localhost");
     cookie.setPath("/");
     response.addCookie(cookie);
-//    Cookie usernameCookie = new Cookie("username",user.getUsername());
-//    usernameCookie.setSecure(false);
-//    usernameCookie.setHttpOnly(true);
-//    usernameCookie.setMaxAge(-1);
-//    usernameCookie.setDomain("localhost");
-//    usernameCookie.setPath("/");
-//    response.addCookie(usernameCookie);
-//    response.addHeader("Username",user.getUsername());
+    // REDIRECT ##################################################
     response.sendRedirect("/Books");
   }
 }

@@ -1,7 +1,9 @@
 package com.publicservice.librarywebapp.controller;
 
 import com.publicservice.librarywebapp.bean.LibraryUserDto;
+import com.publicservice.librarywebapp.configuration.CookieUtil;
 import com.publicservice.librarywebapp.proxy.MSLibraryApiProxy;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,12 +12,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class LoginController {
 
   private final MSLibraryApiProxy msLibraryApiProxy;
+private final CookieUtil cookieUtil;
 
-
-  public LoginController(MSLibraryApiProxy msLibraryApiProxy
-  ) {
+  public LoginController(MSLibraryApiProxy msLibraryApiProxy,
+      CookieUtil cookieUtil) {
     this.msLibraryApiProxy = msLibraryApiProxy;
 
+    this.cookieUtil = cookieUtil;
   }
 
   @GetMapping("/login")
@@ -30,9 +33,10 @@ public class LoginController {
   }
 
 
-  @GetMapping("/logout")
-  public String logout(Model model) {
-    return "views/logoutConfirme";
+  @GetMapping("/logout1")
+  public String logout(Model model, HttpServletResponse response) {
+    cookieUtil.clear(response,"JWTtoken");
+    return "views/index";
   }
 
 

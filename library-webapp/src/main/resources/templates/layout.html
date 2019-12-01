@@ -65,7 +65,7 @@
               <a th:href="@{/Borrows/{username}(username=${#httpServletRequest.getHeader('username')})}"><h1
                   class=" dropdown-item"><i class="fas fa-address-book"></i>Check my borrows</h1>
               </a>
-              <form class="dropdown-item-text" th:action="@{/logout}" method="post">
+              <form class="dropdown-item-text" th:action="@{/logout1}" method="get">
                 <input class=" alert-info" type="submit" value="logout"/>
               </form>
             </div>
