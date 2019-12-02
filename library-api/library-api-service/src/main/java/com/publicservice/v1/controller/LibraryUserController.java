@@ -31,7 +31,7 @@ public class LibraryUserController {
     this.libraryUserMapper = libraryUserMapper;
   }
 
-  @GetMapping(value = "Users/{username}/Borrows")
+  @GetMapping(value = "users/{username}/borrows")
   public List<BorrowDto> checkeLibraryUserBorrowedBook(@PathVariable String username)
       throws LibraryUserNotFoundException {
     return userBusiness.checkeLibraryUserBorrowedBook(username)
@@ -40,14 +40,14 @@ public class LibraryUserController {
         .collect(Collectors.toList());
   }
 
-  @GetMapping(value = "Users/{username}")
+  @GetMapping(value = "users/{username}")
   public LibraryUserDto findOneLibraryUser(@PathVariable String username)
       throws LibraryUserNotFoundException {
     LibraryUser libraryUser = userBusiness.oneLibraryUser(username);
     return libraryUserMapper.toLibraryUserDto(libraryUser);
   }
 
-  @PostMapping(value = "Users/newLibraryUser")
+  @PostMapping(value = "users/newLibraryUser")
   public LibraryUserDto createNewUser(@RequestBody LibraryUserDto libraryUserDto)
       throws LibraryUserNotFoundException {
     LibraryUser libraryUser = libraryUserMapper.toLibraryUser(libraryUserDto);

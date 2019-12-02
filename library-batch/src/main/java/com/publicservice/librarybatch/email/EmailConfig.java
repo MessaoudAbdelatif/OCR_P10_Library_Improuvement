@@ -1,4 +1,4 @@
-package com.publicservice.librarybatch;
+package com.publicservice.librarybatch.email;
 
 
 import lombok.Getter;

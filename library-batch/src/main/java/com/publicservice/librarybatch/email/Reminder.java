@@ -1,4 +1,4 @@
-package com.publicservice.librarybatch;
+package com.publicservice.librarybatch.email;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;

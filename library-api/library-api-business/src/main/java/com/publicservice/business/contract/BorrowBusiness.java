@@ -4,6 +4,7 @@ import com.publicservice.business.exception.BorrowNotFoundException;
 import com.publicservice.business.exception.ExtraTimeNotAllowed;
 import com.publicservice.entities.Borrow;
 import java.text.ParseException;
+import java.util.List;
 
 /**
  * use case business fonction findBorrowById. use case business fonction addExtraTime.
@@ -14,8 +15,8 @@ public interface BorrowBusiness {
    * Used to find Borrow entity by his id.
    *
    * @param id is the borrowing id.
-   * @throws BorrowNotFoundException handle the risk if borrow not found.
    * @return Borrow entity concerned.
+   * @throws BorrowNotFoundException handle the risk if borrow not found.
    */
   Borrow findBorrowById(Long id) throws BorrowNotFoundException;
 
@@ -24,7 +25,8 @@ public interface BorrowBusiness {
    *
    * @param id is the borrowing id.
    */
-  void addExtraTime(Long id, int extraTime) throws BorrowNotFoundException, ParseException, ExtraTimeNotAllowed;
+  void addExtraTime(Long id, int extraTime)
+      throws BorrowNotFoundException, ParseException, ExtraTimeNotAllowed;
 
   /**
    * When user make new borrow.
@@ -40,5 +42,7 @@ public interface BorrowBusiness {
    * @param id is the borrow entity id.
    */
   void closeBorrow(Long id);
+
+  List<Borrow> borrowsOverTimeLimite();
 
 }

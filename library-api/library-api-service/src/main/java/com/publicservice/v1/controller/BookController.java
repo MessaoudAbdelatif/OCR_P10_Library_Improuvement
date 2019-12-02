@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/Books")
+@RequestMapping("/books")
 public class BookController {
 
   private final BookBusiness bookBusiness;
@@ -41,7 +41,7 @@ public class BookController {
     return bookMapper.toBookDto(book);
   }
 
-  @GetMapping(value = "/{id}/Stocks")
+  @GetMapping(value = "/{id}/stocks")
   public StockDto findStockByBookId(@PathVariable Long id) throws BookNotFoundException {
     return stockMapper.toStockDto(bookBusiness.findStockByBookId(id));
   }

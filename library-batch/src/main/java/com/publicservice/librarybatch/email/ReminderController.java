@@ -1,4 +1,4 @@
-package com.publicservice.librarybatch;
+package com.publicservice.librarybatch.email;
 
 
 import javax.xml.bind.ValidationException;
@@ -21,7 +21,7 @@ public class ReminderController {
   }
 
   @PostMapping
-  public void sendFeedback(@RequestBody Reminder reminder,
+  public void sendReminder(@RequestBody Reminder reminder,
       BindingResult bindingResult) throws ValidationException {
     if (bindingResult.hasErrors()) {
       throw new ValidationException("Feedback is not valid");

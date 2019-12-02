@@ -19,32 +19,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RibbonClient(name = "MicroService-LibraryApiService")
 public interface MSLibraryApiProxy {
 
-  @GetMapping(value = "Borrows/{id}")
+  @GetMapping(value = "borrows/{id}")
   BorrowDto findBorrowById(@PathVariable("id") Long id);
 
-  @PostMapping(value = "Borrows/{id}/addExtraTime")
+  @PostMapping(value = "borrows/{id}/addExtraTime")
   void addExtraTime(@PathVariable("id") Long id);
 
-  @PostMapping(value = "Borrows/newBorrow")
+  @PostMapping(value = "borrows/newBorrow")
   BorrowDto createBorrow(@RequestBody BorrowDto newBorrowDto);
 
-  @GetMapping(value = "Books/{id}")
+  @GetMapping(value = "books/{id}")
   BookDto findOneBookById(@PathVariable("id") Long id);
 
-  @GetMapping(value = "Books/{id}/Stocks")
+  @GetMapping(value = "books/{id}/stocks")
   StockDto findStockByBookId(@PathVariable("id") Long id);
 
-  @GetMapping(value = "Users/{username}/Borrows")
+  @GetMapping(value = "users/{username}/borrows")
   List<BorrowDto> checkeLibraryUserBorrowedBook(@PathVariable("username") String username);
 
-  @GetMapping(value = "Users/{username}")
+  @GetMapping(value = "users/{username}")
   LibraryUserDto findOneLibraryUser(@PathVariable("username") String username);
 
-  @GetMapping(value = "Books/search")
+  @GetMapping(value = "books/search")
   BookPageDto lookingForABook(@RequestParam(value = "page",defaultValue = "0") int numPage, @RequestParam(value = "size", defaultValue = "5") int size,
       @RequestParam(value = "keyword", defaultValue = "") String keyword, @RequestParam(value = "kindOfSearch", defaultValue = "NAME") String kindOfSearch);
 
-  @PostMapping(value = "Users/newLibraryUser")
+  @PostMapping(value = "users/newLibraryUser")
   LibraryUserDto createNewUser(@RequestBody LibraryUserDto libraryUserDto);
-
   }

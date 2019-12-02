@@ -12,7 +12,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,7 +20,6 @@ public class UserBusinessImpl implements UserBusiness {
 
   private final UserDao userDao;
   private final RoleDao roleDao;
-  private BCryptPasswordEncoder bCryptPasswordEncoder;
 
   public UserBusinessImpl(UserDao userDao, RoleDao roleDao) {
     this.userDao = userDao;
@@ -54,7 +52,7 @@ public class UserBusinessImpl implements UserBusiness {
     libraryUser.setCreationDate(Date.from(Instant.now()));
     libraryUser.setActive(true);
     String pwd = libraryUser.getPassword();
-    libraryUser.setPassword(bCryptPasswordEncoder.encode(pwd));
+
     userDao.save(libraryUser);
     addRoleToLibraryUser(libraryUser.getUsername(), "USER");
   }

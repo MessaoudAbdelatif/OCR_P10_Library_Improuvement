@@ -7,6 +7,7 @@ import com.publicservice.consumer.BorrowDao;
 import com.publicservice.entities.Borrow;
 import java.time.Instant;
 import java.util.Date;
+import java.util.List;
 import javax.transaction.Transactional;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
@@ -69,5 +70,12 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     Borrow borrow = borrowDao.getOne(id);
     borrow.setClosed(true);
     borrowDao.save(borrow);
+  }
+
+  @Override
+  public List<Borrow> borrowsOverTimeLimite() {
+    List<Borrow> borrowsOverDeadTime = borrowDao
+        .findBorrowByDateEndBefore(Date.from(Instant.now()));
+    return borrowsOverDeadTime;
   }
 }
