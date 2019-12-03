@@ -6,7 +6,7 @@ public class BatchConfig {
 
 //  private JobBuilderFactory jobBuilderFactory;
 //  private StepBuilderFactory stepBuilderFactory;
-////  private ItemProcessor<>
+//  private ItemProcessor<>
 //
 //  public BatchConfig(
 //      JobBuilderFactory jobBuilderFactory,

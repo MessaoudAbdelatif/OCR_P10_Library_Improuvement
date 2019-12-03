@@ -75,7 +75,7 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   @Override
   public List<Borrow> borrowsOverTimeLimite() {
     List<Borrow> borrowsOverDeadTime = borrowDao
-        .findBorrowByDateEndBefore(Date.from(Instant.now()));
+        .findBorrowByDateEndBeforeAndClosedFalse(Date.from(Instant.now()));
     return borrowsOverDeadTime;
   }
 }

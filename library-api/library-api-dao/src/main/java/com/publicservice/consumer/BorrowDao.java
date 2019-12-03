@@ -11,5 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface BorrowDao extends JpaRepository<Borrow, Long> {
 
-    List<Borrow> findBorrowByDateEndBefore(Date date);
+    /**
+     * find the borrows that is over the date limite and still open not yet closed by the library admin.
+     * @param date : using this assigned date in order to filtre the borrows.
+     * @return List Borrow.
+     * */
+    List<Borrow> findBorrowByDateEndBeforeAndClosedFalse(Date date);
 }

@@ -47,7 +47,7 @@ public class BorrowController {
     borrowBusiness.addExtraTime(id, appProperties.getExtraTime());
   }
 
-  @PostMapping(value = "/ADMIN/newBorrow")
+  @PostMapping(value = "/newBorrow")
   @ResponseStatus(HttpStatus.CREATED)
   public Borrow createBorrow(BorrowDto newBorrowDto) {
     Borrow borrow = borrowMapper.toBorrow(newBorrowDto);
@@ -62,5 +62,4 @@ public class BorrowController {
         .map(borrowMapper::toBorrowDto)
         .collect(Collectors.toList());
   }
-
 }

@@ -1,6 +1,7 @@
 package com.publicservice.librarybatch.email;
 
 
+import com.publicservice.librarybatch.model.Reminder;
 import javax.xml.bind.ValidationException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
@@ -36,10 +37,10 @@ public class ReminderController {
 
     // Create an email instance
     SimpleMailMessage mailMessage = new SimpleMailMessage();
-    mailMessage.setFrom("BorrowService@PublicServiceLibrary.lib");
+    mailMessage.setFrom("No-Replay@PublicServiceLibrary.lib");
     mailMessage.setTo(reminder.getEmail());
     mailMessage.setSubject("Hello " + reminder.getName()
-        + " we just reminde you that you have to bring back a book(s)");
+        + " we just remind you that you have to bring back" + reminder.getBooktitle());
     mailMessage.setText(reminder.getFeedback());
 
     // Send mail
