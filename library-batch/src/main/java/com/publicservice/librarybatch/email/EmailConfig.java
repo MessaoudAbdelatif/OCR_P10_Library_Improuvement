@@ -16,4 +16,5 @@ public class EmailConfig {
   private int port;
   private String username;
   private String password;
+  private String feedback;
 }

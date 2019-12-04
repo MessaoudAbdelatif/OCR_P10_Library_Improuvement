@@ -2,43 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_199.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_stoyanr_evictor_1_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_batch_javax_batch_api_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_6_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_batch_spring_batch_core_4_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_batch_spring_batch_infrastructure_4_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_batch_spring_batch_test_4_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_batch_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_loadbalancer_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_config_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_loadbalancer_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/model/BorrowDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/model/LibraryUserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/proxy/MSLibraryApiProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_1_3_RELEASE.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BatchProviderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/mapper/DelayBorrowUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/DelayBorrowUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/batch/EmailSenderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/model/DelayBorrowUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-dao/src/main/java/com/publicservice/consumer/BorrowDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-dao/src/main/java/com/publicservice/consumer/BorrowDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Borrow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-batch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/LibraryBatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/LibraryBatchApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/batch/BatchConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/batch/BatchConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/email/Reminder.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/model/Reminder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/email/EmailConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/email/EmailConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/email/ReminderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/email/ReminderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/model/BorrowDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/model/LibraryUserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/model/Reminder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/proxy/MSLibraryApiProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/proxy/MSLibraryApiProxy.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,8 +45,8 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -126,6 +103,9 @@
       <recent name="$PROJECT_DIR$/zuul-server/src/main/resources/templates/views" />
       <recent name="$PROJECT_DIR$/zuul-server/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.publicservice.librarybatch.model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/emailconfig" />
@@ -303,6 +283,11 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@58e6021a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ecd005fe" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@58e6021a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3047e98b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
@@ -338,7 +323,7 @@
       <workItem from="1573897443475" duration="23059000" />
       <workItem from="1574178410557" duration="54600000" />
       <workItem from="1574767807848" duration="40346000" />
-      <workItem from="1575279749931" duration="17866000" />
+      <workItem from="1575279749931" duration="36877000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -655,7 +640,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575298032375</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="adding some new classes in MS Batch.&#10;preparing for :&#10;           New Job:&#10;                    Step1 -&gt; Feed the db.&#10;                    Step2 -&gt; Email each record.&#10;                    Step3 -&gt; Clear db.">
+      <created>1575372616725</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1575372616725</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +668,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="libraryWebApp consume the libraryApi service and display it on the index page&#10;used stream to map all the list of borrow into borrowDTO&#10;then expose the dto list !  " />
     <MESSAGE value="books.html" />
     <MESSAGE value="book search pagination done" />
     <MESSAGE value="fix bug" />
@@ -701,7 +692,8 @@
     <MESSAGE value="set zuul middleware to allow all cookies and JWT to cross the security in order to handle this JWT in api BackEnd to extract the username.&#10;Using this solution no need to implement spring security in backApi and setting it with sec ctx.&#10;Zuul will discriminate by uri and jwt contain enough no sensitive information.&#10;  " />
     <MESSAGE value="logout done just by delete JWT token !" />
     <MESSAGE value="add business logic to filter the borrows over the time limit and expose borrowsDto concerned;&#10;in order to collect this objects by the batch MS and mail this users." />
-    <option name="LAST_COMMIT_MESSAGE" value="add business logic to filter the borrows over the time limit and expose borrowsDto concerned;&#10;in order to collect this objects by the batch MS and mail this users." />
+    <MESSAGE value="adding some new classes in MS Batch.&#10;preparing for :&#10;           New Job:&#10;                    Step1 -&gt; Feed the db.&#10;                    Step2 -&gt; Email each record.&#10;                    Step3 -&gt; Clear db." />
+    <option name="LAST_COMMIT_MESSAGE" value="adding some new classes in MS Batch.&#10;preparing for :&#10;           New Job:&#10;                    Step1 -&gt; Feed the db.&#10;                    Step2 -&gt; Email each record.&#10;                    Step3 -&gt; Clear db." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

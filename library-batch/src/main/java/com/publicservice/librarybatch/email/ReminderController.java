@@ -1,11 +1,10 @@
 package com.publicservice.librarybatch.email;
 
 
-import com.publicservice.librarybatch.model.Reminder;
+import com.publicservice.librarybatch.model.DelayBorrowUser;
 import javax.xml.bind.ValidationException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,11 +21,12 @@ public class ReminderController {
   }
 
   @PostMapping
-  public void sendReminder(@RequestBody Reminder reminder,
-      BindingResult bindingResult) throws ValidationException {
-    if (bindingResult.hasErrors()) {
-      throw new ValidationException("Feedback is not valid");
-    }
+  public void sendReminder(@RequestBody DelayBorrowUser delayBorrowUser
+//      ,BindingResult bindingResult
+  ) throws ValidationException {
+//    if (bindingResult.hasErrors()) {
+//      throw new ValidationException("Feedback is not valid");
+//    }
 
     // Create a mail sender
     JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
@@ -38,10 +38,10 @@ public class ReminderController {
     // Create an email instance
     SimpleMailMessage mailMessage = new SimpleMailMessage();
     mailMessage.setFrom("No-Replay@PublicServiceLibrary.lib");
-    mailMessage.setTo(reminder.getEmail());
-    mailMessage.setSubject("Hello " + reminder.getName()
-        + " we just remind you that you have to bring back" + reminder.getBooktitle());
-    mailMessage.setText(reminder.getFeedback());
+    mailMessage.setTo(delayBorrowUser.getEmail());
+    mailMessage.setSubject("Hello " + delayBorrowUser.getFirstname()
+        + " we just remind you that you have to bring back " + delayBorrowUser.getName());
+    mailMessage.setText(emailCfg.getFeedback());
 
     // Send mail
     mailSender.send(mailMessage);
