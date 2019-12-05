@@ -26,8 +26,11 @@ public interface MSLibraryApiProxy {
   @PostMapping(value = "borrows/{id}/addExtraTime")
   void addExtraTime(@PathVariable("id") Long id);
 
-  @PostMapping(value = "borrows/newBorrow")
-  BorrowDto createBorrow(@RequestBody BorrowDto newBorrowDto);
+  @PostMapping(value = "ADMIN/newBorrow")
+  BorrowDto createBorrow(BorrowDto newBorrowDto);
+
+  @GetMapping(value = "ADMIN/{id}/close")
+  void closeBorrow(Long id);
 
   @GetMapping(value = "books/{id}")
   BookDto findOneBookById(@PathVariable("id") Long id);

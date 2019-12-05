@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="api batch done tested 💪">
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/LibarayUserBorrowInfoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/bean/LibarayUserBorrowInfoDto.java" afterDir="false" />
+    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/LibraryAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/ClassDiagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/documents/ClassDiagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/ComponentDiagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/documents/ComponentDiagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documents/UseCaseDiagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/documents/UseCaseDiagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/UserBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/UserBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/UserBusinessImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BatchProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BatchProviderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/LibraryUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/LibraryUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/LibraryBatchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/LibraryBatchApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/batch/EmailSenderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/Register.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/borrows.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/borrows.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/configuration/ApplicationPropertiesConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/configuration/ApplicationPropertiesConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizationFiler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,7 +187,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Libraryapiapplication">
+  <component name="RunManager" selected="Spring Boot.LibraryWebappApplication">
     <configuration name="feedback#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/library-batch/src/main/java/com/publicservice/librarybatch/feedback.http">
       <method v="2" />
     </configuration>
@@ -329,7 +311,7 @@
       <workItem from="1573897443475" duration="23059000" />
       <workItem from="1574178410557" duration="54600000" />
       <workItem from="1574767807848" duration="40346000" />
-      <workItem from="1575279749931" duration="56291000" />
+      <workItem from="1575279749931" duration="58591000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -660,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575501189990</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="user can get an extra time from webapp service&#10;update documents for presentation.">
+      <created>1575554815362</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1575554815362</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -681,7 +670,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="book search pagination done" />
     <MESSAGE value="fix bug" />
     <MESSAGE value="set borrow closed" />
     <MESSAGE value="made book detail page and stock uri" />
@@ -706,7 +694,8 @@
     <MESSAGE value="add business logic to filter the borrows over the time limit and expose borrowsDto concerned;&#10;in order to collect this objects by the batch MS and mail this users." />
     <MESSAGE value="adding some new classes in MS Batch.&#10;preparing for :&#10;           New Job:&#10;                    Step1 -&gt; Feed the db.&#10;                    Step2 -&gt; Email each record.&#10;                    Step3 -&gt; Clear db." />
     <MESSAGE value="api batch done tested " />
-    <option name="LAST_COMMIT_MESSAGE" value="api batch done tested " />
+    <MESSAGE value="user can get an extra time from webapp service&#10;update documents for presentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="user can get an extra time from webapp service&#10;update documents for presentation." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -715,11 +704,6 @@
           <url>file://$PROJECT_DIR$/zuul-server/src/main/resources/static/js/validationForm/setCookies.js</url>
           <line>1</line>
           <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
