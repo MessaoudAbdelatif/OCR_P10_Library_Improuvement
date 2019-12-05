@@ -27,6 +27,7 @@ public class BatchProviderController {
         .map(borrow -> getOneDelay(borrow))
         .collect(Collectors.toList());
   }
+
   public DelayBorrowUser getOneDelay(Borrow borrow){
 
     DelayBorrowUser delayBorrowUser = new DelayBorrowUser();

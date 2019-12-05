@@ -69,5 +69,4 @@ private final CookieUtil cookieUtil;
 ////    msLibraryApiProxy.createNewUser(libraryUserDto);
 ////    return "views/confirmRegister";
 ////  }
-
 }

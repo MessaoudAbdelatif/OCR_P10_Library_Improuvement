@@ -2,10 +2,8 @@ package com.publicservice.business.impl;
 
 import com.publicservice.business.contract.UserBusiness;
 import com.publicservice.business.exception.LibraryUserNotFoundException;
-import com.publicservice.consumer.RoleDao;
 import com.publicservice.consumer.UserDao;
 import com.publicservice.entities.Borrow;
-import com.publicservice.entities.LibraryRole;
 import com.publicservice.entities.LibraryUser;
 import java.time.Instant;
 import java.util.Date;
@@ -19,11 +17,11 @@ import org.springframework.stereotype.Service;
 public class UserBusinessImpl implements UserBusiness {
 
   private final UserDao userDao;
-  private final RoleDao roleDao;
+//  private final RoleDao roleDao;
 
-  public UserBusinessImpl(UserDao userDao, RoleDao roleDao) {
+
+  public UserBusinessImpl(UserDao userDao) {
     this.userDao = userDao;
-    this.roleDao = roleDao;
   }
 
   @Override
@@ -54,13 +52,13 @@ public class UserBusinessImpl implements UserBusiness {
     String pwd = libraryUser.getPassword();
 
     userDao.save(libraryUser);
-    addRoleToLibraryUser(libraryUser.getUsername(), "USER");
+//    addRoleToLibraryUser(libraryUser.getUsername(), "USER");
   }
 
-  @Override
-  public void addRoleToLibraryUser(String username, String rolename) {
-    LibraryUser libraryUser = userDao.findById(username).get();
-    LibraryRole libraryRole = roleDao.findByLibraryUserRole(rolename);
-    libraryUser.getRoles().add(libraryRole);
-  }
+//  @Override
+//  public void addRoleToLibraryUser(String username, String rolename) {
+//    LibraryUser libraryUser = userDao.findById(username).get();
+//    LibraryRole libraryRole = roleDao.findByLibraryUserRole(rolename);
+//    libraryUser.getRoles().add(libraryRole);
+//  }
 }

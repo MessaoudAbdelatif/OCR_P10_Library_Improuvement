@@ -35,7 +35,7 @@ public interface UserBusiness {
    */
   void saveOneLibraryUser(LibraryUser libraryUser);
 
-  void addRoleToLibraryUser(String username, String rolename);
+//  void addRoleToLibraryUser(String username, String rolename);
 
 
 }

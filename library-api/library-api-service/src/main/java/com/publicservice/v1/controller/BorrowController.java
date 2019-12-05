@@ -1,13 +1,17 @@
 package com.publicservice.v1.controller;
 
 import com.publicservice.business.contract.BorrowBusiness;
+import com.publicservice.business.contract.UserBusiness;
 import com.publicservice.business.exception.BorrowNotFoundException;
 import com.publicservice.business.exception.ExtraTimeNotAllowed;
+import com.publicservice.business.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.Borrow;
 import com.publicservice.v1.configuration.ApplicationPropertiesConfiguration;
 import com.publicservice.v1.dto.mapper.BorrowMapper;
 import com.publicservice.v1.dto.model.BorrowDto;
+import com.publicservice.v1.dto.model.LibarayUserBorrowInfoDto;
 import java.text.ParseException;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
@@ -24,14 +28,17 @@ public class BorrowController {
 
   private final BorrowBusiness borrowBusiness;
   private final BorrowMapper borrowMapper;
+  private final UserBusiness userBusiness;
   private final ApplicationPropertiesConfiguration appProperties;
 
 
   public BorrowController(BorrowBusiness borrowBusiness,
       BorrowMapper borrowMapper,
+      UserBusiness userBusiness,
       ApplicationPropertiesConfiguration appProperties) {
     this.borrowBusiness = borrowBusiness;
     this.borrowMapper = borrowMapper;
+    this.userBusiness = userBusiness;
     this.appProperties = appProperties;
   }
 
@@ -62,4 +69,33 @@ public class BorrowController {
         .map(borrowMapper::toBorrowDto)
         .collect(Collectors.toList());
   }
+
+  @GetMapping("/{username}/info")
+  public List<LibarayUserBorrowInfoDto> libraryUserBorrowsInfo(@PathVariable String username)
+      throws LibraryUserNotFoundException {
+
+    List<Borrow> borrows = userBusiness.oneLibraryUser(username).getBorrows();
+    if (borrows.isEmpty()) {
+      return Collections.emptyList();
+    }
+    return borrows.stream()
+        .map(this::getUserInfo)
+        .collect(Collectors.toList());
+  }
+
+  public LibarayUserBorrowInfoDto getUserInfo(Borrow borrow) {
+    LibarayUserBorrowInfoDto lUBID = new LibarayUserBorrowInfoDto();
+
+    lUBID.setFirstname(borrow.getUserID().getFirstname());
+    lUBID.setLastname(borrow.getUserID().getLastname());
+    lUBID.setBookName(borrow.getBookID().getName());
+    lUBID.setEndDate(borrow.getDateEnd());
+    lUBID.setExtraTime(borrow.getExtraTime());
+    lUBID.setBorrowID(borrow.getId());
+    lUBID.setBorrowIDS(borrow.getId().toString());
+
+    return lUBID;
+  }
+
+
 }

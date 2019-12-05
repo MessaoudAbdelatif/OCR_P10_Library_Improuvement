@@ -3,6 +3,7 @@ package com.publicservice.librarywebapp.proxy;
 import com.publicservice.librarywebapp.bean.BookDto;
 import com.publicservice.librarywebapp.bean.BookPageDto;
 import com.publicservice.librarywebapp.bean.BorrowDto;
+import com.publicservice.librarywebapp.bean.LibarayUserBorrowInfoDto;
 import com.publicservice.librarywebapp.bean.LibraryUserDto;
 import com.publicservice.librarywebapp.bean.StockDto;
 import java.util.List;
@@ -46,4 +47,7 @@ public interface MSLibraryApiProxy {
 
   @PostMapping(value = "users/newLibraryUser")
   LibraryUserDto createNewUser(@RequestBody LibraryUserDto libraryUserDto);
+
+  @GetMapping("borrows/{username}/info")
+   List<LibarayUserBorrowInfoDto> libraryUserBorrowsInfo(@PathVariable String username);
   }

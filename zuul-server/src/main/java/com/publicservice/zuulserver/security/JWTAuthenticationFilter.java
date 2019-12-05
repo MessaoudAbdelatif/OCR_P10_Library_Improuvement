@@ -22,11 +22,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
-  private AuthenticationManager authenticationManager;
 
-//  private AccountService accountService;
-//
-//  private ObjectMapper objectMapper;
+  private AuthenticationManager authenticationManager;
 
 
   public JWTAuthenticationFilter(
@@ -41,16 +38,8 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     String username = request.getParameter("username");
     String password = request.getParameter("password");
 
-//    try {
-//      LibraryUserAccess  libraryUserAccess = objectMapper
-//          .readValue(request.getInputStream(), LibraryUserAccess.class);
     return authenticationManager.authenticate(
         new UsernamePasswordAuthenticationToken(username, password));
-//    } catch (IOException e) {
-//      e.printStackTrace();
-//      throw new RuntimeException(e);
-//    }
-
   }
 
   @Override
@@ -66,12 +55,13 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         .setSubject(user.getUsername())
         .claim("roles", roles.toArray(new String[roles.size()]))
         .setExpiration(
-            new Date(System.currentTimeMillis() + ApplicationPropertiesConfiguration.EXPIRATION))
+            new Date(System.currentTimeMillis() + ApplicationPropertiesConfiguration.EXPIRATION
+            ))
         .signWith(SignatureAlgorithm.HS512, ApplicationPropertiesConfiguration.SECRET)
         .compact();
     System.out.println(jwt);
     // ADD COOKIES ##################################################
-    Cookie cookie = new Cookie("JWTtoken",jwt);
+    Cookie cookie = new Cookie("JWTtoken", jwt);
     cookie.setSecure(false);
     cookie.setHttpOnly(true);
     cookie.setMaxAge(-1);

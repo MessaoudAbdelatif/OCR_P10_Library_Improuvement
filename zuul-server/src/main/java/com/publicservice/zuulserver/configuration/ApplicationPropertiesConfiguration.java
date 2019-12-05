@@ -1,5 +1,6 @@
 package com.publicservice.zuulserver.configuration;
 
+
 //@ConfigurationProperties("my-security-config")
 
 public interface ApplicationPropertiesConfiguration {
