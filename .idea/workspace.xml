@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/controller/LibraryAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/BorrowController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-api/library-api-service/src/main/java/com/publicservice/v1/controller/Register.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/java/com/publicservice/librarywebapp/proxy/MSLibraryApiProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/borrows.html" beforeDir="false" afterPath="$PROJECT_DIR$/library-webapp/src/main/resources/templates/views/borrows.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -276,7 +272,7 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@58e6021a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3047e98b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ecd005fe" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -311,7 +307,7 @@
       <workItem from="1573897443475" duration="23059000" />
       <workItem from="1574178410557" duration="54600000" />
       <workItem from="1574767807848" duration="40346000" />
-      <workItem from="1575279749931" duration="58591000" />
+      <workItem from="1575279749931" duration="60333000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit init project with maven and springboot">
       <created>1571435904534</created>
@@ -649,7 +645,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575554815362</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="admin library user can make new borrow and close it">
+      <created>1575557275613</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1575557275613</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +673,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix bug" />
     <MESSAGE value="set borrow closed" />
     <MESSAGE value="made book detail page and stock uri" />
     <MESSAGE value="front page" />
@@ -695,7 +697,8 @@
     <MESSAGE value="adding some new classes in MS Batch.&#10;preparing for :&#10;           New Job:&#10;                    Step1 -&gt; Feed the db.&#10;                    Step2 -&gt; Email each record.&#10;                    Step3 -&gt; Clear db." />
     <MESSAGE value="api batch done tested " />
     <MESSAGE value="user can get an extra time from webapp service&#10;update documents for presentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="user can get an extra time from webapp service&#10;update documents for presentation." />
+    <MESSAGE value="admin library user can make new borrow and close it" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin library user can make new borrow and close it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

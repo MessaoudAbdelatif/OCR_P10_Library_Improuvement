@@ -64,7 +64,8 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     Cookie cookie = new Cookie("JWTtoken", jwt);
     cookie.setSecure(false);
     cookie.setHttpOnly(true);
-    cookie.setMaxAge(-1);
+    // 12 days about 999999
+    cookie.setMaxAge(999999);
     cookie.setDomain("localhost");
     cookie.setPath("/");
     response.addCookie(cookie);
