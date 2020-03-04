@@ -14,6 +14,14 @@
         </sourceRoots>
       </configuration>
     </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <setting name="provider-name" value="Hibernate" />
+        <datasource-mapping />
+        <naming-strategy-map />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
@@ -27,7 +35,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.public-service:library-api-business:0.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="libraryapibusiness" />
     <orderEntry type="module" module-name="libraryapidao" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.10.2" level="project" />
     <orderEntry type="module" module-name="libraryapimodel" />

@@ -215,8 +215,6 @@ mlibrary-api/library-api-service/src/main/java/com/publicservice/v1/exception/Ap
 alibrary-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/ErrorMessageDto.java,0/8/08931305b9d6c65ed4ebb80868af80004a777caa
 e
 5zuul-server/src/main/resources/application.properties,b/c/bce4b02de95c62441de7ea7d048a5387bb652674
-ã
-[library-api/library-api-service/src/main/java/com/publicservice/v1/controller/Register.java,a/8/a86ffbbef3ceb9ce05c6e0c400f4a4b0490f3092
 Å
 Qlibrary-api/library-api-dao/src/main/java/com/publicservice/consumer/RoleDao.java,c/0/c08211d4b564f994e6f52c163641e7e0daed9b47
 Å
@@ -259,13 +257,5 @@ Zzuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizatio
 [zuul-server/src/main/java/com/publicservice/zuulserver/security/UserDetailsServiceImpl.java,b/2/b25206ad705cebc828a41f1a91691dd47b834b01
 É
 Szuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java,f/c/fc51350728e3344ef4c04d1a73991e87dd7d247d
-{
-Klibrary-batch/src/main/java/com/publicservice/librarybatch/EmailConfig.java,5/b/5b9fdce2877bc5fe608eb5fe21a6395e42c0ab93
-x
-Hlibrary-batch/src/main/java/com/publicservice/librarybatch/feedback.http,1/4/1427cee363b6d278637b54378584321d9fd48bbe
-Ç
-Rlibrary-batch/src/main/java/com/publicservice/librarybatch/ReminderController.java,a/9/a991d0e7deedaa3851c087499f99b7168e0204dd
-x
-Hlibrary-batch/src/main/java/com/publicservice/librarybatch/Reminder.java,d/d/dd37b9b3c3197bba6add0442667cf8e09b6a4b55
 e
 5library-batch/src/main/resources/bootstrap.properties,8/3/835a6ba9b8edef089e41c31bb3689b0518d96a6d
