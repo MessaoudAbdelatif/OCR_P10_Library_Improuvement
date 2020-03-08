@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class LoginController {
 
   private final MSLibraryApiProxy msLibraryApiProxy;
-private final CookieUtil cookieUtil;
+  private final CookieUtil cookieUtil;
 
   public LoginController(MSLibraryApiProxy msLibraryApiProxy,
       CookieUtil cookieUtil) {
@@ -35,7 +35,7 @@ private final CookieUtil cookieUtil;
 
   @GetMapping("/logout1")
   public String logout(Model model, HttpServletResponse response) {
-    cookieUtil.clear(response,"JWTtoken");
+    cookieUtil.clear(response, "JWTtoken");
     return "views/index";
   }
 
@@ -52,7 +52,7 @@ private final CookieUtil cookieUtil;
   }
 
 
-  @GetMapping("/register")
+  @GetMapping("/register/")
   public String registerform(Model model) {
     model.addAttribute("libraryUser", new LibraryUserDto());
     return "views/register";
