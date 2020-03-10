@@ -52,7 +52,7 @@ public class LoginController {
   }
 
 
-  @GetMapping("/register/")
+  @GetMapping("/register")
   public String registerform(Model model) {
     model.addAttribute("libraryUser", new LibraryUserDto());
     return "views/register";
