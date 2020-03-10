@@ -245,3 +245,7 @@ e
 5library-batch/src/main/resources/bootstrap.properties,8/3/835a6ba9b8edef089e41c31bb3689b0518d96a6d
 š
 jlibrary-api/library-api-service/src/main/java/com/publicservice/v1/controller/BatchProviderController.java,1/1/11c85e586fc4cf8b6ae7afdda16e86db16225d0b
+Š
+Zlibrary-webapp/src/main/java/com/publicservice/librarywebapp/configuration/CookieUtil.java,a/6/a68c70cfbbc6f16ba0112bee2be15a6e099df5b5
+“
+clibrary-webapp/src/main/java/com/publicservice/librarywebapp/controller/LibraryAdminController.java,6/2/62322deedc410b19c8dcbc4bb96dbd815e30295d

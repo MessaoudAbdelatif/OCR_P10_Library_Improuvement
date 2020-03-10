@@ -1,2 +1,5 @@
 
-Jsquid:S1068",Remove this unused "stockDao" private field.(Š¤ß×8¡Ñ¥îã-
+I
+java:S1068",Remove this unused "stockDao" private field.(Š¤ß×8„ ´Ş‹.
+a
+java:S2583"DChange this condition so that it does not always evaluate to "false"(¶‹â8„ ´Ş‹.
