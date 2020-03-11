@@ -38,17 +38,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   protected void configure(HttpSecurity http) throws Exception {
 
     http.csrf().disable();
-    http.formLogin().loginPage("/login");
+    http.formLogin().loginPage("/login/");
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    http.authorizeRequests().antMatchers("login/**", "index/**", "home/**", "register/**").permitAll();
-    http.authorizeRequests().antMatchers("Books/**","Borrows/").hasAuthority("USER");
-    http.authorizeRequests().antMatchers("**/newBorrow/**").hasAuthority("ADMIN");
+    http.authorizeRequests().antMatchers( "/**/login/**","/**/index/**", "/**/home/**", "/**/register/**").permitAll();
+    http.authorizeRequests().antMatchers("/**/Books/**","/**/Borrows/**").hasAuthority("USER");
+    http.authorizeRequests().antMatchers("/**/newBorrow/**").hasAuthority("ADMIN");
+    http.exceptionHandling().accessDeniedPage("/login/");
     http.authorizeRequests().anyRequest().authenticated();
-    http.exceptionHandling().accessDeniedPage("/login");
     http.addFilter(new JWTAuthenticationFilter(authenticationManager()));
     http.addFilterBefore(new JWTAuthorizationFiler(),
         UsernamePasswordAuthenticationFilter.class);
-    http.httpBasic();
+    //http.httpBasic();
   }
 
   @Override
