@@ -29,8 +29,9 @@ public class BookingBusinessImpl implements BookingBusiness {
     //if newBooking.id.userid.borrows.isNotEmpty ?? need to handle ??
     if (notBorrowingActually
         .test(newBooking.getId().getBookID(), newBooking.getId().getLibraryUserID())) {
-      if (actifBookingListSortedByCreationDate.size() < (newBooking.getId().getBookID().getStock()
-          .getTotal())*2) {
+      if (lessThenTheDouble.test(actifBookingListSortedByCreationDate.size(),
+          newBooking.getId().getBookID().getStock()
+              .getTotal())) {
         bookingDao.save(newBooking);
       } else {
         throw new BookingNotAllowed(
@@ -51,4 +52,7 @@ public class BookingBusinessImpl implements BookingBusiness {
           .getBorrows()
           .stream()
           .noneMatch(borrow -> borrow.getBookID().getId().equals(book.getId()));
+
+  protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->
+      theBookingList < bookTotalStock * 2;
 }
