@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/contract/BookingBusiness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/exception/BookingNotAllowed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BookingBusinessImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-dao/src/main/java/com/publicservice/consumer/BookingDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library-api/library-api-model/src/main/java/com/publicservice/entities/BookingKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BookingBusinessImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/library-api-business/src/main/java/com/publicservice/business/impl/BookingBusinessImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -324,14 +319,7 @@
       <workItem from="1583698548069" duration="72000" />
       <workItem from="1583698635136" duration="7816000" />
       <workItem from="1583836406279" duration="148000" />
-      <workItem from="1583836564289" duration="36927000" />
-    </task>
-    <task id="LOCAL-00012" summary="adding business folders">
-      <created>1571613521077</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1571613521077</updated>
+      <workItem from="1583836564289" duration="37230000" />
     </task>
     <task id="LOCAL-00013" summary="fix business layout modules import">
       <created>1571614909806</created>
@@ -669,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583935589123</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Implementing BookingBusinessImpl.java">
+      <created>1583974258986</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1583974258986</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +685,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="zuul gateway api ok " />
     <MESSAGE value="exceptions rest handler added" />
     <MESSAGE value="externalise webAppProperties" />
     <MESSAGE value="add roles springSecurity" />
@@ -715,7 +709,8 @@
     <MESSAGE value="zuul strip-prefix set:&#10;looking to load css &amp; js throw zuul gateway." />
     <MESSAGE value="IDE var env setting" />
     <MESSAGE value="Starting New Feature Booking_Book_Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting New Feature Booking_Book_Service" />
+    <MESSAGE value="Implementing BookingBusinessImpl.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing BookingBusinessImpl.java" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="190" key="#Project_Structure" timestamp="1583837355612">
@@ -735,9 +730,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="528" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1583698570400" />
-    <state x="304" y="126" width="1072" height="1042" key="CommitChangelistDialog2" timestamp="1583935589006">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1573" y="8" width="1072" height="1042" key="CommitChangelistDialog2" timestamp="1583974258827">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1573" y="8" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1583974258827" />
     <state x="304" y="126" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583935589006" />
     <state x="232" y="0" width="1072" height="1042" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1583707882845" />
     <state width="1294" height="161" key="GridCell.Tab.0.bottom" timestamp="1583955171115">
@@ -838,9 +834,10 @@
     </state>
     <state width="615" height="556" key="SwitcherDM/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1583970710475" />
     <state width="538" height="527" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1583702128465" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1583935595090">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2" timestamp="1583974263048">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1583974263048" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583935595090" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1583707942861" />
     <state x="100" y="100" width="1480" height="850" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1583855753228">

@@ -29,8 +29,8 @@ public class BookingBusinessImpl implements BookingBusiness {
     //if newBooking.id.userid.borrows.isNotEmpty ?? need to handle ??
     if (notBorrowingActually
         .test(newBooking.getId().getBookID(), newBooking.getId().getLibraryUserID())) {
-      if (actifBookingListSortedByCreationDate.size() < newBooking.getId().getBookID().getStock()
-          .getTotal()) {
+      if (actifBookingListSortedByCreationDate.size() < (newBooking.getId().getBookID().getStock()
+          .getTotal())*2) {
         bookingDao.save(newBooking);
       } else {
         throw new BookingNotAllowed(
