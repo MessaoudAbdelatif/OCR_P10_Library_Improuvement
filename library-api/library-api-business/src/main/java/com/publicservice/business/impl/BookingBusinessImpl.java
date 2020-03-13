@@ -1,11 +1,12 @@
 package com.publicservice.business.impl;
 
+import static com.publicservice.business.contract.BookingValidatorBusiness.ValidationResult.SUCCESS;
+import static com.publicservice.business.contract.BookingValidatorBusiness.isNotBorrowingThisBook;
+
 import com.publicservice.business.contract.BookingBusiness;
 import com.publicservice.business.exception.BookingNotAllowed;
 import com.publicservice.consumer.BookingDao;
-import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
-import com.publicservice.entities.LibraryUser;
 import java.util.List;
 import java.util.function.BiPredicate;
 import javax.transaction.Transactional;
@@ -27,31 +28,25 @@ public class BookingBusinessImpl implements BookingBusiness {
         .findBookingById_BookID_IdAndClosedIsFalseOrderByDateCreation(
             newBooking.getId().getBookID().getId());
     //if newBooking.id.userid.borrows.isNotEmpty ?? need to handle ??
-    if (notBorrowingActually
-        .test(newBooking.getId().getBookID(), newBooking.getId().getLibraryUserID())) {
-      if (lessThenTheDouble.test(actifBookingListSortedByCreationDate.size(),
-          newBooking.getId().getBookID().getStock()
-              .getTotal())) {
+    if (lessThenTheDouble
+            .test(actifBookingListSortedByCreationDate.size(),
+                newBooking.getId().getBookID().getStock().getTotal())) {
+      if (isNotBorrowingThisBook().apply(newBooking) == SUCCESS) {
         bookingDao.save(newBooking);
       } else {
         throw new BookingNotAllowed(
-            "Sorry our booking list for this book : " + newBooking.getId().getBookID().getName()
-                + " is full !! please try later ...");
+            "Sorry you are already borrowing this book : " + newBooking.getId().getBookID().getName() + " !!");
       }
 
     } else {
       throw new BookingNotAllowed(
-          "You are already borrowing this book : " + newBooking.getId().getBookID().getName());
+          "Sorry our booking list for this book : " + newBooking.getId().getBookID().getName()
+              + " is full !! please try later ..."
+      );
     }
 
     return newBooking;
   }
-
-  protected static BiPredicate<Book, LibraryUser> notBorrowingActually = (book, libraryUser) ->
-      libraryUser
-          .getBorrows()
-          .stream()
-          .noneMatch(borrow -> borrow.getBookID().getId().equals(book.getId()));
 
   protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->
       theBookingList < bookTotalStock * 2;
