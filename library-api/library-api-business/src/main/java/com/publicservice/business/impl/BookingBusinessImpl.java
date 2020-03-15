@@ -6,8 +6,8 @@ import static com.publicservice.business.contract.BookingValidatorBusiness.isNot
 import com.publicservice.business.contract.BookingBusiness;
 import com.publicservice.business.exception.BookingNotAllowed;
 import com.publicservice.consumer.BookingDao;
+import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
-import java.util.List;
 import java.util.function.BiPredicate;
 import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -24,18 +24,16 @@ public class BookingBusinessImpl implements BookingBusiness {
 
   @Override
   public Booking createBooking(Booking newBooking) throws BookingNotAllowed {
-    List<Booking> actifBookingListSortedByCreationDate = bookingDao
-        .findBookingById_BookID_IdAndClosedIsFalseOrderByDateCreation(
-            newBooking.getId().getBookID().getId());
-    //if newBooking.id.userid.borrows.isNotEmpty ?? need to handle ??
-    if (lessThenTheDouble
-            .test(actifBookingListSortedByCreationDate.size(),
-                newBooking.getId().getBookID().getStock().getTotal())) {
+
+    if (bookingListIsNotFull(newBooking.getId().getBookID())) {
       if (isNotBorrowingThisBook().apply(newBooking) == SUCCESS) {
-        bookingDao.save(newBooking);
+
+        bookingDao.save(newBooking);   // <----- SAVE
+
       } else {
         throw new BookingNotAllowed(
-            "Sorry you are already borrowing this book : " + newBooking.getId().getBookID().getName() + " !!");
+            "Sorry you are already borrowing this book : " + newBooking.getId().getBookID()
+                .getName() + " !!");
       }
 
     } else {
@@ -47,6 +45,18 @@ public class BookingBusinessImpl implements BookingBusiness {
 
     return newBooking;
   }
+
+  public boolean bookingListIsNotFull(Book book) {
+    if (bookingDao.findBookingById_BookID_IdAndClosedIsFalseOrderByDateCreation(book.getId())
+        .isPresent()) {
+      return lessThenTheDouble.test(
+          bookingDao.findBookingById_BookID_IdAndClosedIsFalseOrderByDateCreation(book.getId())
+              .get().size(), book.getStock().getTotal());
+    } else {
+      return true;
+    }
+  }
+
 
   protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->
       theBookingList < bookTotalStock * 2;

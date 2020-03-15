@@ -247,3 +247,19 @@ jlibrary-api/library-api-service/src/main/java/com/publicservice/v1/controller/B
 Zlibrary-webapp/src/main/java/com/publicservice/librarywebapp/configuration/CookieUtil.java,a/6/a68c70cfbbc6f16ba0112bee2be15a6e099df5b5
 “
 clibrary-webapp/src/main/java/com/publicservice/librarywebapp/controller/LibraryAdminController.java,6/2/62322deedc410b19c8dcbc4bb96dbd815e30295d
+e
+5zuul-server/src/main/resources/application.properties,b/c/bce4b02de95c62441de7ea7d048a5387bb652674
+†
+Vlibrary-api/library-api-model/src/main/java/com/publicservice/entities/BookingKey.java,9/2/928d42f0f189426387f9b2b84e6c2f61e24cd498
+ƒ
+Slibrary-api/library-api-model/src/main/java/com/publicservice/entities/Booking.java,4/8/4885ddfcfa44bb93ade6c5e396622327d33f4c2e
+š
+jlibrary-api/library-api-business/src/main/java/com/publicservice/business/exception/BookingNotAllowed.java,8/7/87ba4cd3c40820d71b81cf526b27823fbacaf2b9
+„
+Tlibrary-api/library-api-dao/src/main/java/com/publicservice/consumer/BookingDao.java,8/9/89615b85910d6d0f7c0981323395be0680c27940
+ 
+plibrary-api/library-api-business/src/main/java/com/publicservice/business/contract/BookingValidatorBusiness.java,3/b/3b9ff1870a8d672b71806eb4485cb73ff3cffa33
+—
+glibrary-api/library-api-business/src/main/java/com/publicservice/business/contract/BookingBusiness.java,d/6/d68efeb6483f8d4a11192e7ad19b05f2c372b135
+—
+glibrary-api/library-api-business/src/main/java/com/publicservice/business/impl/BookingBusinessImpl.java,5/9/5920d16d54e09b81df9de19ae13a17335939c290
