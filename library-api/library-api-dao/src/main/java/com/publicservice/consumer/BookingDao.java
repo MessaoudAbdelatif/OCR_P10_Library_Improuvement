@@ -1,5 +1,6 @@
 package com.publicservice.consumer;
 
+import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
 import com.publicservice.entities.BookingKey;
 import java.util.List;
@@ -12,6 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface BookingDao extends JpaRepository<Booking, BookingKey> {
 
-  Optional<List<Booking>> findBookingById_BookID_IdAndClosedIsFalseOrderByDateCreation(Long bookID);
+  Optional<List<Booking>> findByIdBookIDAndClosedFalseOrderByDateCreation(Book book);
 
 }

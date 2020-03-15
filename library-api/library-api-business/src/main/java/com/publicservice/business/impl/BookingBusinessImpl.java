@@ -47,10 +47,10 @@ public class BookingBusinessImpl implements BookingBusiness {
   }
 
   public boolean bookingListIsNotFull(Book book) {
-    if (bookingDao.findBookingById_BookID_IdAndClosedIsFalseOrderByDateCreation(book.getId())
+    if (bookingDao.findByIdBookIDAndClosedFalseOrderByDateCreation(book)
         .isPresent()) {
       return lessThenTheDouble.test(
-          bookingDao.findBookingById_BookID_IdAndClosedIsFalseOrderByDateCreation(book.getId())
+          bookingDao.findByIdBookIDAndClosedFalseOrderByDateCreation(book)
               .get().size(), book.getStock().getTotal());
     } else {
       return true;
