@@ -3,7 +3,11 @@ package com.publicservice.business.impl;
 import com.publicservice.business.contract.BorrowBusiness;
 import com.publicservice.business.exception.BorrowNotFoundException;
 import com.publicservice.business.exception.ExtraTimeNotAllowed;
+import com.publicservice.consumer.BookDao;
+import com.publicservice.consumer.BookingDao;
 import com.publicservice.consumer.BorrowDao;
+import com.publicservice.entities.Book;
+import com.publicservice.entities.BookingKey;
 import com.publicservice.entities.Borrow;
 import java.time.Instant;
 import java.util.Date;
@@ -18,12 +22,16 @@ import org.springframework.stereotype.Service;
 public class BorrowBusinessImpl implements BorrowBusiness {
 
   private final BorrowDao borrowDao;
+  private final BookDao bookDao;
+  private final BookingDao bookingDao;
 
 
-  public BorrowBusinessImpl(BorrowDao borrowDao
-  ) {
+  public BorrowBusinessImpl(BorrowDao borrowDao, BookDao bookDao,
+      BookingDao bookingDao) {
     this.borrowDao = borrowDao;
 
+    this.bookDao = bookDao;
+    this.bookingDao = bookingDao;
   }
 
   @Override
@@ -53,6 +61,10 @@ public class BorrowBusinessImpl implements BorrowBusiness {
 
   @Override
   public Borrow createBorrow(Borrow newBorrow, int initialTime) {
+    if (bookingDao.findByIdBookIDAndIdLibraryUserIDAndIsClosedFalse(newBorrow.getBookID(),
+        newBorrow.getUserID()).isPresent()) {
+      bookingDao.deleteById(new BookingKey(newBorrow.getUserID(), newBorrow.getBookID()));
+    }
     newBorrow.setDateStart(Date.from(Instant.now()));
     DateTime dateStart = new DateTime(newBorrow.getDateStart());
     DateTime dateEnd = dateStart.plusDays(initialTime);
@@ -60,6 +72,7 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     newBorrow.setDateEnd(calculatedEndDate);
     newBorrow.setClosed(false);
     newBorrow.setExtraTime(false);
+
     borrowDao.save(newBorrow);
 
     return newBorrow;
@@ -77,5 +90,13 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     List<Borrow> borrowsOverDeadTime = borrowDao
         .findBorrowByDateEndBeforeAndClosedFalse(Date.from(Instant.now()));
     return borrowsOverDeadTime;
+  }
+
+  public void returnedBook(Book book) {
+    book.getStock().setOutside((book.getStock().getOutside()) - 1);
+    book.getStock().setAvailable(book.getStock().getAvailable() + 1);
+    // TODO notify booking queue that book is back
+
+    bookDao.save(book);
   }
 }
