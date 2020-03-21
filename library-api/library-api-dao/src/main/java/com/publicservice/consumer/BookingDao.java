@@ -15,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 public interface BookingDao extends JpaRepository<Booking, BookingKey> {
 
   Optional<List<Booking>> findByIdBookIDAndIsClosedFalseOrderByDateCreation(Book book);
+  Optional<List<Booking>> findBookingByIdLibraryUserID(LibraryUser libraryUser);
   Optional<List<Booking>> findByIdBookIDAndIdLibraryUserIDAndIsClosedFalse(Book book, LibraryUser libraryUser);
-
-
 }

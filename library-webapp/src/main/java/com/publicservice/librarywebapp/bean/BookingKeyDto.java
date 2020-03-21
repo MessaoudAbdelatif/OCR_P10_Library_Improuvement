@@ -1,6 +1,5 @@
 package com.publicservice.librarywebapp.bean;
 
-import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,10 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookingDto {
+public class BookingKeyDto {
 
-  protected BookingKeyDto id;
-  protected Date dateCreation;
-  protected Boolean isClosed;
-  protected Date dateOfClosing;
+  protected String libraryUserID;
+  protected String bookID;
 }

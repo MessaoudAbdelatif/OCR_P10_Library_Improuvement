@@ -30,7 +30,6 @@ public class BookController {
       BookMapper bookMapper, StockMapper stockMapper) {
     this.bookBusiness = bookBusiness;
     this.bookMapper = bookMapper;
-
     this.stockMapper = stockMapper;
   }
 
@@ -66,7 +65,5 @@ public class BookController {
     bookPageDto.setNbrTotalPages(new int[booksUnderPage.getTotalPages()].length);
 
     return bookPageDto;
-
   }
-
 }

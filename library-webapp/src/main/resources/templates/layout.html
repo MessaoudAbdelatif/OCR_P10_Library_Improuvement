@@ -41,44 +41,48 @@
              aria-haspopup="true" aria-expanded="false">
             Home
           </a>
+
         <li class="nav-item">
           <a class="nav-link" th:href="@{/Books/}" id="navbarLink2" role="button"
              aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-book"></i> Books
           </a>
-        <li class="nav-item">
-          <a class="nav-link" th:href="@{/Borrows}" id="navbarLink3" role="button"
-             aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-book-reader"></i> My Borrows
-          </a>
+    <li class="nav-item" th:if="${#httpServletRequest.cookies}">
+      <a class="nav-link" th:href="@{/Borrows}" id="navbarLink3" role="button"
+         aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-book-reader"></i> My Borrows
+      </a>
 
-        <li class="nav-item">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-              class="fas fa-user-circle"></i>
-            Connection
-          </a>
-          <!-- Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-          <div class="dropdown-menu dropdown-menu-right animate slideIn"
-               aria-labelledby="navbarDropdown">
-            <div>
-              <div th:if="${#httpServletRequest.remoteUser}">
-                <a th:href="@{/Borrows/{username}(username=${#httpServletRequest.getHeader('username')})}"><h1
-                    class=" dropdown-item"><i class="fas fa-address-book"></i>Check my borrows</h1>
-                </a>
-              </div>
-              <form class="dropdown-item-text" th:action="@{/logout1}" method="get">
-                <input class=" alert-info" type="submit" value="logout"/>
-              </form>
-            </div>
-            <a class="dropdown-item" th:href="@{/register/}">Sign-Up</a>
-            <div th:if="!${#httpServletRequest.remoteUser}">
-              <a class="dropdown-item" th:href="@{/login}">Sign-In</a>
-            </div>
+
+    <li class="nav-item">
+      <a class="nav-link dropdown-toggle" th:href="@{/login}" id="navbarDropdown" role="button"
+         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+          class="fas fa-user-circle"></i>
+        Connection
+      </a>
+      <!-- Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+      <div class="dropdown-menu dropdown-menu-right animate slideIn"
+           aria-labelledby="navbarDropdown">
+        <div>
+          <div th:if="${#httpServletRequest.cookies}">
+            <a th:href="@{/Borrows}"><h1
+                class=" dropdown-item"><i class="fas fa-address-book"></i>Check my borrows</h1>
+            </a>
           </div>
-        </li>
-      </ul>
-    </div>
+          <form class="dropdown-item-text" th:action="@{/logout1}" method="get">
+            <input class=" alert-info" type="submit" value="logout"/>
+          </form>
+        </div>
+        <div th:if="!${#httpServletRequest.cookies}">
+          <a class="dropdown-item" th:href="@{/register/}">Sign-Up</a>
+        </div>
+        <div th:if="!${#httpServletRequest.cookies}">
+          <a class="dropdown-item" th:href="@{/login}">Sign-In</a>
+        </div>
+      </div>
+    </li>
+    </ul>
+  </div>
   </div>
 </nav>
 

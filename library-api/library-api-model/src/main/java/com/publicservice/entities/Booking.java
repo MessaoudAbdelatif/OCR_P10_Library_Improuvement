@@ -26,7 +26,6 @@ public class Booking implements Serializable {
   @Temporal(TemporalType.DATE)
   private Date dateCreation;
 
-  @NotNull
   @Builder.Default
   private Boolean isClosed = false;
 

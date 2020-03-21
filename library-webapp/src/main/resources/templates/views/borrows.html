@@ -20,7 +20,7 @@
           </tr>
           <tr th:each="borrow : ${lUBID}">
             <th class="list-inline" th:text="${borrow.bookName}"></th>
-            <th class="text-inline" th:text="${borrow.endDate}"></th>
+            <th class="text-inline" th:text="${#dates.format(borrow.endDate, 'dd-MM-yyyy HH:mm')}"></th>
             <th  th:if="${borrow.extraTime == false}" class="list-inline">
               <form autocomplete="off"
                     th:action="@{'borrows/'+ ${borrow.getBorrowIDS()} + '/addExtraTime'}"

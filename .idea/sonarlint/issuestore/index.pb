@@ -191,8 +191,6 @@ g
 ulibrary-webapp/src/main/java/com/publicservice/librarywebapp/configuration/WebApplicationPropertiesConfiguration.java,d/c/dc7537c4c6f25c2d13e47957b190a23b312bf1cf
 á
 Wlibrary-api/library-api-model/src/main/java/com/publicservice/entities/LibraryRole.java,c/7/c76681874c24ea5c7b3fd53e96063ffa52d6294e
-f
-6library-webapp/src/main/resources/bootstrap.properties,c/3/c310ceb937d027b29a681727916f779bdc3abc52
 C
 zuul-server/pom.xml,c/e/ce0e7119e059f07c3d04023d3fc7ce1e23bf2a41
 ù

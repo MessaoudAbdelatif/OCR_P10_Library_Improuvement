@@ -2,6 +2,9 @@ package com.publicservice.business.contract;
 
 import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
+import com.publicservice.entities.BookingKey;
+import com.publicservice.entities.LibraryUser;
+import java.util.List;
 
 public interface BookingBusiness {
 
@@ -18,5 +21,6 @@ public interface BookingBusiness {
    * @param book can be any book of the library.
    */
   boolean bookingListIsNotFull(Book book);
-
+  Booking getBookingById(BookingKey bookingKey);
+  List<Booking> getBookingByUserID(LibraryUser libraryUser);
 }

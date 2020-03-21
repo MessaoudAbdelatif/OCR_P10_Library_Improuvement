@@ -5,24 +5,26 @@ import static com.publicservice.business.contract.BookingValidatorBusiness.Valid
 import static com.publicservice.business.contract.BookingValidatorBusiness.ValidationResult.SUCCESS;
 
 import com.publicservice.business.contract.BookingValidatorBusiness.ValidationResult;
-import com.publicservice.entities.Booking;
-import java.util.function.Function;
+import com.publicservice.entities.Book;
+import com.publicservice.entities.LibraryUser;
+import java.util.function.BiFunction;
 
-public interface BookingValidatorBusiness extends Function<Booking, ValidationResult> {
+public interface BookingValidatorBusiness extends BiFunction<LibraryUser, Book, ValidationResult> {
 
   static BookingValidatorBusiness isNotBorrowingThisBook() {
-    return booking ->
-        booking.getId().getLibraryUserID()
-            .getBorrows()
+    return (libraryUser,book) ->
+        libraryUser.getBorrows()
             .stream()
-            .noneMatch(borrow -> borrow.getBookID().getId().equals(booking.getId().getBookID().getId())) ? SUCCESS
+            .noneMatch(
+                borrow -> borrow.getBookID().getId().equals(book.getId()))
+            ? SUCCESS
             : ALREADY_BORROWING_THIS_BOOK;
   }
 
-  default BookingValidatorBusiness and (BookingValidatorBusiness other){
-    return booking -> {
-      ValidationResult result = this.apply(booking);
-      return result.equals(SUCCESS) ? other.apply(booking) : result;
+  default BookingValidatorBusiness and(BookingValidatorBusiness other) {
+    return (libraryUser,book) -> {
+      ValidationResult result = this.apply(libraryUser,book);
+      return result.equals(SUCCESS) ? other.apply(libraryUser,book) : result;
     };
   }
 
