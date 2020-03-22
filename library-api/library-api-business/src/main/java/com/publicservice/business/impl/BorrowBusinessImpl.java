@@ -61,9 +61,9 @@ public class BorrowBusinessImpl implements BorrowBusiness {
 
   @Override
   public Borrow createBorrow(Borrow newBorrow, int initialTime) {
-    if (bookingDao.findByIdBookIDAndIdLibraryUserIDAndIsClosedFalse(newBorrow.getBookID(),
-        newBorrow.getUserID()).isPresent()) {
-      bookingDao.deleteById(new BookingKey(newBorrow.getUserID(), newBorrow.getBookID()));
+    if (bookingDao.findByIdBookIDAndIdLibraryUserIDAndIsClosedFalse(newBorrow.getBookID().getId(),
+        newBorrow.getUserID().getUsername()).isPresent()) {
+      bookingDao.deleteById(new BookingKey(newBorrow.getUserID().getUsername(), newBorrow.getBookID().getId()));
     }
     newBorrow.setDateStart(Date.from(Instant.now()));
     DateTime dateStart = new DateTime(newBorrow.getDateStart());

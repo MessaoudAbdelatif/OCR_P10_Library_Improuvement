@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Embeddable
 public class BookingKey implements Serializable {
 
-  private LibraryUser libraryUserID;
-  private Book bookID;
+  private String libraryUserID;
+  private Long bookID;
 
 }

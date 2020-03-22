@@ -42,16 +42,15 @@ public class BookingBusinessImpl implements BookingBusiness {
   @Override
   public Booking createBooking(Booking newBooking)
       throws BookingNotAllowed, LibraryUserNotFoundException, BookNotFoundException {
-    if (bookingListIsNotFull(newBooking.getId().getBookID())) {
+    List<Borrow> borrowList = userBusiness
+        .checkeLibraryUserBorrowedBook(newBooking.getId().getLibraryUserID());
 
-      List<Borrow> borrowList = userBusiness
-          .checkeLibraryUserBorrowedBook(newBooking.getId().getLibraryUserID().getUsername());
+    LibraryUser libraryUser = userBusiness
+        .oneLibraryUser(newBooking.getId().getLibraryUserID());
 
-      LibraryUser libraryUser = userBusiness
-          .oneLibraryUser(newBooking.getId().getLibraryUserID().getUsername());
+    Book book = bookBusiness.findOneBookById(newBooking.getId().getBookID());
 
-      Book book = bookBusiness.findOneBookById(newBooking.getId().getBookID().getId());
-
+    if (bookingListIsNotFull(book)) {
       newBooking.setDateCreation(Date.from(Instant.now()));
 
       if (borrowList.isEmpty() || borrowList == null) {
@@ -65,12 +64,12 @@ public class BookingBusinessImpl implements BookingBusiness {
 
       } else {
         throw new BookingNotAllowed(
-            "Sorry you are already borrowing this book : " + newBooking.getId().getBookID()
+            "Sorry you are already borrowing this book : " + book
                 .getName() + " !!");
       }
     } else {
       throw new BookingNotAllowed(
-          "Sorry our booking list for this book : " + newBooking.getId().getBookID().getName()
+          "Sorry our booking list for this book : " + book.getName()
               + " is full !! please try later ..."
       );
     }
@@ -79,10 +78,10 @@ public class BookingBusinessImpl implements BookingBusiness {
   }
 
   public boolean bookingListIsNotFull(Book book) {
-    if (bookingDao.findByIdBookIDAndIsClosedFalseOrderByDateCreation(book)
+    if (bookingDao.findByIdBookIDAndIsClosedFalseOrderByDateCreation(book.getId())
         .isPresent()) {
       return lessThenTheDouble.test(
-          bookingDao.findByIdBookIDAndIsClosedFalseOrderByDateCreation(book)
+          bookingDao.findByIdBookIDAndIsClosedFalseOrderByDateCreation(book.getId())
               .get().size(), book.getStock().getTotal());
     } else {
       return true;
@@ -94,7 +93,7 @@ public class BookingBusinessImpl implements BookingBusiness {
   }
 
   public List<Booking> getBookingByUserID(LibraryUser libraryUser) {
-    return bookingDao.findBookingByIdLibraryUserID(libraryUser).orElse(new ArrayList<Booking>());
+    return bookingDao.findBookingByIdLibraryUserID(libraryUser.getUsername()).orElse(new ArrayList<Booking>());
   }
 
   protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->

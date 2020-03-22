@@ -8,12 +8,10 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -26,8 +24,8 @@ public class Booking implements Serializable {
   @Temporal(TemporalType.DATE)
   private Date dateCreation;
 
-  @Builder.Default
-  private Boolean isClosed = false;
+  @NotNull
+  private Boolean isClosed;
 
   @Temporal(TemporalType.DATE)
   private Date dateOfClosing;
