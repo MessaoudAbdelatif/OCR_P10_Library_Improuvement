@@ -2,6 +2,7 @@ package com.publicservice.librarywebapp.proxy;
 
 import com.publicservice.librarywebapp.bean.BookDto;
 import com.publicservice.librarywebapp.bean.BookPageDto;
+import com.publicservice.librarywebapp.bean.BookingDto;
 import com.publicservice.librarywebapp.bean.BorrowDto;
 import com.publicservice.librarywebapp.bean.LibarayUserBorrowInfoDto;
 import com.publicservice.librarywebapp.bean.LibraryUserDto;
@@ -26,11 +27,11 @@ public interface MSLibraryApiProxy {
   @PostMapping(value = "borrows/{id}/addExtraTime")
   void addExtraTime(@PathVariable("id") Long id);
 
-  @PostMapping(value = "ADMIN/newBorrow")
+  @PostMapping(value = "admin/newBorrow")
   BorrowDto createBorrow(BorrowDto newBorrowDto);
 
-  @GetMapping(value = "ADMIN/{id}/close")
-  void closeBorrow(Long id);
+  @GetMapping(value = "admin/{id}/close")
+  void closeBorrow(@PathVariable("id") Long id);
 
   @GetMapping(value = "books/{id}")
   BookDto findOneBookById(@PathVariable("id") Long id);
@@ -45,12 +46,20 @@ public interface MSLibraryApiProxy {
   LibraryUserDto findOneLibraryUser(@PathVariable("username") String username);
 
   @GetMapping(value = "books/search")
-  BookPageDto lookingForABook(@RequestParam(value = "page",defaultValue = "0") int numPage, @RequestParam(value = "size", defaultValue = "5") int size,
-      @RequestParam(value = "keyword", defaultValue = "") String keyword, @RequestParam(value = "kindOfSearch", defaultValue = "NAME") String kindOfSearch);
+  BookPageDto lookingForABook(@RequestParam(value = "page", defaultValue = "0") int numPage,
+      @RequestParam(value = "size", defaultValue = "5") int size,
+      @RequestParam(value = "keyword", defaultValue = "") String keyword,
+      @RequestParam(value = "kindOfSearch", defaultValue = "NAME") String kindOfSearch);
 
   @PostMapping(value = "users/newLibraryUser")
   LibraryUserDto createNewUser(@RequestBody LibraryUserDto libraryUserDto);
 
   @GetMapping("borrows/{username}/info")
-   List<LibarayUserBorrowInfoDto> libraryUserBorrowsInfo(@PathVariable String username);
-  }
+  List<LibarayUserBorrowInfoDto> libraryUserBorrowsInfo(@PathVariable String username);
+
+  @PostMapping(value = "/booking/{username}/{bookID}/add")
+  BookingDto createBooking(BookingDto bookingDto,@PathVariable String bookID,@PathVariable String username);
+
+  @GetMapping(value = "/booking/{username}")
+  List<BookingDto> findOneBookingById(@PathVariable String username);
+}

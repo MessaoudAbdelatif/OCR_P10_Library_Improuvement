@@ -1,10 +1,15 @@
 package com.publicservice.v1.controller;
 
+import com.publicservice.business.contract.BookBusiness;
 import com.publicservice.business.contract.BookingBusiness;
 import com.publicservice.business.contract.UserBusiness;
+import com.publicservice.business.exception.BookNotFoundException;
 import com.publicservice.business.exception.LibraryUserNotFoundException;
+import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
 import com.publicservice.entities.LibraryUser;
+import com.publicservice.v1.dto.mapper.BookMapper;
+import com.publicservice.v1.dto.mapper.BookingKeyMapper;
 import com.publicservice.v1.dto.mapper.BookingMapper;
 import com.publicservice.v1.dto.model.BookingDto;
 import com.publicservice.v1.dto.model.BookingKeyDto;
@@ -25,17 +30,24 @@ public class BookingController {
   BookingBusiness bookingBusiness;
   UserBusiness userBusiness;
   BookingMapper bookingMapper;
+  BookingKeyMapper bookingKeyMapper;
+  BookMapper bookMapper;
+  BookBusiness bookBusiness;
 
 
   public BookingController(BookingBusiness bookingBusiness,
-      BookingMapper bookingMapper, UserBusiness userBusiness) {
+      BookingMapper bookingMapper, UserBusiness userBusiness, BookMapper bookMapper,
+      BookingKeyMapper bookingKeyMapper, BookBusiness bookBusiness) {
     this.bookingBusiness = bookingBusiness;
     this.bookingMapper = bookingMapper;
+    this.bookingKeyMapper = bookingKeyMapper;
     this.userBusiness = userBusiness;
+    this.bookMapper = bookMapper;
+    this.bookBusiness = bookBusiness;
   }
 
   @GetMapping(value = "/{username}")
-  public List<BookingDto> findOneBookingById(@PathVariable String username)
+  public List<BookingDto> findOBookingListByUserId(@PathVariable String username)
       throws LibraryUserNotFoundException {
     LibraryUser libraryUser = userBusiness.oneLibraryUser(username);
     List<Booking> bookingList = bookingBusiness.getBookingByUserID(libraryUser);
@@ -44,14 +56,33 @@ public class BookingController {
         .map(bookingMapper::toBookingDto)
         .collect(Collectors.toList());
   }
+
   @PostMapping(value = "/{username}/{bookID}/add")
   @ResponseStatus(HttpStatus.CREATED)
-  public Booking createBooking(BookingDto bookingDto,@PathVariable String bookID,@PathVariable String username) throws Exception {
+  public BookingDto createBooking(@PathVariable String bookID,
+      @PathVariable String username) throws Exception {
     BookingKeyDto bookingKeyDto = new BookingKeyDto();
+    BookingDto bookingDto = new BookingDto();
+
     bookingKeyDto.setBookID(bookID);
     bookingKeyDto.setLibraryUserID(username);
+
     bookingDto.setId(bookingKeyDto);
+
     Booking booking = bookingMapper.toBooking(bookingDto);
-    return bookingBusiness.createBooking(booking);
+    bookingBusiness.createBooking(booking);
+
+    Booking bookingByIdFromDao = bookingBusiness
+        .getBookingById(bookingKeyMapper.toBookingKey(bookingKeyDto));
+
+    return bookingMapper.toBookingDto(bookingByIdFromDao);
   }
+
+  @GetMapping(value = "/book/{bookId}")
+  public boolean bookingListIsNotFull(@PathVariable String bookId) throws BookNotFoundException {
+    Book oneBookById = bookBusiness.findOneBookById(Long.parseLong(bookId));
+    return bookingBusiness.bookingListIsNotFull(oneBookById);
+  }
+
+
 }

@@ -56,7 +56,6 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     } else {
       throw new ExtraTimeNotAllowed("You already get an extra time !");
     }
-
   }
 
   @Override
@@ -99,4 +98,6 @@ public class BorrowBusinessImpl implements BorrowBusiness {
 
     bookDao.save(book);
   }
+
+
 }

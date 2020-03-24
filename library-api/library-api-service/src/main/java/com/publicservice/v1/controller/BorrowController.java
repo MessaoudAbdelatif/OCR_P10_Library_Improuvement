@@ -54,14 +54,14 @@ public class BorrowController {
     borrowBusiness.addExtraTime(id, appProperties.getExtraTime());
   }
 
-  @PostMapping(value = "ADMIN/newBorrow")
+  @PostMapping(value = "admin/newBorrow")
   @ResponseStatus(HttpStatus.CREATED)
   public Borrow createBorrow(BorrowDto newBorrowDto) {
     Borrow borrow = borrowMapper.toBorrow(newBorrowDto);
     return borrowBusiness.createBorrow(borrow, appProperties.getInitialTime());
   }
 
-  @GetMapping(value = "ADMIN/{id}/close")
+  @GetMapping(value = "admin/{id}/close")
   @ResponseStatus(HttpStatus.OK)
   public void closeBorrow(@PathVariable("id") Long id){
     borrowBusiness.closeBorrow(id);

@@ -19,6 +19,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.BiPredicate;
 import javax.transaction.Transactional;
 import org.springframework.stereotype.Service;
@@ -58,7 +59,7 @@ public class BookingBusinessImpl implements BookingBusiness {
         bookingDao.save(newBooking);   // <----- SAVE
 
       } else if (!borrowList.isEmpty()
-          && isNotBorrowingThisBook().apply(libraryUser,book) == SUCCESS) {
+          && isNotBorrowingThisBook().apply(libraryUser, book) == SUCCESS) {
 
         bookingDao.save(newBooking);   // <----- SAVE
 
@@ -93,7 +94,23 @@ public class BookingBusinessImpl implements BookingBusiness {
   }
 
   public List<Booking> getBookingByUserID(LibraryUser libraryUser) {
-    return bookingDao.findBookingByIdLibraryUserID(libraryUser.getUsername()).orElse(new ArrayList<Booking>());
+    return bookingDao.findBookingByIdLibraryUserID(libraryUser.getUsername())
+        .orElse(new ArrayList<Booking>());
+  }
+
+  public void deleteBookingById(BookingKey bookingKey) {
+    bookingDao.deleteById(bookingKey);
+  }
+
+  public int myPositionInQueue(BookingKey bookingKey) throws BookingNotAllowed {
+    Optional<Booking> vBooking = bookingDao.findById(bookingKey);
+    Optional<List<Booking>> bookingList = bookingDao
+        .findByIdBookIDAndIsClosedFalseOrderByDateCreation(bookingKey.getBookID());
+    if (vBooking.isPresent() && bookingList.isPresent()) {
+      return bookingList.get().indexOf(vBooking.get());
+    } else {
+      throw new BookingNotAllowed("Can't find you in the Booking List !");
+    }
   }
 
   protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->

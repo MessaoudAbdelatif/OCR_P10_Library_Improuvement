@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout">
+
+<div layout:fragment="content1">
+
+  <div class="container mt-5 ml-md-5 col-md-6">
+    <div class="shadow card bg-light">
+      <div class="card-header h4 text-primary text-center">
+        <div th:text="${ User.lastname +' '+User.firstname}"></div>
+      </div>
+      <div class="p-2 card-body list-group">
+        <table class="table table-hover">
+          <tr class="card-header">
+            <th>BOOK NAME</th>
+            <th>WILL BE BACK</th>
+            <th>YOUR POSITION</th>
+            <th></th>
+          </tr>
+          <tr th:each="borrow : ${lUBID}">
+            <th class="list-inline" th:text="${borrow.bookName}"></th>
+            <th class="text-inline" th:text="${#dates.format(borrow.endDate, 'dd-MM-yyyy HH:mm')}"></th>
+            <th  th:if="${borrow.extraTime == false}" class="list-inline">
+              <form autocomplete="off"
+                    th:action="@{'borrows/'+ ${borrow.getBorrowIDS()} + '/addExtraTime'}"
+                    method="post">
+                <button type="submit" class="btn btn-primary d-inline" data-toggle="tooltip"
+                        data-placement="top"
+                        title="getTime">
+                  Get an extra time
+                  <a id="getTime"
+                     onclick="return confirm('this will add you 4 additional weeks ?')">
+                    <i class="fas fa-plus"></i>
+                  </a>
+                </button>
+              </form>
+            </th>
+            <th  th:if="${borrow.extraTime == true}" class="list-inline text-danger"> You already got an extra time</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+</html>
