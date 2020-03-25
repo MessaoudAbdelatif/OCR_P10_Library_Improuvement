@@ -1,6 +1,8 @@
 package com.publicservice.business.impl;
 
+import com.publicservice.business.contract.BookBusiness;
 import com.publicservice.business.contract.BorrowBusiness;
+import com.publicservice.business.exception.BookNotFoundException;
 import com.publicservice.business.exception.BorrowNotFoundException;
 import com.publicservice.business.exception.ExtraTimeNotAllowed;
 import com.publicservice.consumer.BookDao;
@@ -12,6 +14,7 @@ import com.publicservice.entities.Borrow;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import javax.transaction.Transactional;
 import org.joda.time.DateTime;
 import org.springframework.stereotype.Service;
@@ -24,12 +27,13 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   private final BorrowDao borrowDao;
   private final BookDao bookDao;
   private final BookingDao bookingDao;
+  private final BookBusiness bookBusiness;
 
 
   public BorrowBusinessImpl(BorrowDao borrowDao, BookDao bookDao,
-      BookingDao bookingDao) {
+      BookingDao bookingDao, BookBusiness bookBusiness) {
     this.borrowDao = borrowDao;
-
+    this.bookBusiness = bookBusiness;
     this.bookDao = bookDao;
     this.bookingDao = bookingDao;
   }
@@ -62,7 +66,8 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   public Borrow createBorrow(Borrow newBorrow, int initialTime) {
     if (bookingDao.findByIdBookIDAndIdLibraryUserIDAndIsClosedFalse(newBorrow.getBookID().getId(),
         newBorrow.getUserID().getUsername()).isPresent()) {
-      bookingDao.deleteById(new BookingKey(newBorrow.getUserID().getUsername(), newBorrow.getBookID().getId()));
+      bookingDao.deleteById(
+          new BookingKey(newBorrow.getUserID().getUsername(), newBorrow.getBookID().getId()));
     }
     newBorrow.setDateStart(Date.from(Instant.now()));
     DateTime dateStart = new DateTime(newBorrow.getDateStart());
@@ -97,6 +102,14 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     // TODO notify booking queue that book is back
 
     bookDao.save(book);
+  }
+
+  public Date nearestReturnDate(Long bookId) throws BookNotFoundException {
+    Book oneBookById = bookBusiness.findOneBookById(bookId);
+    Optional<List<Borrow>> rowList = borrowDao
+        .findByBookIDOrderByDateEndAsc(oneBookById);
+    Borrow borrow = rowList.get().get(0);
+    return borrow.getDateEnd();
   }
 
 

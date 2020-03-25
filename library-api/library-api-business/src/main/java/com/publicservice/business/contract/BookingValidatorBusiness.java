@@ -12,19 +12,19 @@ import java.util.function.BiFunction;
 public interface BookingValidatorBusiness extends BiFunction<LibraryUser, Book, ValidationResult> {
 
   static BookingValidatorBusiness isNotBorrowingThisBook() {
-    return (libraryUser,book) ->
+    return (libraryUser, book) ->
         libraryUser.getBorrows()
             .stream()
-            .noneMatch(
-                borrow -> borrow.getBookID().getId().equals(book.getId()))
-            ? SUCCESS
-            : ALREADY_BORROWING_THIS_BOOK;
+            .anyMatch(
+                borrow -> (String.valueOf(borrow.getBookID().getId())).equals(String.valueOf(book.getId())))
+            ? ALREADY_BORROWING_THIS_BOOK
+            : SUCCESS;
   }
 
   default BookingValidatorBusiness and(BookingValidatorBusiness other) {
-    return (libraryUser,book) -> {
-      ValidationResult result = this.apply(libraryUser,book);
-      return result.equals(SUCCESS) ? other.apply(libraryUser,book) : result;
+    return (libraryUser, book) -> {
+      ValidationResult result = this.apply(libraryUser, book);
+      return result.equals(SUCCESS) ? other.apply(libraryUser, book) : result;
     };
   }
 

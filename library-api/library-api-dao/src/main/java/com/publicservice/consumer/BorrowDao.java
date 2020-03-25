@@ -1,8 +1,10 @@
 package com.publicservice.consumer;
 
+import com.publicservice.entities.Book;
 import com.publicservice.entities.Borrow;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,4 +19,5 @@ public interface BorrowDao extends JpaRepository<Borrow, Long> {
      * @return List Borrow.
      * */
     List<Borrow> findBorrowByDateEndBeforeAndClosedFalse(Date date);
+    Optional<List<Borrow>> findByBookIDOrderByDateEndAsc(Book book);
 }

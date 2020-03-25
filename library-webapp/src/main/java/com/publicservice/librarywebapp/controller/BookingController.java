@@ -1,6 +1,6 @@
 package com.publicservice.librarywebapp.controller;
 
-import com.publicservice.librarywebapp.bean.LibarayUserBorrowInfoDto;
+import com.publicservice.librarywebapp.bean.BookingDto;
 import com.publicservice.librarywebapp.bean.LibraryUserDto;
 import com.publicservice.librarywebapp.configuration.CookieUtil;
 import com.publicservice.librarywebapp.proxy.MSLibraryApiProxy;
@@ -29,10 +29,10 @@ public class BookingController {
   public String booking(Model model, HttpServletRequest req) {
     String cookie = cookieUtil.cookieValue(req, "JWTtoken");
     String username = cookieUtil.usernameFromJWT(cookie);
+    List<BookingDto> bookings = msLibraryApiProxy.findBookingListByUserId(username);
     LibraryUserDto user = msLibraryApiProxy.findOneLibraryUser(username);
-    List<LibarayUserBorrowInfoDto> lUBID = msLibraryApiProxy.libraryUserBorrowsInfo(username);
-    model.addAttribute("lUBID", lUBID);
     model.addAttribute("User", user);
+    model.addAttribute("bookings",bookings);
     return "views/booking";
   }
 }

@@ -10,4 +10,7 @@ public class BookingDto {
   protected Date dateCreation;
   protected Boolean isClosed;
   protected Date dateOfClosing;
+  protected int position;
+  protected Date dateOfBookWillBeBack;
+  protected String bookName;
 }

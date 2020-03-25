@@ -2,11 +2,14 @@ package com.publicservice.v1.controller;
 
 import com.publicservice.business.contract.BookBusiness;
 import com.publicservice.business.contract.BookingBusiness;
+import com.publicservice.business.contract.BorrowBusiness;
 import com.publicservice.business.contract.UserBusiness;
 import com.publicservice.business.exception.BookNotFoundException;
+import com.publicservice.business.exception.BookingNotAllowed;
 import com.publicservice.business.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
+import com.publicservice.entities.BookingKey;
 import com.publicservice.entities.LibraryUser;
 import com.publicservice.v1.dto.mapper.BookMapper;
 import com.publicservice.v1.dto.mapper.BookingKeyMapper;
@@ -33,28 +36,59 @@ public class BookingController {
   BookingKeyMapper bookingKeyMapper;
   BookMapper bookMapper;
   BookBusiness bookBusiness;
+  BorrowBusiness borrowBusiness;
 
 
   public BookingController(BookingBusiness bookingBusiness,
       BookingMapper bookingMapper, UserBusiness userBusiness, BookMapper bookMapper,
-      BookingKeyMapper bookingKeyMapper, BookBusiness bookBusiness) {
+      BookingKeyMapper bookingKeyMapper, BookBusiness bookBusiness, BorrowBusiness borrowBusiness) {
     this.bookingBusiness = bookingBusiness;
     this.bookingMapper = bookingMapper;
     this.bookingKeyMapper = bookingKeyMapper;
     this.userBusiness = userBusiness;
     this.bookMapper = bookMapper;
     this.bookBusiness = bookBusiness;
+    this.borrowBusiness = borrowBusiness;
   }
 
   @GetMapping(value = "/{username}")
-  public List<BookingDto> findOBookingListByUserId(@PathVariable String username)
+  public List<BookingDto> findBookingListByUserId(@PathVariable String username)
       throws LibraryUserNotFoundException {
     LibraryUser libraryUser = userBusiness.oneLibraryUser(username);
     List<Booking> bookingList = bookingBusiness.getBookingByUserID(libraryUser);
-    return bookingList
+    List<BookingDto> bookingDtoList = bookingList
         .stream()
         .map(bookingMapper::toBookingDto)
         .collect(Collectors.toList());
+
+    bookingDtoList.forEach(bookingDto -> {
+      try {
+        bookingDto.setPosition(
+            bookingBusiness.myPositionInQueue(bookingKeyMapper.toBookingKey(bookingDto.getId())));
+      } catch (BookingNotAllowed bookingNotAllowed) {
+        bookingNotAllowed.printStackTrace();
+      }
+    });
+
+    bookingDtoList.forEach(bookingDto -> {
+      try {
+        bookingDto.setDateOfBookWillBeBack(
+            borrowBusiness.nearestReturnDate(Long.parseLong(bookingDto.getId().getBookID())));
+      } catch (BookNotFoundException e) {
+        e.printStackTrace();
+      }
+    });
+
+    bookingDtoList.forEach(bookingDto -> {
+      try {
+        bookingDto.setBookName(
+            bookBusiness.findOneBookById(Long.parseLong(bookingDto.getId().getBookID())).getName());
+      } catch (BookNotFoundException e) {
+        e.printStackTrace();
+      }
+    });
+
+    return bookingDtoList;
   }
 
   @PostMapping(value = "/{username}/{bookID}/add")
@@ -84,5 +118,12 @@ public class BookingController {
     return bookingBusiness.bookingListIsNotFull(oneBookById);
   }
 
-
+  @GetMapping(value = "/{username}/{bookID}/position")
+  public int myPositionInTheQueue(@PathVariable String username, @PathVariable String bookID)
+      throws BookingNotAllowed {
+    BookingKey bookingKey = new BookingKey();
+    bookingKey.setBookID(Long.parseLong(bookID));
+    bookingKey.setLibraryUserID(username);
+    return bookingBusiness.myPositionInQueue(bookingKey);
+  }
 }

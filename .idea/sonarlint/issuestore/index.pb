@@ -113,8 +113,6 @@ l
 <library-webapp/src/main/resources/static/js/bootstrap.min.js,e/4/e4b79f02621f4ed5f3f813104cd3f1c4e91ec788
 i
 9library-webapp/src/main/resources/static/js/jquery.min.js,9/5/95f8ffbb429d6da97840a6b603df2b248df59ced
-l
-<library-webapp/src/main/resources/templates/views/Index.html,c/c/cc18a159733eac11caf2dd466568f79ab6491661
 €
 Plibrary-webapp/src/main/java/com/publicservice/librarywebapp/bean/BorrowDto.java,b/6/b6d2b84bca6a35f032e95566d231d4d90031e411
 ~
@@ -211,8 +209,6 @@ Ulibrary-webapp/src/main/java/com/publicservice/librarywebapp/bean/LibraryRoleDt
 Wlibrary-webapp/src/main/java/com/publicservice/librarywebapp/validation/FieldMatch.java,b/5/b58b5e6f8c833720d00ca57daa2aeedf702e3229
 
 `library-webapp/src/main/java/com/publicservice/librarywebapp/validation/FieldMatchValidator.java,f/6/f67b1d25ee4673dd982de3b3ab6787ef75b3808c
-v
-Flibrary-webapp/src/main/resources/templates/views/confirmRegister.html,c/b/cb6c9c698fda03c78479da4c78004319b574e893
 
 _library-webapp/src/test/java/com/publicservice/librarywebapp/LibraryWebappApplicationTests.java,2/6/262cfc597ba956886e97f1d6f292916251b9b0e0
 „

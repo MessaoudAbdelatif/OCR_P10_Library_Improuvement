@@ -39,7 +39,7 @@
         <li class="nav-item">
           <a class="nav-link" th:href="@{/index}" id="navbarLink1" role="button"
              aria-haspopup="true" aria-expanded="false">
-            Home
+            <i class="fas fa-home"></i> Home
           </a>
 
         <li class="nav-item">
@@ -48,10 +48,16 @@
             <i class="fas fa-book"></i> Books
           </a>
     <li class="nav-item" th:if="${#httpServletRequest.cookies}">
-      <a class="nav-link" th:href="@{/Borrows}" id="navbarLink3" role="button"
-         aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-book-reader"></i> My Borrows
-      </a>
+        <a class="nav-link" th:href="@{/Borrows}" id="navbarLink3" role="button"
+           aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-book-reader"></i> Borrows
+        </a>
+
+        <li class="nav-item" th:if="${#httpServletRequest.cookies}">
+          <a class="nav-link" th:href="@{/user/booking}" id="navbarLink4" role="button"
+             aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-calendar"></i> Bookings
+          </a>
 
 
     <li class="nav-item">

@@ -16,7 +16,7 @@ import com.publicservice.entities.BookingKey;
 import com.publicservice.entities.Borrow;
 import com.publicservice.entities.LibraryUser;
 import java.time.Instant;
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -95,7 +95,7 @@ public class BookingBusinessImpl implements BookingBusiness {
 
   public List<Booking> getBookingByUserID(LibraryUser libraryUser) {
     return bookingDao.findBookingByIdLibraryUserID(libraryUser.getUsername())
-        .orElse(new ArrayList<Booking>());
+        .orElse(Collections.emptyList());
   }
 
   public void deleteBookingById(BookingKey bookingKey) {
@@ -107,7 +107,7 @@ public class BookingBusinessImpl implements BookingBusiness {
     Optional<List<Booking>> bookingList = bookingDao
         .findByIdBookIDAndIsClosedFalseOrderByDateCreation(bookingKey.getBookID());
     if (vBooking.isPresent() && bookingList.isPresent()) {
-      return bookingList.get().indexOf(vBooking.get());
+      return (bookingList.get().indexOf(vBooking.get())) + 1;
     } else {
       throw new BookingNotAllowed("Can't find you in the Booking List !");
     }
@@ -115,6 +115,7 @@ public class BookingBusinessImpl implements BookingBusiness {
 
   protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->
       theBookingList < bookTotalStock * 2;
+
 }
 
 

@@ -1,9 +1,12 @@
 package com.publicservice.business.contract;
 
+import com.publicservice.business.exception.BookNotFoundException;
 import com.publicservice.business.exception.BorrowNotFoundException;
 import com.publicservice.business.exception.ExtraTimeNotAllowed;
+import com.publicservice.entities.Book;
 import com.publicservice.entities.Borrow;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -44,5 +47,7 @@ public interface BorrowBusiness {
   void closeBorrow(Long id);
 
   List<Borrow> borrowsOverTimeLimite();
+  void returnedBook(Book book);
+  Date nearestReturnDate(Long book) throws BookNotFoundException;
 
 }

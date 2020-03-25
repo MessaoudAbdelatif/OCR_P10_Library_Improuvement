@@ -61,5 +61,5 @@ public interface MSLibraryApiProxy {
   BookingDto createBooking(BookingDto bookingDto,@PathVariable String bookID,@PathVariable String username);
 
   @GetMapping(value = "/booking/{username}")
-  List<BookingDto> findOneBookingById(@PathVariable String username);
+  List<BookingDto> findBookingListByUserId(@PathVariable String username);
 }
