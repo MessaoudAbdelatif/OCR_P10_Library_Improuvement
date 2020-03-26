@@ -141,4 +141,11 @@ public class BookingController {
     return bookingBusiness.bookingListSize(Long.parseLong(bookId));
   }
 
+  @GetMapping(value = "/{bookId}/{username}/canBook")
+  public boolean canBookABook(@PathVariable("bookId") Long bookId,@PathVariable("username") String username)
+      throws LibraryUserNotFoundException, BookNotFoundException {
+    Book oneBookById = bookBusiness.findOneBookById(bookId);
+    return bookingBusiness.canBookABook(oneBookById,username);
+  }
+
 }

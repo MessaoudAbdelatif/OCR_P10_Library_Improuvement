@@ -31,13 +31,16 @@ public class BookingBusinessImpl implements BookingBusiness {
   private final BookingDao bookingDao;
   private final UserBusiness userBusiness;
   private final BookBusiness bookBusiness;
+  private final UserBusiness borrowBusiness;
 
 
   public BookingBusinessImpl(BookingDao bookingDao, UserBusiness userBusiness,
-      BookBusiness bookBusiness) {
+      BookBusiness bookBusiness, UserBusiness borrowBusiness) {
     this.bookingDao = bookingDao;
     this.userBusiness = userBusiness;
     this.bookBusiness = bookBusiness;
+
+    this.borrowBusiness = borrowBusiness;
   }
 
   @Override
@@ -87,6 +90,13 @@ public class BookingBusinessImpl implements BookingBusiness {
     } else {
       return true;
     }
+  }
+
+  public boolean canBookABook(Book book, String username) throws LibraryUserNotFoundException {
+    List<Borrow> borrows = userBusiness.checkeLibraryUserBorrowedBook(username);
+    boolean anyMatch = borrows.stream()
+        .noneMatch(borrow -> borrow.getBookID().equals(book));
+    return bookingListIsNotFull(book) && anyMatch;
   }
 
   public Booking getBookingById(BookingKey bookingKey) {

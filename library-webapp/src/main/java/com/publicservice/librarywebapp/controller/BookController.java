@@ -52,10 +52,12 @@ public class BookController {
   }
 
   @GetMapping("/Books/{id}")
-  public String bookDetails(Model model, @PathVariable("id") Long id) {
+  public String bookDetails(Model model, @PathVariable("id") Long id,HttpServletRequest req) {
+    String cookie = cookieUtil.cookieValue(req, "JWTtoken");
+    String username = cookieUtil.usernameFromJWT(cookie);
     BookDto bookDto = msLibraryApiProxy.findOneBookById(id);
     StockDto stockDto = msLibraryApiProxy.findStockByBookId(id);
-    boolean isBookingPossible = msLibraryApiProxy.bookingListIsNotFull(String.valueOf(id));
+    boolean isBookingPossible = msLibraryApiProxy.canBookABook(id,username);
     int bookingListSize = msLibraryApiProxy.bookingListSize(String.valueOf(id));
     model.addAttribute("book", bookDto);
     model.addAttribute("stock", stockDto);

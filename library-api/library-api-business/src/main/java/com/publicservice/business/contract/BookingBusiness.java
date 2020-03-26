@@ -1,6 +1,7 @@
 package com.publicservice.business.contract;
 
 import com.publicservice.business.exception.BookingNotAllowed;
+import com.publicservice.business.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
 import com.publicservice.entities.BookingKey;
@@ -53,4 +54,6 @@ public interface BookingBusiness {
   int myPositionInQueue(BookingKey bookingKey) throws BookingNotAllowed;
 
   int bookingListSize(Long bookId);
+
+  boolean canBookABook(Book book, String username) throws LibraryUserNotFoundException;
 }

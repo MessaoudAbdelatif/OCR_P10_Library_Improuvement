@@ -72,4 +72,7 @@ public interface MSLibraryApiProxy {
   @GetMapping(value = "booking/size/{bookId}")
   int bookingListSize(@PathVariable String bookId);
 
+  @GetMapping(value = "booking/{bookId}/{username}/canBook")
+  boolean canBookABook(@PathVariable("bookId") Long bookId,@PathVariable("username") String username);
+
 }
