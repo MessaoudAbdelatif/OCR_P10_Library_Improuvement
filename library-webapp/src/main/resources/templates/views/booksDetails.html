@@ -6,11 +6,25 @@
 
 <div layout:fragment="content1">
 
-  <div class="container mt-5 ml-md-5 col-md-6" th:if="${book}">
+  <div class="container m-2 ml-md-5 col-md-6" th:if="${book}">
     <div class="shadow card bg-light">
       <div class="card-header h4 text-dark text-center"
            th:text="${book.name.toUpperCase()}">
       </div>
+      <span class="card-header text-dark text-center" th:if="${isBookingPossible && stock.available == 0}">
+          <form autocomplete="off"
+                th:action="@{'booking/'+ ${book.id} + '/add'}"
+                method="post">
+            <button type="submit" class="btn btn-primary d-inline" data-toggle="tooltip"
+                    data-placement="top"
+                    title="create booking" onclick="return confirm('book this book 🤗 ?')"><i class="fas fa-pen-square"></i>
+              Make Booking
+              <a id="create booking">
+              </a>
+            </button>
+          </form>
+        </span>
+
       <div class="p-2">
         <table class="table table-hover table-bordered table-striped">
           <tr>
@@ -27,14 +41,14 @@
           </tr>
           <tr>
             <th class="text-primary">Publication Date</th>
-            <th  th:text="${book.publicationDate}"></th>
+            <th  th:text="${#dates.format(book.publicationDate, 'dd-MM-yyyy')}"></th>
           </tr>
           <tr>
             <th class="text-primary">Subject</th>
             <th  th:text="${book.subject}"></th>
           </tr>
           <tr>
-            <th class="text-primary">Picture</th>
+            <th class="text-primary">Preview</th>
             <th>
               <img th:src="${book.coverPicUrl}" alt="Mountain View" style="width:155px;height:228px">
             </th>
@@ -43,6 +57,15 @@
             <th class="text-primary">Copies available</th>
             <th  th:text="${stock.available}"></th>
           </tr>
+
+          <tr th:if="${stock.available == 0}">
+            <th class="text-danger">Unfortunately out of stock</th>
+            <th th:if="${isBookingPossible}">
+              <p  class="text-field" th:text="${bookingListSize + ' reader(s) waiting for this book on the booking list'}"></p>
+            </th>
+            <th></th>
+          </tr>
+
         </table>
       </div>
     </div>

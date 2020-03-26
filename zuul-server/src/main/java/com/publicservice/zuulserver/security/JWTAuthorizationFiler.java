@@ -1,6 +1,6 @@
 package com.publicservice.zuulserver.security;
 
-import com.publicservice.zuulserver.configuration.ApplicationPropertiesConfiguration;
+import com.publicservice.zuulserver.configuration.SecurityParams;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import java.io.IOException;
@@ -35,13 +35,12 @@ public class JWTAuthorizationFiler extends OncePerRequestFilter {
       if (cookie != null) {
         jwtToken = cookie.getValue();
       }
-      if (jwtToken == null)
-      {
+      if (jwtToken == null) {
         filterChain.doFilter(request, response);
         return;
       }
       Claims claims = Jwts.parser()
-          .setSigningKey(ApplicationPropertiesConfiguration.SECRET)
+          .setSigningKey(SecurityParams.SECRET)
           .parseClaimsJws(jwtToken)
           .getBody();
 

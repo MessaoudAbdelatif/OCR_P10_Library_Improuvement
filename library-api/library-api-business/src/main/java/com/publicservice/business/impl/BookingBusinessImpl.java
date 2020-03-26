@@ -113,6 +113,17 @@ public class BookingBusinessImpl implements BookingBusiness {
     }
   }
 
+  public int bookingListSize(Long bookId) {
+    boolean present = bookingDao
+        .findByIdBookIDAndIsClosedFalseOrderByDateCreation(bookId).isPresent();
+    if (present) {
+      return bookingDao
+          .findByIdBookIDAndIsClosedFalseOrderByDateCreation(bookId).get().size();
+    } else {
+      return 0;
+    }
+  }
+
   protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->
       theBookingList < bookTotalStock * 2;
 

@@ -13,7 +13,7 @@
       </div>
       <div class="p-2 card-body list-group">
         <table class="table table-hover">
-          <tr class="card-header">
+          <tr class="card-header text-dark">
             <th>BOOK NAME</th>
             <th>WILL BE BACK</th>
             <th>YOUR POSITION</th>
@@ -22,19 +22,17 @@
           <tr th:each="booking : ${bookings}">
             <th class="list-inline" th:text="${booking.bookName}"></th>
             <th class="text-inline" th:text="${#dates.format(booking.dateOfBookWillBeBack, 'dd-MM-yyyy HH:mm')}"></th>
-            <th class="list-inline" th:text="${booking.position}"></th>
+            <th class="list-inline text-center" th:text="${booking.position}"></th>
 
             <th  th:if="${booking.isClosed == false}" class="list-inline">
               <form autocomplete="off"
-                    th:action="@{'booking/'+ ${booking.id} + '/addExtraTime'}"
+                    th:action="@{'booking/'+ ${booking.id.getBookID()} + '/' + ${booking.id.getLibraryUserID()} }"
                     method="post">
-                <button type="submit" class="btn btn-primary d-inline" data-toggle="tooltip"
+                <button type="submit" class="btn btn-danger d-inline" data-toggle="tooltip"
                         data-placement="top"
-                        title="getTime">
-                  Get an extra time
-                  <a id="getTime"
-                     onclick="return confirm('are you sure to remove your booking ?')">
-                    <i class="fas fa-plus"></i>
+                        title="delete" onclick="return confirm('are you sure to remove your booking ?')"><i class="fas fa-trash-alt"></i>
+                  Delete
+                  <a id="delete">
                   </a>
                 </button>
               </form>

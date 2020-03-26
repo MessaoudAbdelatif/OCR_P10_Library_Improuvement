@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -32,7 +34,13 @@ public class BookingController {
     List<BookingDto> bookings = msLibraryApiProxy.findBookingListByUserId(username);
     LibraryUserDto user = msLibraryApiProxy.findOneLibraryUser(username);
     model.addAttribute("User", user);
-    model.addAttribute("bookings",bookings);
+    model.addAttribute("bookings", bookings);
     return "views/booking";
+  }
+
+  @PostMapping(value = "/booking/{bookId}/{username}")
+  public String deleteBooking(@PathVariable("bookId") String bookId, @PathVariable("username") String username) {
+    msLibraryApiProxy.deleteBooking(bookId, username);
+    return "redirect:/user/booking";
   }
 }

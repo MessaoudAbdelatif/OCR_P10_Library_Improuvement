@@ -105,10 +105,6 @@ _library-api/library-api-service/src/main/java/com/publicservice/v1/dto/mapper/B
 hlibrary-api/library-api-service/src/main/java/com/publicservice/v1/controller/LibraryUserController.java,f/3/f34331d122a62b178ee2e2cde3d20e92f2479be6
 …
 Ulibrary-webapp/src/main/java/com/publicservice/librarywebapp/bean/LibraryUserDto.java,a/c/ac70ccd9dd9c97251e4b0ada7fdad0808236e516
-n
->library-webapp/src/main/resources/static/css/bootstrap.min.css,5/b/5bfef229c50a2bb89ef8f65d1fd9bd987f4f4653
-f
-6library-webapp/src/main/resources/static/css/style.css,1/b/1b35b394eca0a440a5b4b63f0de6b9b9fa7c7122
 l
 <library-webapp/src/main/resources/static/js/bootstrap.min.js,e/4/e4b79f02621f4ed5f3f813104cd3f1c4e91ec788
 i
@@ -241,8 +237,6 @@ jlibrary-api/library-api-service/src/main/java/com/publicservice/v1/controller/B
 Zlibrary-webapp/src/main/java/com/publicservice/librarywebapp/configuration/CookieUtil.java,a/6/a68c70cfbbc6f16ba0112bee2be15a6e099df5b5
 “
 clibrary-webapp/src/main/java/com/publicservice/librarywebapp/controller/LibraryAdminController.java,6/2/62322deedc410b19c8dcbc4bb96dbd815e30295d
-e
-5zuul-server/src/main/resources/application.properties,b/c/bce4b02de95c62441de7ea7d048a5387bb652674
 †
 Vlibrary-api/library-api-model/src/main/java/com/publicservice/entities/BookingKey.java,9/2/928d42f0f189426387f9b2b84e6c2f61e24cd498
 ƒ

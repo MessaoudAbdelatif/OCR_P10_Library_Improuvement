@@ -58,8 +58,18 @@ public interface MSLibraryApiProxy {
   List<LibarayUserBorrowInfoDto> libraryUserBorrowsInfo(@PathVariable String username);
 
   @PostMapping(value = "/booking/{username}/{bookID}/add")
-  BookingDto createBooking(BookingDto bookingDto,@PathVariable String bookID,@PathVariable String username);
+  BookingDto createBooking(@PathVariable String bookID,@PathVariable String username);
 
   @GetMapping(value = "/booking/{username}")
   List<BookingDto> findBookingListByUserId(@PathVariable String username);
+
+  @PostMapping(value = "booking/{bookId}/{username}")
+  void deleteBooking(@PathVariable("bookId") String bookId, @PathVariable("username") String username);
+
+  @GetMapping(value = "booking/book/{bookId}")
+  boolean bookingListIsNotFull(@PathVariable String bookId);
+
+  @GetMapping(value = "booking/size/{bookId}")
+  int bookingListSize(@PathVariable String bookId);
+
 }

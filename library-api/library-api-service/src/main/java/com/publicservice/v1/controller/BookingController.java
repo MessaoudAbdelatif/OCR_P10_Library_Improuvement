@@ -126,4 +126,19 @@ public class BookingController {
     bookingKey.setLibraryUserID(username);
     return bookingBusiness.myPositionInQueue(bookingKey);
   }
+
+  @PostMapping(value = "/{bookId}/{username}")
+  public void deleteBooking(@PathVariable("bookId") String bookId,
+      @PathVariable("username") String username) {
+    BookingKey bookingKey = new BookingKey();
+    bookingKey.setBookID(Long.parseLong(bookId));
+    bookingKey.setLibraryUserID(username);
+    bookingBusiness.deleteBookingById(bookingKey);
+  }
+
+  @GetMapping(value = "/size/{bookId}")
+  public int bookingListSize(@PathVariable("bookId") String bookId) {
+    return bookingBusiness.bookingListSize(Long.parseLong(bookId));
+  }
+
 }

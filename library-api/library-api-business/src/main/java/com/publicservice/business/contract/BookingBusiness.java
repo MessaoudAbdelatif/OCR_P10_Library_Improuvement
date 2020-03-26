@@ -51,4 +51,6 @@ public interface BookingBusiness {
    * @return int position.
    * **/
   int myPositionInQueue(BookingKey bookingKey) throws BookingNotAllowed;
+
+  int bookingListSize(Long bookId);
 }

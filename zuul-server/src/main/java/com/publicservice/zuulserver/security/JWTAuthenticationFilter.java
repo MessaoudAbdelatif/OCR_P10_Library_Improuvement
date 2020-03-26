@@ -1,6 +1,7 @@
 package com.publicservice.zuulserver.security;
 
-import com.publicservice.zuulserver.configuration.ApplicationPropertiesConfiguration;
+
+import com.publicservice.zuulserver.configuration.SecurityParams;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import java.io.IOException;
@@ -22,12 +23,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
-
   private AuthenticationManager authenticationManager;
 
-
   public JWTAuthenticationFilter(
-      AuthenticationManager authenticationManager) {
+      AuthenticationManager authenticationManager
+  ) {
     this.authenticationManager = authenticationManager;
   }
 
@@ -50,22 +50,26 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     authResult.getAuthorities().forEach(a -> {
       roles.add(a.getAuthority());
     });
+    long nowMillis = System.currentTimeMillis();
+    Date now = new Date(nowMillis);
+    long expirationDelay = SecurityParams.EXPIRATION;
+    long expMillies = nowMillis + expirationDelay;
+    Date exp = new Date(expMillies);
     String jwt = Jwts.builder()
         .setIssuer(request.getRequestURI())
+        .setIssuedAt(now)
         .setSubject(user.getUsername())
         .claim("roles", roles.toArray(new String[roles.size()]))
-        .setExpiration(
-            new Date(System.currentTimeMillis() + ApplicationPropertiesConfiguration.EXPIRATION
-            ))
-        .signWith(SignatureAlgorithm.HS512, ApplicationPropertiesConfiguration.SECRET)
+        .setExpiration(exp)
+        .signWith(SignatureAlgorithm.HS512, SecurityParams.SECRET)
         .compact();
     System.out.println(jwt);
     // ADD COOKIES ##################################################
     Cookie cookie = new Cookie("JWTtoken", jwt);
     cookie.setSecure(false);
     cookie.setHttpOnly(true);
-    // 12 days about 999999
-    cookie.setMaxAge(999999);
+    // 1 days is 86400 seconds
+    cookie.setMaxAge(86400);
     cookie.setDomain("localhost");
     cookie.setPath("/");
     response.addCookie(cookie);
