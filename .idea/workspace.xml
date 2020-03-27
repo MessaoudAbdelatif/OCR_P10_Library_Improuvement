@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="setting log for scheduled function">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -357,14 +357,7 @@
       <workItem from="1584285538840" duration="23927000" />
       <workItem from="1584648259552" duration="195000" />
       <workItem from="1584694173976" duration="131572000" />
-      <workItem from="1585280942831" duration="13533000" />
-    </task>
-    <task id="LOCAL-00031" summary="zuul gateway api ok 👏">
-      <created>1573221049497</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1573221049497</updated>
+      <workItem from="1585280942831" duration="14350000" />
     </task>
     <task id="LOCAL-00032" summary="exceptions rest handler added">
       <created>1573430162131</created>
@@ -702,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585309568141</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="setting log for scheduled function">
+      <created>1585345864152</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1585345864152</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -793,10 +793,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1061" y="300" key="#xdebugger.XInspectDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584831878745" />
-    <state x="-1573" y="8" width="1072" height="972" key="CommitChangelistDialog2" timestamp="1585345723641">
+    <state x="-1573" y="8" width="1072" height="972" key="CommitChangelistDialog2" timestamp="1585347283789">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1573" y="8" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585345723641" />
+    <state x="-1573" y="8" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585347283789" />
     <state x="38" y="126" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1584381852376" />
     <state x="232" y="23" width="1072" height="972" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585309567919" />
     <state x="-1151" y="446" key="Github.CreateGistDialog" timestamp="1584829382969">
@@ -942,10 +942,10 @@
     </state>
     <state width="615" height="556" key="SwitcherDM/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585282585984" />
     <state width="538" height="556" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1584369488328" />
-    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1585309569849">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2" timestamp="1585345865685">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585286588791" />
+    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585345865685" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1584381853921" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585309569849" />
     <state width="704" height="540" key="XDebugger.FullValuePopup" timestamp="1585071294271">
@@ -995,9 +995,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1222" y="300" key="extract.method.dialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1583974967966" />
-    <state x="571" y="245" key="git4idea.branch.GitSmartOperationDialog" timestamp="1583929504608">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1267" y="252" key="git4idea.branch.GitSmartOperationDialog" timestamp="1585347158140">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="-1267" y="252" key="git4idea.branch.GitSmartOperationDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585347158140" />
     <state x="571" y="245" key="git4idea.branch.GitSmartOperationDialog/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1583929504608" />
     <state x="440" y="323" key="git4idea.merge.GitPullDialog" timestamp="1583355653063">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -1007,10 +1008,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1198" y="153" key="refactoring.ChangeSignatureDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585157634782" />
-    <state x="-1295" y="241" key="search.everywhere.popup" timestamp="1584841218434">
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1585347264155">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1295" y="241" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584841218434" />
+    <state x="-1295" y="241" width="670" height="676" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585347264155" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
