@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="setting log for scheduled function">
+    <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -357,14 +357,7 @@
       <workItem from="1584285538840" duration="23927000" />
       <workItem from="1584648259552" duration="195000" />
       <workItem from="1584694173976" duration="131572000" />
-      <workItem from="1585280942831" duration="14350000" />
-    </task>
-    <task id="LOCAL-00032" summary="exceptions rest handler added">
-      <created>1573430162131</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1573430162131</updated>
+      <workItem from="1585280942831" duration="14659000" />
     </task>
     <task id="LOCAL-00033" summary="externalise webAppProperties">
       <created>1573553541018</created>
@@ -702,7 +695,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585345864152</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="setting gitignore">
+      <created>1585347714241</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1585347714241</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -723,7 +723,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="admin library user can make new borrow and close it" />
     <MESSAGE value="add documents" />
     <MESSAGE value="setting folders" />
     <MESSAGE value="cleaning security code before P10" />
@@ -748,7 +747,8 @@
     <MESSAGE value="ticket 1 done&#10;closes #1" />
     <MESSAGE value="ticket 1 done.  Closes #1" />
     <MESSAGE value="setting log for scheduled function" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting log for scheduled function" />
+    <MESSAGE value="setting gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1360" y="205" key="#Assign_Data_Sources" timestamp="1584832786348">
@@ -793,10 +793,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1061" y="300" key="#xdebugger.XInspectDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584831878745" />
-    <state x="-1573" y="8" width="1072" height="972" key="CommitChangelistDialog2" timestamp="1585347283789">
+    <state x="-1573" y="8" width="1072" height="972" key="CommitChangelistDialog2" timestamp="1585347714106">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1573" y="8" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585347283789" />
+    <state x="-1573" y="8" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585347714106" />
     <state x="38" y="126" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1584381852376" />
     <state x="232" y="23" width="1072" height="972" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585309567919" />
     <state x="-1151" y="446" key="Github.CreateGistDialog" timestamp="1584829382969">
@@ -942,10 +942,10 @@
     </state>
     <state width="615" height="556" key="SwitcherDM/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585282585984" />
     <state width="538" height="556" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1584369488328" />
-    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2" timestamp="1585345865685">
+    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2" timestamp="1585347715619">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585345865685" />
+    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585347715619" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1584381853921" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585309569849" />
     <state width="704" height="540" key="XDebugger.FullValuePopup" timestamp="1585071294271">
