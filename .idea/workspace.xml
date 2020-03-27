@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c89285a-d2f1-4dcf-83ff-25dd8cb89727" name="Default Changelist" comment="setting gitignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-api/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/library-api/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="master" />
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
@@ -290,11 +291,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.static.img.css in library-webapp" />
+        <item itemvalue="JUnit.All in library-batch" />
         <item itemvalue="HTTP Request.Libraryapiapplication#2" />
         <item itemvalue="HTTP Request.Libraryapiapplication#1" />
         <item itemvalue="Application.BookingBusinessImpl" />
-        <item itemvalue="JUnit.static.img.css in library-webapp" />
-        <item itemvalue="JUnit.All in library-batch" />
       </list>
     </recent_temporary>
   </component>
@@ -357,14 +358,7 @@
       <workItem from="1584285538840" duration="23927000" />
       <workItem from="1584648259552" duration="195000" />
       <workItem from="1584694173976" duration="131572000" />
-      <workItem from="1585280942831" duration="15409000" />
-    </task>
-    <task id="LOCAL-00035" summary="set zuul as middleware for the webapp in order to filter the access using spring security">
-      <created>1573650602778</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1573650602779</updated>
+      <workItem from="1585280942831" duration="15877000" />
     </task>
     <task id="LOCAL-00036" summary="implementing spring security in zuul module in order to set JWT authentication.">
       <created>1574155908328</created>
@@ -702,7 +696,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585349039089</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="setting gitignore">
+      <created>1585349282848</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1585349282848</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -793,12 +794,16 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1061" y="300" key="#xdebugger.XInspectDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1584831878745" />
-    <state x="-1573" y="8" width="1072" height="972" key="CommitChangelistDialog2" timestamp="1585349087522">
+    <state x="-1573" y="8" width="1072" height="972" key="CommitChangelistDialog2" timestamp="1585349579235">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1573" y="8" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585349087522" />
+    <state x="-1573" y="8" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585349579235" />
     <state x="38" y="126" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1584381852376" />
     <state x="232" y="23" width="1072" height="972" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1585309567919" />
+    <state x="-1821" y="0" key="DiffContextDialog" timestamp="1585349575783">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1821" y="0" key="DiffContextDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585349575783" />
     <state x="-1151" y="446" key="Github.CreateGistDialog" timestamp="1584829382969">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
@@ -942,10 +947,10 @@
     </state>
     <state width="615" height="556" key="SwitcherDM/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585282585984" />
     <state width="538" height="556" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1584369488328" />
-    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2" timestamp="1585349040467">
+    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2" timestamp="1585349284174">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585349040467" />
+    <state x="-1417" y="273" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1585349284174" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1584381853921" />
     <state x="440" y="265" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1585309569849" />
     <state width="704" height="540" key="XDebugger.FullValuePopup" timestamp="1585071294271">
