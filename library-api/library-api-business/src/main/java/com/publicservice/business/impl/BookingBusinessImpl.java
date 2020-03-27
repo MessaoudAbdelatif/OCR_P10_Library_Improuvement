@@ -16,16 +16,21 @@ import com.publicservice.entities.BookingKey;
 import com.publicservice.entities.Borrow;
 import com.publicservice.entities.LibraryUser;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.BiPredicate;
 import javax.transaction.Transactional;
+import lombok.extern.slf4j.Slf4j;
+import org.joda.time.DateTime;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 @Service
 @Transactional
+@Slf4j
 public class BookingBusinessImpl implements BookingBusiness {
 
   private final BookingDao bookingDao;
@@ -152,10 +157,30 @@ public class BookingBusinessImpl implements BookingBusiness {
     bookingDao.save(booking);
   }
 
+  @Scheduled(cron = "0 * * * * ?")
+  public void deletingOverTwoDaysClosed() {
+    log.warn(
+        "********** EVERY 1H I REMOVE CLOSED BOOKING WHO GOT NOTIFIED 48H EARLIER **************");
+
+    Optional<List<Booking>> bookingList = bookingDao.findBookingsByIsClosedIsTrue();
+    List<Booking> bookingsNeedRemove = new ArrayList<>();
+
+    bookingList.ifPresent(bookings -> {
+      bookings.forEach(booking -> {
+        DateTime closedBookingDate = new DateTime(booking.getDateOfClosing());
+        DateTime deadLine = closedBookingDate.plusDays(2);
+        if (DateTime.now().isAfter(deadLine)) {
+          bookingsNeedRemove.add(booking);
+        }
+      });
+    });
+    if (!bookingsNeedRemove.isEmpty()) {
+      bookingsNeedRemove.forEach(bookingDao::delete);
+    }
+  }
 
   protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->
       theBookingList < bookTotalStock * 2;
-
 }
 
 

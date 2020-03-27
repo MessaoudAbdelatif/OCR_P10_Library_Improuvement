@@ -5,12 +5,14 @@ import com.publicservice.librarybatch.model.DelayBorrowUser;
 import com.publicservice.librarybatch.proxy.MSLibraryApiProxy;
 import java.util.List;
 import javax.xml.bind.ValidationException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 //@Configuration
 //@EnableBatchProcessing
+@Slf4j
 @RestController
 public class BatchConfig {
 
@@ -49,9 +51,9 @@ public class BatchConfig {
   }
 
   @Scheduled(cron = "0/20 * * * * ?")
- @GetMapping("/sendBookingReminder")
+  @GetMapping("/sendBookingReminder")
   public void senderBooking() {
-    System.out.println("******** CHECKINGGGGGGGG*********");
+    log.info("************* Checking if book is back every 20s ************");
     List<DelayBorrowUser> delayBorrowUsers = msLibraryApiProxy.notifyBookedUser();
     delayBorrowUsers.forEach(this::sendBookingEmailAuto);
   }

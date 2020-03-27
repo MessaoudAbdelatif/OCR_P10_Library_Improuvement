@@ -33,7 +33,6 @@ public class BookController {
   private final BookMapper bookMapper;
   private final StockMapper stockMapper;
   private final BorrowBusiness borrowBusiness;
-  // private MSBatchApiProxy msBatchApiProxy;
   private BookingBusiness bookingBusiness;
   private BookingKeyMapper bookingKeyMapper;
   private UserBusiness userBusiness;
@@ -41,7 +40,6 @@ public class BookController {
   public BookController(BookBusiness bookBusiness,
       BookMapper bookMapper, StockMapper stockMapper,
       BorrowBusiness borrowBusiness,
-      //MSBatchApiProxy msBatchApiProxy,
       BookingBusiness bookingBusiness,
       BookingKeyMapper bookingKeyMapper,
       UserBusiness userBusiness) {
@@ -49,7 +47,6 @@ public class BookController {
     this.bookMapper = bookMapper;
     this.stockMapper = stockMapper;
     this.borrowBusiness = borrowBusiness;
-    // this.msBatchApiProxy = msBatchApiProxy;
     this.bookingBusiness = bookingBusiness;
     this.bookingKeyMapper = bookingKeyMapper;
     this.userBusiness = userBusiness;

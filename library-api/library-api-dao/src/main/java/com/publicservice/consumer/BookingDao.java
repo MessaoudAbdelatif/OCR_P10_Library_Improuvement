@@ -16,4 +16,5 @@ public interface BookingDao extends JpaRepository<Booking, BookingKey> {
   Optional<List<Booking>> findBookingByIdLibraryUserID(String libraryUser);
   Optional<List<Booking>> findByIdBookIDAndIdLibraryUserIDAndIsClosedFalse(Long bookID, String libraryUser);
   Optional<List<Booking>> findBookingsByIsClosedIsTrueAndIsNotifiedFalse();
+  Optional<List<Booking>> findBookingsByIsClosedIsTrue();
 }

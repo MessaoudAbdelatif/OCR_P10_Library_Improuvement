@@ -64,4 +64,6 @@ public interface BookingBusiness {
   Optional<List<Booking>> allBookingsClosedNotNotified();
 
   void updateBookingInfo(Booking booking);
+
+  void deletingOverTwoDaysClosed();
 }
