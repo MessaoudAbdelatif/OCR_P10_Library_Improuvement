@@ -1,13 +1,20 @@
 package com.publicservice.v1.controller;
 
 import com.publicservice.business.contract.BookBusiness;
+import com.publicservice.business.contract.BookingBusiness;
+import com.publicservice.business.contract.BorrowBusiness;
+import com.publicservice.business.contract.UserBusiness;
 import com.publicservice.business.exception.BookNotFoundException;
 import com.publicservice.entities.Book;
+import com.publicservice.entities.Booking;
 import com.publicservice.v1.dto.mapper.BookMapper;
+import com.publicservice.v1.dto.mapper.BookingKeyMapper;
 import com.publicservice.v1.dto.mapper.StockMapper;
 import com.publicservice.v1.dto.model.BookDto;
 import com.publicservice.v1.dto.model.BookPageDto;
 import com.publicservice.v1.dto.model.StockDto;
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.data.domain.Page;
@@ -25,12 +32,27 @@ public class BookController {
   private final BookBusiness bookBusiness;
   private final BookMapper bookMapper;
   private final StockMapper stockMapper;
+  private final BorrowBusiness borrowBusiness;
+  // private MSBatchApiProxy msBatchApiProxy;
+  private BookingBusiness bookingBusiness;
+  private BookingKeyMapper bookingKeyMapper;
+  private UserBusiness userBusiness;
 
   public BookController(BookBusiness bookBusiness,
-      BookMapper bookMapper, StockMapper stockMapper) {
+      BookMapper bookMapper, StockMapper stockMapper,
+      BorrowBusiness borrowBusiness,
+      //MSBatchApiProxy msBatchApiProxy,
+      BookingBusiness bookingBusiness,
+      BookingKeyMapper bookingKeyMapper,
+      UserBusiness userBusiness) {
     this.bookBusiness = bookBusiness;
     this.bookMapper = bookMapper;
     this.stockMapper = stockMapper;
+    this.borrowBusiness = borrowBusiness;
+    // this.msBatchApiProxy = msBatchApiProxy;
+    this.bookingBusiness = bookingBusiness;
+    this.bookingKeyMapper = bookingKeyMapper;
+    this.userBusiness = userBusiness;
   }
 
   @GetMapping(value = "/{id}")
@@ -65,5 +87,18 @@ public class BookController {
     bookPageDto.setNbrTotalPages(new int[booksUnderPage.getTotalPages()].length);
 
     return bookPageDto;
+  }
+
+  @GetMapping(value = "/{id}/back")
+  public void bookIsBack(@PathVariable("id") Long id)
+      throws BookNotFoundException {
+    Book oneBookById = bookBusiness.findOneBookById(id);
+    borrowBusiness.returnedBook(oneBookById);
+    if (bookingBusiness.bookingListSize(id) != 0) {
+      //Close Booking.
+      Booking booking = bookingBusiness.theHeadOfList(oneBookById);
+      booking.setIsClosed(true);
+      booking.setDateOfClosing(Date.from(Instant.now()));
+    }
   }
 }

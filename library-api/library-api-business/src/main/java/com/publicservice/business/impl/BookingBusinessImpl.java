@@ -31,16 +31,13 @@ public class BookingBusinessImpl implements BookingBusiness {
   private final BookingDao bookingDao;
   private final UserBusiness userBusiness;
   private final BookBusiness bookBusiness;
-  private final UserBusiness borrowBusiness;
 
 
   public BookingBusinessImpl(BookingDao bookingDao, UserBusiness userBusiness,
-      BookBusiness bookBusiness, UserBusiness borrowBusiness) {
+      BookBusiness bookBusiness) {
     this.bookingDao = bookingDao;
     this.userBusiness = userBusiness;
     this.bookBusiness = bookBusiness;
-
-    this.borrowBusiness = borrowBusiness;
   }
 
   @Override
@@ -132,7 +129,24 @@ public class BookingBusinessImpl implements BookingBusiness {
     } else {
       return 0;
     }
+
   }
+
+  public Booking theHeadOfList(Book book) throws BookNotFoundException {
+    Optional<List<Booking>> orderByDateCreation = bookingDao
+        .findByIdBookIDAndIsClosedFalseOrderByDateCreation(book.getId());
+    if (orderByDateCreation.isPresent()) {
+      List<Booking> bookings = orderByDateCreation.get();
+      return bookings.get(0);
+    } else {
+      throw new BookNotFoundException("There is not booking list for this book !!");
+    }
+  }
+
+  public Optional<List<Booking>> allBookingsClosedNotNotified() {
+    return bookingDao.findBookingsByIsClosedIsTrueAndIsNotifiedFalse();
+  }
+
 
   protected static BiPredicate<Integer, Integer> lessThenTheDouble = (theBookingList, bookTotalStock) ->
       theBookingList < bookTotalStock * 2;

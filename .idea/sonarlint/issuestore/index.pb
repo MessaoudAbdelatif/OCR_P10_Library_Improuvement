@@ -195,8 +195,6 @@ alibrary-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/Er
 Qlibrary-api/library-api-dao/src/main/java/com/publicservice/consumer/RoleDao.java,c/0/c08211d4b564f994e6f52c163641e7e0daed9b47
 Å
 Qzuul-server/src/main/java/com/publicservice/zuulserver/ZuulServerApplication.java,d/3/d33244a2d29960e6b9ce95e2abcba5921619fdd9
-w
-Glibrary-api/library-api-service/src/main/resources/bootstrap.properties,0/c/0c74a29dea45ec31b186e5835f34383a5379e61c
 å
 \library-webapp/src/main/java/com/publicservice/librarywebapp/controller/LoginController.java,8/3/83809947ea2bba7d06ea05a47e1e83198dcc6a9a
 Ö
@@ -229,8 +227,6 @@ Zzuul-server/src/main/java/com/publicservice/zuulserver/security/JWTAuthorizatio
 [zuul-server/src/main/java/com/publicservice/zuulserver/security/UserDetailsServiceImpl.java,b/2/b25206ad705cebc828a41f1a91691dd47b834b01
 É
 Szuul-server/src/main/java/com/publicservice/zuulserver/security/SecurityConfig.java,f/c/fc51350728e3344ef4c04d1a73991e87dd7d247d
-e
-5library-batch/src/main/resources/bootstrap.properties,8/3/835a6ba9b8edef089e41c31bb3689b0518d96a6d
 ö
 jlibrary-api/library-api-service/src/main/java/com/publicservice/v1/controller/BatchProviderController.java,1/1/11c85e586fc4cf8b6ae7afdda16e86db16225d0b
 ä

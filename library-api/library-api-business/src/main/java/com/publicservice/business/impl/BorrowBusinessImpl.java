@@ -99,8 +99,6 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   public void returnedBook(Book book) {
     book.getStock().setOutside((book.getStock().getOutside()) - 1);
     book.getStock().setAvailable(book.getStock().getAvailable() + 1);
-    // TODO notify booking queue that book is back
-
     bookDao.save(book);
   }
 

@@ -29,21 +29,31 @@ public class BatchConfig {
     reminderController.sendReminder(delayBorrowUser);
   }
 
-  @Scheduled(cron = "0 30 7 * * ?")
-  @GetMapping("/send")
-  public void sender(){
-    List<DelayBorrowUser>  dbusers =msLibraryApiProxy.overTimeLimite();
-    dbusers
-        .stream()
-        .forEach(delayBorrowUser -> {
-      try {
-        sendEmailAuto(delayBorrowUser);
-      } catch (ValidationException e) {
-        e.printStackTrace();
-      }
-    });
+  public void sendBookingEmailAuto(DelayBorrowUser delayBorrowUser) {
+
+    reminderController.sendBookingReminder(delayBorrowUser);
   }
 
+  @Scheduled(cron = "0 30 7 * * ?")
+  @GetMapping("/send")
+  public void sender() {
+    List<DelayBorrowUser> dbusers = msLibraryApiProxy.overTimeLimite();
+    dbusers
+        .forEach(delayBorrowUser -> {
+          try {
+            sendEmailAuto(delayBorrowUser);
+          } catch (ValidationException e) {
+            e.printStackTrace();
+          }
+        });
+  }
+
+  @Scheduled(cron = "0/30 * * * * ?")
+  @GetMapping("/sendBookingReminder")
+  public void senderBooking() {
+    List<DelayBorrowUser> delayBorrowUsers = msLibraryApiProxy.notifyBookedUsed();
+    delayBorrowUsers.forEach(this::sendBookingEmailAuto);
+  }
 
 //
 //  private EmailConfig emailConfig;

@@ -27,6 +27,8 @@ public class Booking implements Serializable {
   @NotNull
   private Boolean isClosed;
 
+  private Boolean isNotified;
+
   @Temporal(TemporalType.DATE)
   private Date dateOfClosing;
 }

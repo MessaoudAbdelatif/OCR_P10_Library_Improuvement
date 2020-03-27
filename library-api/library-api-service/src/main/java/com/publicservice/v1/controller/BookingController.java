@@ -11,12 +11,14 @@ import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
 import com.publicservice.entities.BookingKey;
 import com.publicservice.entities.LibraryUser;
-import com.publicservice.v1.dto.mapper.BookMapper;
 import com.publicservice.v1.dto.mapper.BookingKeyMapper;
 import com.publicservice.v1.dto.mapper.BookingMapper;
 import com.publicservice.v1.dto.model.BookingDto;
 import com.publicservice.v1.dto.model.BookingKeyDto;
+import com.publicservice.v1.dto.model.DelayBorrowUser;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,19 +36,14 @@ public class BookingController {
   UserBusiness userBusiness;
   BookingMapper bookingMapper;
   BookingKeyMapper bookingKeyMapper;
-  BookMapper bookMapper;
   BookBusiness bookBusiness;
   BorrowBusiness borrowBusiness;
 
 
   public BookingController(BookingBusiness bookingBusiness,
-      BookingMapper bookingMapper, UserBusiness userBusiness, BookMapper bookMapper,
-      BookingKeyMapper bookingKeyMapper, BookBusiness bookBusiness, BorrowBusiness borrowBusiness) {
+      UserBusiness userBusiness, BookBusiness bookBusiness, BorrowBusiness borrowBusiness) {
     this.bookingBusiness = bookingBusiness;
-    this.bookingMapper = bookingMapper;
-    this.bookingKeyMapper = bookingKeyMapper;
     this.userBusiness = userBusiness;
-    this.bookMapper = bookMapper;
     this.bookBusiness = bookBusiness;
     this.borrowBusiness = borrowBusiness;
   }
@@ -58,9 +55,8 @@ public class BookingController {
     List<Booking> bookingList = bookingBusiness.getBookingByUserID(libraryUser);
     List<BookingDto> bookingDtoList = bookingList
         .stream()
-        .map(bookingMapper::toBookingDto)
+        .map(bookinglistitems -> bookingMapper.toBookingDto(bookinglistitems))
         .collect(Collectors.toList());
-
     bookingDtoList.forEach(bookingDto -> {
       try {
         bookingDto.setPosition(
@@ -100,9 +96,7 @@ public class BookingController {
 
     bookingKeyDto.setBookID(bookID);
     bookingKeyDto.setLibraryUserID(username);
-
     bookingDto.setId(bookingKeyDto);
-
     Booking booking = bookingMapper.toBooking(bookingDto);
     bookingBusiness.createBooking(booking);
 
@@ -142,10 +136,39 @@ public class BookingController {
   }
 
   @GetMapping(value = "/{bookId}/{username}/canBook")
-  public boolean canBookABook(@PathVariable("bookId") Long bookId,@PathVariable("username") String username)
+  public boolean canBookABook(@PathVariable("bookId") Long bookId,
+      @PathVariable("username") String username)
       throws LibraryUserNotFoundException, BookNotFoundException {
     Book oneBookById = bookBusiness.findOneBookById(bookId);
-    return bookingBusiness.canBookABook(oneBookById,username);
+    return bookingBusiness.canBookABook(oneBookById, username);
   }
 
+  @GetMapping(value = "/notification")
+  public List<DelayBorrowUser> notifyBookedUser() {
+    Optional<List<Booking>> bookings = bookingBusiness.allBookingsClosedNotNotified();
+    List<DelayBorrowUser> delayBorrowUsers = new ArrayList<>();
+    if (bookings.isPresent()) {
+      bookings.get().forEach(booking -> {
+        DelayBorrowUser delayBorrowUser = new DelayBorrowUser();
+        LibraryUser libraryUser = null;
+        try {
+          libraryUser = userBusiness.oneLibraryUser(booking.getId().getLibraryUserID());
+        } catch (LibraryUserNotFoundException e) {
+          e.printStackTrace();
+        }
+        delayBorrowUser.setFirstname(libraryUser.getFirstname());
+        delayBorrowUser.setEmail(libraryUser.getEmail());
+        Book oneBookById = null;
+        try {
+          oneBookById = bookBusiness.findOneBookById(booking.getId().getBookID());
+        } catch (BookNotFoundException e) {
+          e.printStackTrace();
+        }
+        delayBorrowUser.setName(oneBookById.getName());
+        delayBorrowUsers.add(delayBorrowUser);
+        booking.setIsNotified(true);
+      });
+    }
+    return delayBorrowUsers;
+  }
 }

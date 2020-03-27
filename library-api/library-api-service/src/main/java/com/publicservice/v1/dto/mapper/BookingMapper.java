@@ -1,5 +1,6 @@
 package com.publicservice.v1.dto.mapper;
 
+
 import com.publicservice.entities.Booking;
 import com.publicservice.v1.dto.model.BookingDto;
 import org.mapstruct.InjectionStrategy;
@@ -12,6 +13,6 @@ public interface BookingMapper {
   BookingDto toBookingDto(Booking booking);
 
   @Mapping(target = "isClosed", defaultValue = "false")
-  Booking toBooking(BookingDto bookingDto);
+   Booking toBooking(BookingDto bookingDto);
 
 }

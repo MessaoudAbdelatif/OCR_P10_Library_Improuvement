@@ -13,6 +13,7 @@ public class BookingDto {
   protected BookingKeyDto id;
   protected Date dateCreation;
   protected Boolean isClosed;
+  protected Boolean isNotified;
   protected Date dateOfClosing;
   protected int position;
   protected Date dateOfBookWillBeBack;
