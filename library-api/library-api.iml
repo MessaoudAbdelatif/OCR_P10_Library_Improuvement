@@ -8,5 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: com.public-service:library-api-business:0.0.1-SNAPSHOT" level="project" />
   </component>
 </module>

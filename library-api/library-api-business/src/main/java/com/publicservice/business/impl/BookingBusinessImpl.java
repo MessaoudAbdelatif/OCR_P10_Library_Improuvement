@@ -132,9 +132,9 @@ public class BookingBusinessImpl implements BookingBusiness {
 
   }
 
-  public Booking theHeadOfList(Book book) throws BookNotFoundException {
+  public Booking theHeadOfList(Long bookId) throws BookNotFoundException {
     Optional<List<Booking>> orderByDateCreation = bookingDao
-        .findByIdBookIDAndIsClosedFalseOrderByDateCreation(book.getId());
+        .findByIdBookIDAndIsClosedFalseOrderByDateCreation(bookId);
     if (orderByDateCreation.isPresent()) {
       List<Booking> bookings = orderByDateCreation.get();
       return bookings.get(0);
@@ -145,6 +145,11 @@ public class BookingBusinessImpl implements BookingBusiness {
 
   public Optional<List<Booking>> allBookingsClosedNotNotified() {
     return bookingDao.findBookingsByIsClosedIsTrueAndIsNotifiedFalse();
+  }
+
+  @Override
+  public void updateBookingInfo(Booking booking) {
+    bookingDao.save(booking);
   }
 
 

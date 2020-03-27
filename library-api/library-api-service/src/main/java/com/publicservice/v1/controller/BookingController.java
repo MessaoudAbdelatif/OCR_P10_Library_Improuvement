@@ -41,11 +41,15 @@ public class BookingController {
 
 
   public BookingController(BookingBusiness bookingBusiness,
-      UserBusiness userBusiness, BookBusiness bookBusiness, BorrowBusiness borrowBusiness) {
+      UserBusiness userBusiness, BookBusiness bookBusiness, BorrowBusiness borrowBusiness,
+      BookingMapper bookingMapper,
+      BookingKeyMapper bookingKeyMapper) {
     this.bookingBusiness = bookingBusiness;
     this.userBusiness = userBusiness;
     this.bookBusiness = bookBusiness;
     this.borrowBusiness = borrowBusiness;
+    this.bookingMapper = bookingMapper;
+    this.bookingKeyMapper = bookingKeyMapper;
   }
 
   @GetMapping(value = "/{username}")
@@ -53,10 +57,8 @@ public class BookingController {
       throws LibraryUserNotFoundException {
     LibraryUser libraryUser = userBusiness.oneLibraryUser(username);
     List<Booking> bookingList = bookingBusiness.getBookingByUserID(libraryUser);
-    List<BookingDto> bookingDtoList = bookingList
-        .stream()
-        .map(bookinglistitems -> bookingMapper.toBookingDto(bookinglistitems))
-        .collect(Collectors.toList());
+    List<BookingDto> bookingDtoList = bookingList.stream().map(bookingMapper::toBookingDto).collect(
+        Collectors.toList());
     bookingDtoList.forEach(bookingDto -> {
       try {
         bookingDto.setPosition(
@@ -147,28 +149,27 @@ public class BookingController {
   public List<DelayBorrowUser> notifyBookedUser() {
     Optional<List<Booking>> bookings = bookingBusiness.allBookingsClosedNotNotified();
     List<DelayBorrowUser> delayBorrowUsers = new ArrayList<>();
-    if (bookings.isPresent()) {
-      bookings.get().forEach(booking -> {
-        DelayBorrowUser delayBorrowUser = new DelayBorrowUser();
-        LibraryUser libraryUser = null;
-        try {
-          libraryUser = userBusiness.oneLibraryUser(booking.getId().getLibraryUserID());
-        } catch (LibraryUserNotFoundException e) {
-          e.printStackTrace();
-        }
-        delayBorrowUser.setFirstname(libraryUser.getFirstname());
-        delayBorrowUser.setEmail(libraryUser.getEmail());
-        Book oneBookById = null;
-        try {
-          oneBookById = bookBusiness.findOneBookById(booking.getId().getBookID());
-        } catch (BookNotFoundException e) {
-          e.printStackTrace();
-        }
-        delayBorrowUser.setName(oneBookById.getName());
-        delayBorrowUsers.add(delayBorrowUser);
-        booking.setIsNotified(true);
-      });
-    }
+    bookings.ifPresent(bookingList -> bookingList.forEach(booking -> {
+      DelayBorrowUser delayBorrowUser = new DelayBorrowUser();
+      LibraryUser libraryUser = null;
+      try {
+        libraryUser = userBusiness.oneLibraryUser(booking.getId().getLibraryUserID());
+      } catch (LibraryUserNotFoundException e) {
+        e.printStackTrace();
+      }
+      delayBorrowUser.setFirstname(libraryUser.getFirstname());
+      delayBorrowUser.setEmail(libraryUser.getEmail());
+      Book oneBookById = null;
+      try {
+        oneBookById = bookBusiness.findOneBookById(booking.getId().getBookID());
+      } catch (BookNotFoundException e) {
+        e.printStackTrace();
+      }
+      delayBorrowUser.setName(oneBookById.getName());
+      delayBorrowUsers.add(delayBorrowUser);
+      booking.setIsNotified(true);
+      bookingBusiness.updateBookingInfo(booking);
+    }));
     return delayBorrowUsers;
   }
 }

@@ -90,15 +90,16 @@ public class BookController {
   }
 
   @GetMapping(value = "/{id}/back")
-  public void bookIsBack(@PathVariable("id") Long id)
+  public void bookIsBack(@PathVariable("id") String id)
       throws BookNotFoundException {
-    Book oneBookById = bookBusiness.findOneBookById(id);
+    Book oneBookById = bookBusiness.findOneBookById(Long.parseLong(id));
     borrowBusiness.returnedBook(oneBookById);
-    if (bookingBusiness.bookingListSize(id) != 0) {
+    if (bookingBusiness.bookingListSize(Long.parseLong(id)) > 0) {
       //Close Booking.
-      Booking booking = bookingBusiness.theHeadOfList(oneBookById);
+      Booking booking = bookingBusiness.theHeadOfList(Long.parseLong(id));
       booking.setIsClosed(true);
       booking.setDateOfClosing(Date.from(Instant.now()));
+      bookingBusiness.updateBookingInfo(booking);
     }
   }
 }

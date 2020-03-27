@@ -1,6 +1,6 @@
 
+T	java:S106B"9Replace this use of System.out or System.err by a logger.(àË/8øü˜›‘.
 N
-java:S16022",Remove useless curly braces around statement(øİæÀûÿÿÿÿ8Ôš£Œ.
-T	java:S106>"9Replace this use of System.out or System.err by a logger.(àË/8Ôš£Œ.
+java:S16022",Remove useless curly braces around statement(øİæÀûÿÿÿÿ8şìØ•‘.
 §
-java:S1130$"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ğ»’ùÿÿÿÿ8Ôš£Œ.
+java:S1130$"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ğ»’ùÿÿÿÿ8şìØ•‘.

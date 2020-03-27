@@ -13,6 +13,6 @@ public interface BookingMapper {
   BookingDto toBookingDto(Booking booking);
 
   @Mapping(target = "isClosed", defaultValue = "false")
-   Booking toBooking(BookingDto bookingDto);
+  Booking toBooking(BookingDto bookingDto);
 
 }

@@ -59,7 +59,9 @@ public interface BookingBusiness {
 
   boolean canBookABook(Book book, String username) throws LibraryUserNotFoundException;
 
-  Booking theHeadOfList(Book book) throws BookNotFoundException;
+  Booking theHeadOfList(Long book) throws BookNotFoundException;
 
   Optional<List<Booking>> allBookingsClosedNotNotified();
+
+  void updateBookingInfo(Booking booking);
 }

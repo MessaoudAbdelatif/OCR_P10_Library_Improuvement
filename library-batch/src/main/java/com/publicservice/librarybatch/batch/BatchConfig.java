@@ -48,10 +48,11 @@ public class BatchConfig {
         });
   }
 
-  @Scheduled(cron = "0/30 * * * * ?")
-  @GetMapping("/sendBookingReminder")
+  @Scheduled(cron = "0/20 * * * * ?")
+ @GetMapping("/sendBookingReminder")
   public void senderBooking() {
-    List<DelayBorrowUser> delayBorrowUsers = msLibraryApiProxy.notifyBookedUsed();
+    System.out.println("******** CHECKINGGGGGGGG*********");
+    List<DelayBorrowUser> delayBorrowUsers = msLibraryApiProxy.notifyBookedUser();
     delayBorrowUsers.forEach(this::sendBookingEmailAuto);
   }
 

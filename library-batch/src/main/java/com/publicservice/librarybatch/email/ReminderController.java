@@ -5,7 +5,6 @@ import com.publicservice.librarybatch.model.DelayBorrowUser;
 import javax.xml.bind.ValidationException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +19,7 @@ public class ReminderController {
     this.emailCfg = emailCfg;
   }
 
-  @PostMapping
+//  @PostMapping
   public void sendReminder(@RequestBody DelayBorrowUser delayBorrowUser
 //      ,BindingResult bindingResult
   ) throws ValidationException {
@@ -48,7 +47,7 @@ public class ReminderController {
   }
 
 
-  @PostMapping
+//  @PostMapping
   public void sendBookingReminder(@RequestBody DelayBorrowUser delayBorrowUser)
 //      ,BindingResult bindingResult
   {
