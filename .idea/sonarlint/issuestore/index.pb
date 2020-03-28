@@ -203,8 +203,6 @@ alibrary-api/library-api-service/src/main/java/com/publicservice/v1/dto/model/Er
 Qlibrary-api/library-api-dao/src/main/java/com/publicservice/consumer/RoleDao.java,c/0/c08211d4b564f994e6f52c163641e7e0daed9b47
 Å
 Qzuul-server/src/main/java/com/publicservice/zuulserver/ZuulServerApplication.java,d/3/d33244a2d29960e6b9ce95e2abcba5921619fdd9
-w
-Glibrary-api/library-api-service/src/main/resources/bootstrap.properties,0/c/0c74a29dea45ec31b186e5835f34383a5379e61c
 å
 \library-webapp/src/main/java/com/publicservice/librarywebapp/controller/LoginController.java,8/3/83809947ea2bba7d06ea05a47e1e83198dcc6a9a
 Ö
@@ -213,8 +211,6 @@ Ulibrary-webapp/src/main/java/com/publicservice/librarywebapp/bean/LibraryRoleDt
 Wlibrary-webapp/src/main/java/com/publicservice/librarywebapp/validation/FieldMatch.java,b/5/b58b5e6f8c833720d00ca57daa2aeedf702e3229
 ê
 `library-webapp/src/main/java/com/publicservice/librarywebapp/validation/FieldMatchValidator.java,f/6/f67b1d25ee4673dd982de3b3ab6787ef75b3808c
-v
-Flibrary-webapp/src/main/resources/templates/views/confirmRegister.html,c/b/cb6c9c698fda03c78479da4c78004319b574e893
 è
 _library-webapp/src/test/java/com/publicservice/librarywebapp/LibraryWebappApplicationTests.java,2/6/262cfc597ba956886e97f1d6f292916251b9b0e0
 Ñ

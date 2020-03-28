@@ -39,16 +39,20 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   public void addExtraTime(Long id, int extraTime)
       throws BorrowNotFoundException, ExtraTimeNotAllowed {
     Borrow borrow = findBorrowById(id);
-    if (!borrow.getExtraTime()) {
-      DateTime dt = new DateTime(borrow.getDateEnd());
-      DateTime newdt = dt.plusDays(extraTime);
-      Date newEndDate = newdt.toDate();
-      borrow.setDateEnd(newEndDate);
-      borrow.setExtraTime(true);
+    DateTime dateBookBack = new DateTime(borrow.getDateEnd());
+    if (dateBookBack.isAfterNow()) {
+      if (!borrow.getExtraTime()) {
+        DateTime newdt = dateBookBack.plusDays(extraTime);
+        Date newEndDate = newdt.toDate();
+        borrow.setDateEnd(newEndDate);
+        borrow.setExtraTime(true);
+      } else {
+        throw new ExtraTimeNotAllowed("You already get an extra time !");
+      }
     } else {
-      throw new ExtraTimeNotAllowed("You already get an extra time !");
-    }
 
+      throw new ExtraTimeNotAllowed("Sorry it is too late to add an additional days !");
+    }
   }
 
   @Override
@@ -77,5 +81,14 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     List<Borrow> borrowsOverDeadTime = borrowDao
         .findBorrowByDateEndBeforeAndClosedFalse(Date.from(Instant.now()));
     return borrowsOverDeadTime;
+  }
+
+  @Override
+  public void updateInfo(Borrow borrow) {
+    DateTime dateBookBack = new DateTime(borrow.getDateEnd());
+    if (dateBookBack.isBeforeNow() && !borrow.getExtraTime()) {
+      borrow.setExtraTime(true);
+      borrowDao.save(borrow);
+    }
   }
 }
