@@ -45,4 +45,5 @@ public interface BorrowBusiness {
 
   List<Borrow> borrowsOverTimeLimite();
 
+  void updateInfo(Borrow borrow);
 }

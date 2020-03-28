@@ -14,6 +14,7 @@ import java.text.ParseException;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +22,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
+@Slf4j
 @RestController
 @RequestMapping("borrows")
 public class BorrowController {
@@ -79,11 +80,12 @@ public class BorrowController {
   @GetMapping("/{username}/info")
   public List<LibarayUserBorrowInfoDto> libraryUserBorrowsInfo(@PathVariable String username)
       throws LibraryUserNotFoundException {
-
     List<Borrow> borrows = userBusiness.oneLibraryUser(username).getBorrows();
     if (borrows.isEmpty()) {
       return Collections.emptyList();
     }
+    borrows.forEach(borrowBusiness::updateInfo);
+    log.info("************->  BORROW ADD EXTRA TIME CHECKING IF ALLOW......    **************** ");
     return borrows.stream()
         .map(this::getUserInfo)
         .collect(Collectors.toList());
