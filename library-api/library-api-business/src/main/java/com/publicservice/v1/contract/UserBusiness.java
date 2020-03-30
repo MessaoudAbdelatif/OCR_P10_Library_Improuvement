@@ -1,6 +1,6 @@
-package com.publicservice.business.contract;
+package com.publicservice.v1.contract;
 
-import com.publicservice.business.exception.LibraryUserNotFoundException;
+import com.publicservice.v1.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.Borrow;
 import com.publicservice.entities.LibraryUser;
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.publicservice.business.impl;
+package com.publicservice.v1.impl;
 
-import com.publicservice.business.contract.BookBusiness;
-import com.publicservice.business.exception.BookNotFoundException;
+import com.publicservice.v1.contract.BookBusiness;
+import com.publicservice.v1.exception.BookNotFoundException;
 import com.publicservice.consumer.BookDao;
 import com.publicservice.consumer.StockDao;
 import com.publicservice.entities.Book;

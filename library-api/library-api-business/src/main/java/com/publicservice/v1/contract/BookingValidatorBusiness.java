@@ -1,10 +1,10 @@
-package com.publicservice.business.contract;
+package com.publicservice.v1.contract;
 
 
-import static com.publicservice.business.contract.BookingValidatorBusiness.ValidationResult.ALREADY_BORROWING_THIS_BOOK;
-import static com.publicservice.business.contract.BookingValidatorBusiness.ValidationResult.SUCCESS;
+import static com.publicservice.v1.contract.BookingValidatorBusiness.ValidationResult.ALREADY_BORROWING_THIS_BOOK;
+import static com.publicservice.v1.contract.BookingValidatorBusiness.ValidationResult.SUCCESS;
 
-import com.publicservice.business.contract.BookingValidatorBusiness.ValidationResult;
+import com.publicservice.v1.contract.BookingValidatorBusiness.ValidationResult;
 import com.publicservice.entities.Book;
 import com.publicservice.entities.LibraryUser;
 import java.util.function.BiFunction;

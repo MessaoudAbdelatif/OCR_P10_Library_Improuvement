@@ -1,6 +1,5 @@
 package com.publicservice.v1.exception;
 
-import com.publicservice.business.exception.LibraryUserNotFoundException;
 import com.publicservice.v1.dto.model.ErrorMessageDto;
 import java.util.Date;
 import javax.persistence.EntityNotFoundException;

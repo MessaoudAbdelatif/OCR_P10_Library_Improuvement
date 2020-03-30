@@ -1,12 +1,11 @@
 package com.publicservice.v1.controller;
 
-import com.publicservice.business.contract.UserBusiness;
-import com.publicservice.business.exception.LibraryUserNotFoundException;
+import com.publicservice.v1.contract.UserBusiness;
+import com.publicservice.v1.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.LibraryUser;
 import com.publicservice.v1.dto.mapper.BorrowMapper;
 import com.publicservice.v1.dto.mapper.LibraryUserMapper;
 import com.publicservice.v1.dto.model.BorrowDto;
-import com.publicservice.v1.dto.model.LibarayUserBorrowInfoDto;
 import com.publicservice.v1.dto.model.LibraryUserDto;
 import java.util.List;
 import java.util.stream.Collectors;

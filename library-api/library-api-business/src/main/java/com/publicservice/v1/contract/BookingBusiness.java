@@ -1,8 +1,8 @@
-package com.publicservice.business.contract;
+package com.publicservice.v1.contract;
 
-import com.publicservice.business.exception.BookNotFoundException;
-import com.publicservice.business.exception.BookingNotAllowed;
-import com.publicservice.business.exception.LibraryUserNotFoundException;
+import com.publicservice.v1.exception.BookNotFoundException;
+import com.publicservice.v1.exception.BookingNotAllowed;
+import com.publicservice.v1.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
 import com.publicservice.entities.BookingKey;

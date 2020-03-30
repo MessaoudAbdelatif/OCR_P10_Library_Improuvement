@@ -1,7 +1,7 @@
-package com.publicservice.business.impl;
+package com.publicservice.v1.impl;
 
-import com.publicservice.business.contract.UserBusiness;
-import com.publicservice.business.exception.LibraryUserNotFoundException;
+import com.publicservice.v1.contract.UserBusiness;
+import com.publicservice.v1.exception.LibraryUserNotFoundException;
 import com.publicservice.consumer.UserDao;
 import com.publicservice.entities.Borrow;
 import com.publicservice.entities.LibraryUser;
@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 public class UserBusinessImpl implements UserBusiness {
 
   private final UserDao userDao;
-//  private final RoleDao roleDao;
 
 
   public UserBusinessImpl(UserDao userDao) {
@@ -52,13 +51,6 @@ public class UserBusinessImpl implements UserBusiness {
     String pwd = libraryUser.getPassword();
 
     userDao.save(libraryUser);
-//    addRoleToLibraryUser(libraryUser.getUsername(), "USER");
   }
 
-//  @Override
-//  public void addRoleToLibraryUser(String username, String rolename) {
-//    LibraryUser libraryUser = userDao.findById(username).get();
-//    LibraryRole libraryRole = roleDao.findByLibraryUserRole(rolename);
-//    libraryUser.getRoles().add(libraryRole);
-//  }
 }

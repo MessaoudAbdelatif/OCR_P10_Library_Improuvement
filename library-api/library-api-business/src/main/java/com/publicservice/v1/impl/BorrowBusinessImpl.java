@@ -1,10 +1,10 @@
-package com.publicservice.business.impl;
+package com.publicservice.v1.impl;
 
-import com.publicservice.business.contract.BookBusiness;
-import com.publicservice.business.contract.BorrowBusiness;
-import com.publicservice.business.exception.BookNotFoundException;
-import com.publicservice.business.exception.BorrowNotFoundException;
-import com.publicservice.business.exception.ExtraTimeNotAllowed;
+import com.publicservice.v1.contract.BookBusiness;
+import com.publicservice.v1.contract.BorrowBusiness;
+import com.publicservice.v1.exception.BookNotFoundException;
+import com.publicservice.v1.exception.BorrowNotFoundException;
+import com.publicservice.v1.exception.ExtraTimeNotAllowed;
 import com.publicservice.consumer.BookDao;
 import com.publicservice.consumer.BookingDao;
 import com.publicservice.consumer.BorrowDao;

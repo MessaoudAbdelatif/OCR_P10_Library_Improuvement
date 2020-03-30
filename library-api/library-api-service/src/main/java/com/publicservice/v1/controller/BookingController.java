@@ -1,12 +1,12 @@
 package com.publicservice.v1.controller;
 
-import com.publicservice.business.contract.BookBusiness;
-import com.publicservice.business.contract.BookingBusiness;
-import com.publicservice.business.contract.BorrowBusiness;
-import com.publicservice.business.contract.UserBusiness;
-import com.publicservice.business.exception.BookNotFoundException;
-import com.publicservice.business.exception.BookingNotAllowed;
-import com.publicservice.business.exception.LibraryUserNotFoundException;
+import com.publicservice.v1.contract.BookBusiness;
+import com.publicservice.v1.contract.BookingBusiness;
+import com.publicservice.v1.contract.BorrowBusiness;
+import com.publicservice.v1.contract.UserBusiness;
+import com.publicservice.v1.exception.BookNotFoundException;
+import com.publicservice.v1.exception.BookingNotAllowed;
+import com.publicservice.v1.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.Book;
 import com.publicservice.entities.Booking;
 import com.publicservice.entities.BookingKey;

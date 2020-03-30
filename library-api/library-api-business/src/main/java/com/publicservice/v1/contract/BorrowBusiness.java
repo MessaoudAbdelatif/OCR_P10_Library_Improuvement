@@ -1,8 +1,8 @@
-package com.publicservice.business.contract;
+package com.publicservice.v1.contract;
 
-import com.publicservice.business.exception.BookNotFoundException;
-import com.publicservice.business.exception.BorrowNotFoundException;
-import com.publicservice.business.exception.ExtraTimeNotAllowed;
+import com.publicservice.v1.exception.BookNotFoundException;
+import com.publicservice.v1.exception.BorrowNotFoundException;
+import com.publicservice.v1.exception.ExtraTimeNotAllowed;
 import com.publicservice.entities.Book;
 import com.publicservice.entities.Borrow;
 import java.text.ParseException;
