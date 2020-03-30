@@ -51,23 +51,14 @@ public class BorrowBusinessImpl implements BorrowBusiness {
   public void addExtraTime(Long id, int extraTime)
       throws BorrowNotFoundException, ExtraTimeNotAllowed {
     Borrow borrow = findBorrowById(id);
-    DateTime dateBookBack = new DateTime(borrow.getDateEnd());
-    if (dateBookBack.isAfterNow()) {
-      if (!borrow.getExtraTime()) {
-        DateTime newdt = dateBookBack.plusDays(extraTime);
-        Date newEndDate = newdt.toDate();
-        borrow.setDateEnd(newEndDate);
-        borrow.setExtraTime(true);
-      } else {
-        throw new ExtraTimeNotAllowed("You already get an extra time !");
-      }
+    if (!borrow.getExtraTime()) {
+      DateTime dt = new DateTime(borrow.getDateEnd());
+      DateTime newdt = dt.plusDays(extraTime);
+      Date newEndDate = newdt.toDate();
+      borrow.setDateEnd(newEndDate);
+      borrow.setExtraTime(true);
     } else {
-<<<<<<< HEAD:library-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java
-
-      throw new ExtraTimeNotAllowed("Sorry it is too late to add an additional days !");
-=======
       throw new ExtraTimeNotAllowed("You already get an extra time !");
->>>>>>> feature/Booking_Book_Service:library-api/library-api-business/src/main/java/com/publicservice/v1/impl/BorrowBusinessImpl.java
     }
   }
 
@@ -105,16 +96,6 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     return borrowsOverDeadTime;
   }
 
-<<<<<<< HEAD:library-api/library-api-business/src/main/java/com/publicservice/business/impl/BorrowBusinessImpl.java
-  @Override
-  public void updateInfo(Borrow borrow) {
-    DateTime dateBookBack = new DateTime(borrow.getDateEnd());
-    if (dateBookBack.isBeforeNow() && !borrow.getExtraTime()) {
-      borrow.setExtraTime(true);
-      borrowDao.save(borrow);
-    }
-  }
-=======
   public void returnedBook(Book book) {
     book.getStock().setOutside((book.getStock().getOutside()) - 1);
     book.getStock().setAvailable(book.getStock().getAvailable() + 1);
@@ -129,6 +110,14 @@ public class BorrowBusinessImpl implements BorrowBusiness {
     return borrow.getDateEnd();
   }
 
+  @Override
+  public void updateInfo(Borrow borrow) {
+    DateTime dateBookBack = new DateTime(borrow.getDateEnd());
+    if (dateBookBack.isBeforeNow() && !borrow.getExtraTime()) {
+      borrow.setExtraTime(true);
+      borrowDao.save(borrow);
+    }
+  }
 
->>>>>>> feature/Booking_Book_Service:library-api/library-api-business/src/main/java/com/publicservice/v1/impl/BorrowBusinessImpl.java
+
 }
