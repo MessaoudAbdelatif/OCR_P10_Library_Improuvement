@@ -26,10 +26,12 @@ public class Borrow implements Serializable {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @NotNull
   @ManyToOne
   @JoinColumn(name = "user_id")
   private LibraryUser userID;
 
+  @NotNull
   @OneToOne
   private Book bookID;
 

@@ -1,6 +1,6 @@
 package com.publicservice.v1.controller;
 
-import com.publicservice.business.contract.BorrowBusiness;
+import com.publicservice.v1.contract.BorrowBusiness;
 import com.publicservice.entities.Borrow;
 import com.publicservice.v1.dto.model.DelayBorrowUser;
 import java.util.List;

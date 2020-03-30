@@ -5,12 +5,14 @@ import com.publicservice.librarybatch.model.DelayBorrowUser;
 import com.publicservice.librarybatch.proxy.MSLibraryApiProxy;
 import java.util.List;
 import javax.xml.bind.ValidationException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 //@Configuration
 //@EnableBatchProcessing
+@Slf4j
 @RestController
 public class BatchConfig {
 
@@ -29,21 +31,32 @@ public class BatchConfig {
     reminderController.sendReminder(delayBorrowUser);
   }
 
-  @Scheduled(cron = "0 30 7 * * ?")
-  @GetMapping("/send")
-  public void sender(){
-    List<DelayBorrowUser>  dbusers =msLibraryApiProxy.overTimeLimite();
-    dbusers
-        .stream()
-        .forEach(delayBorrowUser -> {
-      try {
-        sendEmailAuto(delayBorrowUser);
-      } catch (ValidationException e) {
-        e.printStackTrace();
-      }
-    });
+  public void sendBookingEmailAuto(DelayBorrowUser delayBorrowUser) {
+
+    reminderController.sendBookingReminder(delayBorrowUser);
   }
 
+  @Scheduled(cron = "0 30 7 * * ?")
+  @GetMapping("/send")
+  public void sender() {
+    List<DelayBorrowUser> dbusers = msLibraryApiProxy.overTimeLimite();
+    dbusers
+        .forEach(delayBorrowUser -> {
+          try {
+            sendEmailAuto(delayBorrowUser);
+          } catch (ValidationException e) {
+            e.printStackTrace();
+          }
+        });
+  }
+
+  @Scheduled(cron = "0/20 * * * * ?")
+  @GetMapping("/sendBookingReminder")
+  public void senderBooking() {
+    log.info("************* Checking if book is back every 20s ************");
+    List<DelayBorrowUser> delayBorrowUsers = msLibraryApiProxy.notifyBookedUser();
+    delayBorrowUsers.forEach(this::sendBookingEmailAuto);
+  }
 
 //
 //  private EmailConfig emailConfig;

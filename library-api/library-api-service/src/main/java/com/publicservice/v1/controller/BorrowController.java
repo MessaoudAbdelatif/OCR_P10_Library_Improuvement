@@ -1,10 +1,10 @@
 package com.publicservice.v1.controller;
 
-import com.publicservice.business.contract.BorrowBusiness;
-import com.publicservice.business.contract.UserBusiness;
-import com.publicservice.business.exception.BorrowNotFoundException;
-import com.publicservice.business.exception.ExtraTimeNotAllowed;
-import com.publicservice.business.exception.LibraryUserNotFoundException;
+import com.publicservice.v1.contract.BorrowBusiness;
+import com.publicservice.v1.contract.UserBusiness;
+import com.publicservice.v1.exception.BorrowNotFoundException;
+import com.publicservice.v1.exception.ExtraTimeNotAllowed;
+import com.publicservice.v1.exception.LibraryUserNotFoundException;
 import com.publicservice.entities.Borrow;
 import com.publicservice.v1.configuration.ApplicationPropertiesConfiguration;
 import com.publicservice.v1.dto.mapper.BorrowMapper;
@@ -55,14 +55,14 @@ public class BorrowController {
     borrowBusiness.addExtraTime(id, appProperties.getExtraTime());
   }
 
-  @PostMapping(value = "ADMIN/newBorrow")
+  @PostMapping(value = "admin/newBorrow")
   @ResponseStatus(HttpStatus.CREATED)
   public Borrow createBorrow(BorrowDto newBorrowDto) {
     Borrow borrow = borrowMapper.toBorrow(newBorrowDto);
     return borrowBusiness.createBorrow(borrow, appProperties.getInitialTime());
   }
 
-  @GetMapping(value = "ADMIN/{id}/close")
+  @GetMapping(value = "admin/{id}/close")
   @ResponseStatus(HttpStatus.OK)
   public void closeBorrow(@PathVariable("id") Long id){
     borrowBusiness.closeBorrow(id);

@@ -1,7 +1,9 @@
 
-L
-java:S5411*"*Use the primitive boolean expression here.(öáç‚ûÿÿÿÿ8 š´Ş‹.
-a
-java:S2583 "DChange this condition so that it does not always evaluate to "false"(”•ƒ»8 š´Ş‹.
 
-java:S1488M"kImmediately return this expression instead of assigning it to the temporary variable "borrowsOverDeadTime".(ˆÉŒ ÿÿÿÿÿ8 š´Ş‹.
+java:S1488^"kImmediately return this expression instead of assigning it to the temporary variable "borrowsOverDeadTime".(ˆÉŒ ÿÿÿÿÿ8­åà¥Œ.
+L
+java:S54116"*Use the primitive boolean expression here.(öáç‚ûÿÿÿÿ8®êîû.
+X
+java:S3655m"6Call "rowList.isPresent()" before accessing the value.(éèÿÀûÿÿÿÿ8×ºıû.
+a
+java:S2583,"DChange this condition so that it does not always evaluate to "false"(”•ƒ»8®êîû.

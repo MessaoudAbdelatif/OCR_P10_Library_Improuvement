@@ -17,4 +17,5 @@ public class EmailConfig {
   private String username;
   private String password;
   private String feedback;
+  private String feedbackBooking;
 }

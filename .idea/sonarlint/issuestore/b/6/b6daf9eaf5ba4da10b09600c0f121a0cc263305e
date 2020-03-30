@@ -1,10 +1,6 @@
 
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8ëô×é-
-S
-squid:S106"9Replace this use of System.out or System.err by a logger.(àË/8ëô×é-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Œáí¨8ëô×é-
-lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(•¹ªúùÿÿÿÿ8ëô×é-
-À%squid:RedundantThrowsDeclarationCheck"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ð»’ùÿÿÿÿ8ëô×é-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ù›è‘8ëô×é-
-Msquid:S1602",Remove useless curly braces around statement(øÝæÀûÿÿÿÿ8ëô×é-
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ö®˜ï8ëô×é-
+T	java:S106B"9Replace this use of System.out or System.err by a logger.(àË/8øü˜›‘.
+N
+java:S16022",Remove useless curly braces around statement(øÝæÀûÿÿÿÿ8þìØ•‘.
+§
+java:S1130$"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ð»’ùÿÿÿÿ8þìØ•‘.

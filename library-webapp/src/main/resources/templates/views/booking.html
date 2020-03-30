@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout">
+
+<div layout:fragment="content1">
+
+  <div class="container mt-5 ml-md-5 col-md-6">
+    <div class="shadow card bg-light">
+      <div class="card-header h4 text-primary text-center">
+        <div th:text="${ User.lastname +' '+User.firstname +' Booking List'}"></div>
+      </div>
+      <div class="p-2 card-body list-group">
+        <table class="table table-hover">
+          <tr class="card-header text-dark">
+            <th>BOOK NAME</th>
+            <th>WILL BE BACK</th>
+            <th>YOUR POSITION</th>
+            <th></th>
+          </tr>
+          <tr th:each="booking : ${bookings}">
+            <th class="list-inline" th:text="${booking.bookName}"></th>
+            <th class="text-inline" th:text="${#dates.format(booking.dateOfBookWillBeBack, 'dd-MM-yyyy HH:mm')}"></th>
+            <th class="list-inline text-center" th:text="${booking.position}"></th>
+
+            <th  th:if="${booking.isClosed == false}" class="list-inline">
+              <form autocomplete="off"
+                    th:action="@{'booking/'+ ${booking.id.getBookID()} + '/' + ${booking.id.getLibraryUserID()} }"
+                    method="post">
+                <button type="submit" class="btn btn-danger d-inline" data-toggle="tooltip"
+                        data-placement="top"
+                        title="delete" onclick="return confirm('are you sure to remove your booking ?')"><i class="fas fa-trash-alt"></i>
+                  Delete
+                  <a id="delete">
+                  </a>
+                </button>
+              </form>
+            </th>
+            <th  th:if="${booking.isClosed == true}" class="list-inline text-danger"> hmmmm</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+</html>

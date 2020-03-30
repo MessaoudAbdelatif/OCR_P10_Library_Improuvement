@@ -23,7 +23,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
   public SecurityConfig(
       UserDetailsServiceImpl userDetailsService,
-      BCryptPasswordEncoder bCryptPasswordEncoder) {
+      BCryptPasswordEncoder bCryptPasswordEncoder
+  ) {
     this.userDetailsService = userDetailsService;
     this.bCryptPasswordEncoder = bCryptPasswordEncoder;
   }
@@ -40,8 +41,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     http.csrf().disable();
     http.formLogin().loginPage("/login/");
     http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-    http.authorizeRequests().antMatchers( "/**/login/**","/**/index/**", "/**/home/**", "/**/register/**").permitAll();
-    http.authorizeRequests().antMatchers("/**/Books/**","/**/Borrows/**").hasAuthority("USER");
+    http.authorizeRequests()
+        .antMatchers("/**/login/**", "/**/index/**", "/**/home/**", "/**/register/**").permitAll();
+    http.authorizeRequests().antMatchers("/**/Books/**", "/**/Borrows/**").hasAuthority("USER");
     http.authorizeRequests().antMatchers("/**/newBorrow/**").hasAuthority("ADMIN");
     http.exceptionHandling().accessDeniedPage("/login/");
     http.authorizeRequests().anyRequest().authenticated();
@@ -54,7 +56,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   public void configure(WebSecurity web) throws Exception {
     // Allow eureka client to be accessed without authentication
-    web.ignoring().antMatchers("/*/")//
+    web.ignoring()
+        .antMatchers("/*/")
         .antMatchers("/eureka/**")//
         .antMatchers(HttpMethod.OPTIONS, "/**"); // Request type options should be allowed.
   }

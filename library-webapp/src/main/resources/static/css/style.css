@@ -82,3 +82,7 @@ h1,h2,h3,h4{
   font-family: 'Roboto', cursive;
   font-size: larger;
 }
+
+.navbar , .dropdown-menu{
+  background-color: rgba(245, 245, 245, 0.6);
+}

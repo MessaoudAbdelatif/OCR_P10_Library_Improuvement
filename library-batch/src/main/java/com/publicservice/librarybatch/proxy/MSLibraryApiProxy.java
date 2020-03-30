@@ -12,4 +12,9 @@ public interface MSLibraryApiProxy {
 
   @GetMapping(value = "/delay/all")
   List<DelayBorrowUser> overTimeLimite();
+
+  @GetMapping(value = "/booking/notification")
+  List<DelayBorrowUser> notifyBookedUser();
+
+
 }
