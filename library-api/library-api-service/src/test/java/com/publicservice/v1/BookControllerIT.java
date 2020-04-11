@@ -8,10 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.Sql.ExecutionPhase;
+import org.springframework.test.context.jdbc.SqlGroup;
 
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-//@SqlGroup({
-//    @Sql(executionPhase = ExecutionPhase.BEFORE_TEST_METHOD, scripts = {"classpath:db_library.sql"})})
+@SpringBootTest(classes = {Libraryapiapplication.class},webEnvironment = WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("test")
+@SqlGroup({
+    @Sql(executionPhase = ExecutionPhase.BEFORE_TEST_METHOD, scripts = {"classpath:db_library.sql"})})
 public class BookControllerIT {
 
   @Autowired

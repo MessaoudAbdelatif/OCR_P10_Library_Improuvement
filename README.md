@@ -8,20 +8,20 @@ Easy to maintain and deploy springboot provide embedded tomcat server.
 
 #### _SpringBoot Cloud Edge MicroServices :_
 
-##### **Config Server :**
+##### 1. **Config Server :**
 It provide all environmental variables and configuration setup, this data are stored and persisted in separate github repository https://github.com/MessaoudAbdelatif/Library-config-repository
 
-##### **Eureka Discovery :**
+##### 2. **Eureka Discovery :**
 All the MS will be subscribing to Eureka MS, this will allow our gateway to handle the load increase secure and manage the entire solution.
 
-##### **Zuul Gateway :** 
+##### 3. **Zuul Gateway :** 
 Handle all entries connexions at port 9004, dispatch using load balancer Ribbon solution from Netflix.
 Secure user account profile using JWT combine with Spring Security.
 provide each user a JWT stored in a secured cookie and http only.
 
 #### _SpringBoot Functional & Logic Solution :_
 
-##### **Library Back API :**
+##### 4. **Library Back API :**
 Provide all the logic & business implementation of the functional specifications this MS is N’Tier Modules Maven:
 
 _Library-api-business
@@ -29,11 +29,11 @@ Library-api-dao
 Library-api-model
 Library-api-service_
 
-##### **Library Webapp :**
+##### 5. **Library Webapp :**
 Provide the web application views using html template generator Thyemleaf.
 Consume the exposed end point from the back api.
 
-##### **Library Batch :** 
+##### 6. **Library Batch :** 
 Managed the e-mail reminder sender, user borrows delay, user booking notify.
 Implementing Scheduler auto checking back Api.
 
@@ -58,3 +58,7 @@ when it’s lunch,  you can run:
 Open Browser : localhost:9004/index 
 
 Enjoy 😎
+
+
+My GitHub
+https://github.com/MessaoudAbdelatif/OCR_P10_Library_Improuvement
